@@ -3,7 +3,7 @@ var options = {
     "amount": "2500000",
     "currency": "INR",
     "name": "M W F - Sponsor",
-    "image": "https://raw.githubusercontent.com/ItsEsd/mwf-biz-io/mwfbiz-V.1.1/image/imgicon.gif",
+    "image": "../image/imgicon.gif",
     "handler": function(response) {
       var payid = response.razorpay_payment_id;
       var peid = "Diamond Sponsor";
@@ -48,7 +48,7 @@ var optionsP = {
   "amount": "2000000",
   "currency": "INR",
   "name": "M W F - Sponsor",
-  "image": "https://raw.githubusercontent.com/ItsEsd/mwf-biz-io/mwfbiz-V.1.1/image/imgicon.gif",
+  "image": "../image/imgicon.gif",
   "handler": function(response) {
     var payid = response.razorpay_payment_id;
       var peid = "Platinum Sponsor";
@@ -93,7 +93,7 @@ var optionsG = {
   "amount": "1500000",
   "currency": "INR",
   "name": "M W F - Sponsor",
-  "image": "https://raw.githubusercontent.com/ItsEsd/mwf-biz-io/mwfbiz-V.1.1/image/imgicon.gif",
+  "image": "../image/imgicon.gif",
   "handler": function(response) {
     var payid = response.razorpay_payment_id;
       var peid = "Gold Sponsor";
@@ -138,7 +138,7 @@ var optionsS = {
   "amount": "500000",
   "currency": "INR",
   "name": "M W F - Sponsor",
-  "image": "https://raw.githubusercontent.com/ItsEsd/mwf-biz-io/mwfbiz-V.1.1/image/imgicon.gif",
+  "image": "../image/imgicon.gif",
   "handler": function(response) {
     var payid = response.razorpay_payment_id;
       var peid = "Silver Sponsor";
