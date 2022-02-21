@@ -1,0 +1,19 @@
+{   "theme_color": "#000000",
+    "background_color": "#000000",
+    "description": "Mind Without Fear - M W F",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "image/manifestIcon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "name": "M W F BIZ",
+    "short_name": "M W F BIZ",
+    "start_url": "/",
+    "url": "https://mwfbiz.com/",
+    "manifestUrl": "https://mwfbiz.com/manifest.json",
+    "lang": ""
+}
