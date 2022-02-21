@@ -1,0 +1,22 @@
+hr{border-color: #848684;}
+#rfitem {
+    border: none;
+    width:100%;
+    padding:10px;
+    display:inline-block;
+    margin: 2px;
+
+    background-color: #161616;
+    border-radius:10px;
+}
+#rfitem p{color:#6969e9}
+
+#rfitem .title{color: #d4d4d4;}
+
+#rfitem a{text-decoration: none;}
+#rfitem .title:hover{color:#ffffff}
+
+#rfitem .dtitle{font-size: 14px;color:#ff6868}
+
+#rfitem .descp {color:#f4f75a}
+#rfitem img{width:100%;max-width:600px;pointer-events: none;}
