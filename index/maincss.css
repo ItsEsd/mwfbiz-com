@@ -1,0 +1,52 @@
+header,
+.sticky {
+  width: 100%;
+  position: fixed;
+  bottom: 0 !important;
+  left: 0;
+  border: none;
+  margin-bottom: 0px;
+}
+
+#titleImg {
+  width: 100%;
+  max-width: 310px;
+}
+
+#periinfomwf a {
+  text-decoration: none;
+  color: #272626;
+}
+
+#periinfomwf a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+#deskmob{
+    color:white;
+    padding-left:0px;
+    font-size: 30px;
+    cursor:pointer;
+}
+.animback div{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#butter{
+    top:0px;left:0px;
+    position:fixed;color:white;
+}
+#butter img{
+    width:300px;height:600px;pointer-events: none;
+}
+.animcon{
+    z-index:2;
+}
+
+#formsign h1{
+    margin-top:4px;
+    font-family: 'Shadows Into Light', sans-sarif;
+    font-size:28px;color:white;
+}

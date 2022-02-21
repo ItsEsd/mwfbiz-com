@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Primary Meta Tags -->
+    <title>[ GENESIS ] - M W F BIZ</title>
+    <meta name="title" content="[ GENESIS ] - M W F BIZ">
+     <meta name="author" content="Es D">
+    <meta name="description" content="Biographies. Sports & Game. Art & Culture. Enterprising. Social."><!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mwfbiz.com/">
+    <meta property="og:title" content="[ GENESIS ] - M W F BIZ">
+    <meta property="og:description" content="Biographies. Sports & Game. Art & Culture. Enterprising. Social.">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/ItsEsd/mwf-biz-io@d39f30ac6478711ccd884b9478f6821f01552808/image/meta.gif"><!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mwfbiz.com/">
+    <meta property="twitter:title" content="[ GENESIS ] - M W F BIZ">
+    <meta property="twitter:description" content="Biographies. Sports & Game. Art & Culture. Enterprising. Social.">
+    <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/ItsEsd/mwf-biz-io@d39f30ac6478711ccd884b9478f6821f01552808/image/meta.gif">
+    <!-------------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../vendor/style/bootstrap.3.4.1.min.css">
+    <link rel="icon" href="../image/iconCurved.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="../vendor/style/font-awesome.4.7.0.min.css">
+    <script src="../vendor/scripts/jquery.3.4.1.min.js"></script>
+    <script src="../vendor/scripts/bootstrap.3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+     <!--------<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script><script>var loca = moment.tz.guess();var res = loca.split("/", 1);if ( res == "Asia"){ window.location.href = "https://feed.mwfbiz.com";} else{ window.location.href = "https://mwfbiz.com"; } console.log(moment.tz.guess());</script>------>
+     <script>
+      function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      var user = getCookie("_ybizc0");
+        var usergu = getCookie("_ybizv0");
+        var userel = getCookie("_ybize0");
+        if (user != "" ) {
+        document.getElementById('falsebacksigup').style.display = "none";
+        document.getElementById('sigcontainer').style.display = "none";
+        } 
+        else if(usergu != ""){
+      setTimeout(function(){
+        document.getElementById('falsebacksigup').style.display = "block";
+        document.getElementById('sigcontainer').style.display = "block";},
+        3600000);
+        }
+        else if(userel != ""){
+      setTimeout(function(){
+        document.getElementById('falsebacksigup').style.display = "block";
+        document.getElementById('sigcontainer').style.display = "block";},
+        3600000);
+        }
+        else {
+          window.open("../", "_self");
+        }
+        function deleteAllCookies() {
+          var cookies = document.cookie.split(";");
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i];
+              var eqPos = cookie.indexOf("=");
+              var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+              document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=mwfbiz.com";
+          }
+          setTimeout(function(){location.reload();},2000);
+      }     
+      
+      </script>
+    </head>
+  <style>
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      overscroll-behavior-x: none;
+      background-color: white;
+      overflow-x: hidden;
+    }
+   
+    /* width */
+    ::-webkit-scrollbar {
+      height: 10px;
+      width: 0px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: white;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background-image: linear-gradient(-45deg, blue, red);
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background-image: linear-gradient(-45deg, blue, red, yellow, green);
+    }
+
+    .Name {
+      color: black;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .Bio {
+      color: black;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .ppro img {
+      width: 210px;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    #box1 {
+      overflow-y: visible;
+      overflow-x: auto;
+      white-space: nowrap;
+      vertical-align: text-top;
+      margin: 0;
+      padding: 0;
+      clear: both;
+      border-spacing: 14px;
+    }
+
+    #box2 {
+      overflow-y: visible;
+      overflow-x: auto;
+      white-space: nowrap;
+      vertical-align: text-top;
+      margin: 0;
+      padding: 0;
+      clear: both;
+      border-spacing: 14px;
+    }
+
+    #box3 {
+      overflow-y: visible;
+      overflow-x: auto;
+      white-space: nowrap;
+      vertical-align: text-top;
+      margin: 0;
+      padding: 0;
+      clear: both;
+      border-spacing: 14px;
+    }
+
+    #box4 {
+      overflow-y: visible;
+      overflow-x: auto;
+      white-space: nowrap;
+      vertical-align: text-top;
+      margin: 0;
+      padding: 0;
+      clear: both;
+      border-spacing: 14px;
+    }
+
+    .item1 {
+      display: table-cell;
+      min-width: 220px;
+      width: 220px;
+      font-size: 120px;
+      border: 2px solid #4AC108;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      white-space: normal;
+      line-height: 1.4;
+      vertical-align: top;
+      text-align: center;
+      box-shadow: 0 0px 5px 0 #555;
+    }
+
+    .item2 {
+      display: table-cell;
+      min-width: 220px;
+      width: 220px;
+      font-size: 120px;
+      border: 2px solid #AA0DD8;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      white-space: normal;
+      line-height: 1.4;
+      vertical-align: top;
+      text-align: center;
+      box-shadow: 0 0px 5px 0 #555;
+    }
+
+    .item3 {
+      display: table-cell;
+      min-width: 220px;
+      width: 220px;
+      font-size: 120px;
+      border: 2px solid #D80DA6;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      white-space: normal;
+      line-height: 1.4;
+      vertical-align: top;
+      text-align: center;
+      box-shadow: 0 0px 5px 0 #555;
+    }
+
+    .item4 {
+      display: table-cell;
+      min-width: 220px;
+      width: 220px;
+      font-size: 120px;
+      border: 2px solid #0D82D8;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      white-space: normal;
+      line-height: 1.4;
+      vertical-align: top;
+      text-align: center;
+      box-shadow: 0 0px 5px 0 #555;
+    }
+
+    .item1:hover {
+      box-shadow: 0 0px 10px 0 #555;
+    }
+
+    .item2:hover {
+      box-shadow: 0 0px 10px 0 #555;
+    }
+
+    .item3:hover {
+      box-shadow: 0 0px 10px 0 #555;
+    }
+
+    .item4:hover {
+      box-shadow: 0 0px 10px 0 #555;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 4px 6px;
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:focus {
+      text-decoration: none;
+    }
+
+    .previous1 {
+      background-color: #4AC108;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .previous1:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .next1 {
+      background-color: #4AC108;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .next1:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .previous2 {
+      background-color: #AA0DD8;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .previous2:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .next2 {
+      background-color: #AA0DD8;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .next2:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .previous3 {
+      background-color: #D80DA6;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .previous3:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .next3 {
+      background-color: #D80DA6;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .next3:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .previous4 {
+      background-color: #0D82D8;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .previous4:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .next4 {
+      background-color: #0D82D8;
+      color: white;
+      padding: 4px 10px;
+    }
+
+    .next4:active {
+      background-color: #555;
+      color: white;
+      text-decoration: none;
+    }
+
+    .next4:hover,
+    .next3:hover,
+    .next2:hover,
+    .next1:hover,
+    .previous4:hover,
+    .previous3:hover,
+    .previous2:hover,
+    .previous1:hover {
+      color: white;
+    }
+
+    h1 {
+      font-size: 40px;
+      background: -webkit-linear-gradient(red, #333);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    footer a {
+      color: #ffd703;
+    }
+
+    footer a:hover {
+      color: #ffd703;
+      text-decoration: underline;
+    }
+
+    footer {
+      font-family: 'Shadows Into Light', sans-sarif;
+      bottom: 0;
+      position: fixed;
+      width: 100%;
+    }
+
+    .sticky {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      height: 86px;
+    }
+
+    .sticky img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .qb a {
+      margin-right: 10px;
+      float: right;
+      color: white;
+      margin-bottom: 2px;
+      text-decoration: none;
+    }
+
+    .qb a:hover {
+      margin-right: 18px;
+      transition: 0.3s;
+    }
+    #falsebacksigup{
+    top:0px;
+   left:0px;
+  width:100%;
+  height:100%;
+  position: fixed;
+  background-color: black;
+  opacity: 0.96;
+  z-index:10000;
+  display: none;}
+  #sigup{cursor: pointer;
+    color:#ecde14;
+    width:70%;
+    max-width:300px;
+    background-color: #4e4e4e;
+    font-size: 18px;
+    border-radius: 40px;
+    bottom:20px;
+    padding:10px;
+    
+  }
+  #sigup:hover{
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  opacity: 0.9;}
+#sigcontainer{
+background-color: transparent !important;
+top:30%;
+width: 100%;
+position: fixed;
+z-index:10000;
+display:none;
+}
+  </style>
+
+  <body onload="typeWriter()">
+    <div id="falsebacksigup"></div>
+    <section>
+     
+    <div align="center" id="sigcontainer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" style="color:white;" class="bi bi-people-fill" viewBox="0 0 16 16">
+        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+      </svg><br><br>
+      
+      <div id="sigup" onclick="deleteAllCookies(); ">
+                  🎭 Sign Up/ Login</div><br>
+                  <p id="commntsm" style="font-family: 'Courier New', Courier, monospace;color:white;"></p>
+                </div> 
+    
+    </section>
+    <!----Nav----->
+    <div class="sticky" style="background-image: linear-gradient(-25deg, blue,red);box-shadow:0 2px 6px grey;border-bottom: 1px solid white;height:80px;">
+      <div align="left" style="padding-bottom:0px;padding-top:6px;">
+        <span><a target="_self" href="../home">
+          <img src="../image/mwfLogo.gif" frameBorder="0" class="titleImg" style="pointer-events: none;float:center;" alt="M W F"></a></span>
+        </div><p class="qb">
+          <a target="_self" href="https://qubit.mwfbiz.com/" style="float:right;padding-bottom:2px;">&#10020; Post or Show QuBit >></a>
+        </p>
+    </div>
+    <!----------------->
+    <div align="center" style="margin-top:120px;">
+      <h1><b>GENESIS</b></h1>
+    </div>
+    <div style="margin:20px;" class="ppro">
+      <h3 style="color: #0D82D8;padding:4px;display:inline-block;" align="left"><b>|| Sports & Games</b></h3><span id="control4"><span style="float:right;display:inline-block;padding-top:18px;"><a id="btnScrollLeftN4" class="next4"> &raquo;</a></span><span style="float:right;padding:0px 4px;display:inline-block;padding-top:18px;"><a id="btnScrollLeftP4" class="previous4">&laquo; </a></span></span>
+      <div>
+        <div id="box4">
+          <div id="PSpgProfile"> </div>
+        </div>
+      </div><br>
+      <h3 style="color:#D80DA6;padding:4px;display:inline-block;" align="left"><b>|| Art & Culture</b></h3><span id="control3"><span style="float:right;display:inline-block;padding-top:18px;"><a id="btnScrollLeftN3" class="next3"> &raquo;</a></span><span style="float:right;padding:0px 4px;display:inline-block;padding-top:18px;"><a id="btnScrollLeftP3" class="previous3">&laquo; </a></span></span>
+      <div>
+        <div id="box3">
+          <div id="PArcProfile"> </div>
+        </div>
+      </div> <br>
+      <h3 style="color:#AA0DD8;padding:4px;display:inline-block;" align="left"><b>|| Enterprising</b></h3><span id="control2"><span style="float:right;display:inline-block;padding-top:18px;"><a id="btnScrollLeftN2" class="next2"> &raquo;</a></span><span style="float:right;padding:0px 4px;display:inline-block;padding-top:18px;"><a id="btnScrollLeftP2" class="previous2">&laquo; </a></span></span>
+      <div>
+        <div id="box2">
+          <div id="PEnProfile"> </div>
+        </div>
+      </div><br>
+      <h3 style="color:#4AC108;padding:4px;display:inline-block;"><b>|| Societal</b></h3><span id="control1"><span style="float:right;display:inline-block;padding-top:18px;"><a id="btnScrollLeftN1" class="next1"> &raquo;</a></span><span style="float:right;padding:0px 4px;display:inline-block;padding-top:18px;"><a id="btnScrollLeftP1" class="previous1">&laquo; </a></span></span>
+      <div>
+        <div id="box1">
+          <div id="PProfile"> </div>
+        </div> <br>
+      </div>
+    </div><br>
+    <p class="qb"><a onclick="goBack()" style="text-align:right;padding-bottom:2px;cursor:pointer;color:black;margin-top:0px;">&#10020; Go Back >></a></p><br><br><br>
+    <!--------Footer----->
+    <footer style="background:black;">
+      <div align="center" style="background:black;padding:10px;min-height:40px;">
+        <p><span style="float:left;"><a href="mailto:info@mwfbiz.com">info@mwfbiz.com</a></span><span style="color:#f0f0f0;float:right;">© 2022 by <b>m W F BIZ</b></span></p>
+      </div>
+    </footer>
+    <!--------Footer----->
+    <script src="../genesis/ppro-social.js"></script>
+    <script src="../genesis/ppro-ac.js"></script>
+    <script src="../genesis/ppro-sg.js"></script>
+    <script src="../genesis/ppro-en.js"></script>
+    <script>
+      jQuery(function(jQuery) {
+        jQuery.fn.hScroll = function(amount) {
+          amount = amount || 120;
+          jQuery(this).bind("DOMMouseScroll mousewheel", function(event) {
+            var oEvent = event.originalEvent,
+              direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+              position = jQuery(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            jQuery(this).scrollLeft(position);
+            event.preventDefault();
+          })
+        };
+      });
+      jQuery(document).ready(function() {
+        jQuery('#box1').hScroll(20);
+      });
+
+    </script>
+    <script>
+      jQuery(function(jQuery) {
+        jQuery.fn.hScroll = function(amount) {
+          amount = amount || 120;
+          jQuery(this).bind("DOMMouseScroll mousewheel", function(event) {
+            var oEvent = event.originalEvent,
+              direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+              position = jQuery(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            jQuery(this).scrollLeft(position);
+            event.preventDefault();
+          })
+        };
+      });
+      jQuery(document).ready(function() {
+        jQuery('#box2').hScroll(20);
+      });
+
+    </script>
+    <script>
+      jQuery(function(jQuery) {
+        jQuery.fn.hScroll = function(amount) {
+          amount = amount || 120;
+          jQuery(this).bind("DOMMouseScroll mousewheel", function(event) {
+            var oEvent = event.originalEvent,
+              direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+              position = jQuery(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            jQuery(this).scrollLeft(position);
+            event.preventDefault();
+          })
+        };
+      });
+      jQuery(document).ready(function() {
+        jQuery('#box3').hScroll(20);
+      });
+
+    </script>
+    <script>
+      jQuery(function(jQuery) {
+        jQuery.fn.hScroll = function(amount) {
+          amount = amount || 120;
+          jQuery(this).bind("DOMMouseScroll mousewheel", function(event) {
+            var oEvent = event.originalEvent,
+              direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+              position = jQuery(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            jQuery(this).scrollLeft(position);
+            event.preventDefault();
+          })
+        };
+      });
+      jQuery(document).ready(function() {
+        jQuery('#box4').hScroll(20);
+      });
+
+    </script>
+    <script>
+      var control = document.querySelector('#control1');
+      control.addEventListener('click', function(e) {
+        var div = document.getElementById('box1');
+        var target = e.target;
+        switch (target.id) {
+          case 'btnScrollLeftN1':
+            div.scrollLeft += 255;
+            break;
+          case 'btnScrollLeftP1':
+            div.scrollLeft -= 255;
+            break;
+        }
+      });
+      var control = document.querySelector('#control2');
+      control.addEventListener('click', function(e) {
+        var div = document.getElementById('box2');
+        var target = e.target;
+        switch (target.id) {
+          case 'btnScrollLeftN2':
+            div.scrollLeft += 255;
+            break;
+          case 'btnScrollLeftP2':
+            div.scrollLeft -= 255;
+            break;
+        }
+      });
+      var control = document.querySelector('#control3');
+      control.addEventListener('click', function(e) {
+        var div = document.getElementById('box3');
+        var target = e.target;
+        switch (target.id) {
+          case 'btnScrollLeftN3':
+            div.scrollLeft += 255;
+            break;
+          case 'btnScrollLeftP3':
+            div.scrollLeft -= 255;
+            break;
+        }
+      });
+      var control = document.querySelector('#control4');
+      control.addEventListener('click', function(e) {
+        var div = document.getElementById('box4');
+        var target = e.target;
+        switch (target.id) {
+          case 'btnScrollLeftN4':
+            div.scrollLeft += 255;
+            break;
+          case 'btnScrollLeftP4':
+            div.scrollLeft -= 255;
+            break;
+        }
+      });
+
+      function goBack() {
+        window.open('https://www.mwfbiz.com','_self');
+      }
+
+    </script>
+      <script>
+        window.addEventListener("online", function() {
+          location.reload();
+        });
+  
+        window.addEventListener("offline", function() {
+          document.body.style.background = "black";document.body.style.fontFamily = "Arial";
+          document.body.style.height = "100%";
+          document.body.innerHTML = "<div align='center' style='padding:10px;'><div style='border-radius:10px;max-width:400px;margin-top:120px;border:none;box-shadow:0 2px 6px 0 grey;padding:40px;color:white;'><p style='font-size:40px'>&#9785;</p><h2 style='padding:20px;'>No Internet</h2></div><div align='center'><h3 style='color:white;padding-top:80px;'>Mind Without Fear | M W F</h3></div></div>"
+        });
+  
+      </script>
+       <form name="gform" id="glocform" enctype="text/plain" style="display:none;" action="https://docs.google.com/forms/d/e/1FAIpQLSf5PcdCkDENQ58q3_J01VGFgHURQQyP8AVHkMtxgiE28d9AkA/formResponse?" target="hidden_iframe" onsubmit="return false;"><input id="entry.478650065" name="entry.478650065" /><input id="entry.1282852792" name="entry.1282852792" /><input id="entry.377350750" name="entry.377350750" /><input id="entry.1133528172" name="entry.1133528172" /></form><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script>
+       <script>
+         $.getJSON("https://api.ipify.org?format=json", function(data) {
+           document.getElementById('entry.478650065').value = data.ip;
+         });
+         var loca = moment.tz.guess();
+         var res = loca.split("/", 1);
+         document.getElementById('entry.1282852792').value = moment.tz.guess();
+         document.getElementById('entry.1133528172').value = window.location.href;
+         document.getElementById('entry.377350750').value = new Date();
+         setTimeout(function() {
+           logvisited()
+         }, 4000);
+       
+         function logvisited() {
+           var ipadds = $('#entry.478650065').val();
+           var locadds = $('#entry.1282852792').val();
+           var timeadds = $('#entry.377350750').val();
+           if (ipadds != 0 && locadds != 0 && timeadds != 0) {
+             document.forms["glocform"].submit();
+           }
+         }
+       </script>
+         <script>
+          var i = 0;
+          var txt = 'Thank you for visiting. Have a nice day. ';
+          var speed = 200;
+          
+          function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("commntsm").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);  
+            }
+            
+            else if(i = txt.length){
+              i= 0;
+              document.getElementById("commntsm").innerHTML = "";
+             document.getElementById("commntsm").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);  
+            }
+          }
+                </script>
+          <noscript>
+            Your browser does not support JavaScript!
+          </noscript>
+  </body>
+
+</html>
