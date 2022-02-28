@@ -93,6 +93,9 @@ function removeSpaces(string) {
 }
 
 
+
+formsign.addEventListener('submit', (event) => {
+  
 const formsign = document.getElementById('formsign');
 const first = formsign.elements[0];
 const last = formsign.elements[1];
@@ -116,8 +119,6 @@ const requiredFields = [{
   }
 
 ];
-
-formsign.addEventListener('submit', (event) => {
   let valid = true;
   requiredFields.forEach((input) => {
     valid = requireValue(input.input, input.message);
