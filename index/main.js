@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 5,099/- per month</p><p>👉 Visitor Pass 199/- a day</p>";
+    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 5,099/- per month</p>";
     });
 
 $('#promodiv_l').click(function(){
