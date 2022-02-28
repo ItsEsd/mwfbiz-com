@@ -294,7 +294,7 @@ function onClick() {
   }
 }
 jQuery('#gbtn').on('click', function() {
-
+/*
  var optionsv = {
     "key": "rzp_live_zeJJQym7llbiEc",
     "amount": "19900",
@@ -332,12 +332,13 @@ jQuery('#gbtn').on('click', function() {
   var rzpv = new Razorpay(optionsv);
   rzpv.open();
   e.preventDefault(); 
- /* var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
+  */
+  var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
   var uid = window.btoa(String(gid));
   guSetCookie(1,uid);
   setTimeout(function() {
     window.open("../home", "_self");
-  }, 2000); */
+  }, 2000); 
 
 });
 
