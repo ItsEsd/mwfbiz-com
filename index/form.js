@@ -92,7 +92,7 @@ function removeSpaces(string) {
   return string.split(' ').join('');
 }
 
-/*
+
 const formsign = document.getElementById('formsign');
 const first = formsign.elements[0];
 const last = formsign.elements[1];
@@ -115,7 +115,7 @@ const requiredFields = [{
     message: 'Please Enter the Captcha Text'
   }
 
-]; */
+];
 
 formsign.addEventListener('submit', (event) => {
   let valid = true;
