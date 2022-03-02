@@ -1122,18 +1122,21 @@
       color: white;
       float: right;
       font-size: 40px;
-      font-weight: 280;
+      font-weight: 400;
       padding-right: 2px;
       padding-left: 4px;
+      padding:23px;
       border-color: none;
-      background-color: #dd1d16;
+      background-color: #720505;
+
+
     }
 
     .close:hover,
     .close:focus {
       color: white;
       text-decoration: none;
-      cursor: pointer;
+      cursor: pointer; background-color: #e92828;
     }
 
     .facebook-responsive {
@@ -1520,12 +1523,22 @@
       text-decoration: none;
       font-size: 20px;
     }
-
+#myModal{
+  width: 100%;
+  padding:10px;
+}
+#hififood{
+  width: 100%;
+  max-width: 800px;
+}
     #HappyIndex {
-      max-width: 1200px;
+      max-width: 800px;
       font-family: 'Shadows Into Light', sans-sarif;
     }
-
+#HappyIndex iframe{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
     .hpinImg {
       width: 100%;
       max-width: 600px;
@@ -1769,8 +1782,8 @@
     }
 
     .cstick {
-      position: fixed;
-      top: 20px;
+      position: absolute;
+      top: 24px;
       right:0px;
     }
     #sigup{cursor: pointer;
