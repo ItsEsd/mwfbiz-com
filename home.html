@@ -73,11 +73,9 @@
         </center>
       </section>
       <!----Nav----->
-      <div id="imgdoge" style="display:none;">
-        <div id="info" style="display:none;"> <span style="float:left;">DOGE URI: <input class="dogeuri" disabled value="dogecoin:D76dZRpmw9VSjrVFKfzahFRnNyKJXZP9nq" /> </span></div> <img class="dogeimg" onclick="$('#info').toggle();" style="display:none;" src="image/mdoge.png" alt="DOGE">
-      </div>
-      <div id="imgcon"><a target="_self" href="feedback/"><img class="mwimg" src="image/imgicon.gif" alt="MWFBIZ"></a><br>
-        <p style="margin-top:6px;margin-left:-4px;font-size: 12px;color: khaki;text-align: center;font-family: 'Courier New', Courier, monospace;">Feedback</p>
+      
+      <div id="imgcon"><img class="mwimg" src="image/imgicon.gif" alt="MWFBIZ"><br>
+        <div id="bizprost"><div id="bizuserin"></div></div>
       </div>
       <!--------------------------------->
       <section style="display:none;" id="gamesec">
@@ -148,9 +146,9 @@
               <div class="card">Featured</div>
             </a> <a target="_self" href="reel-random/">
               <div class="card">Reel Random</div>
-            </a> <a onclick="closeNav();document.getElementById('imgdoge').style.display='none';document.body.scrollTop = 0;document.documentElement.scrollTop = 0; document.getElementById('imgcon').style.display='none'; document.getElementById('otherEx').style.display='block';">
+            </a> <a onclick="closeNav();document.body.scrollTop = 0;document.documentElement.scrollTop = 0; document.getElementById('imgcon').style.display='none'; document.getElementById('otherEx').style.display='block';">
               <div class="card">Spoiler</div>
-            </a> <a target="_self" onclick="openNav();document.getElementById('imgdoge').style.display='block';document.getElementById('imgcon').style.display='block';$('#otherEx').style.display='block';">
+            </a> <a target="_self" id="bizadmnsh">
               <div class="card"><span style="font-size: 16px;">BIZ Admin &#8250;&#8250;</span></div>
             </a> </div>
           <div id="audioG" align="center"><br>
@@ -184,13 +182,10 @@
             </a> </div>
         </div>
       </section>
-      <div id="mySidenav" onclick="closeNav(); document.getElementById('imgdoge').style.display='none';document.body.scrollTop = 0;document.documentElement.scrollTop = 0;document.getElementById('imgcon').style.display='none';" class="sidenav"> <a target="_blank" href="about/">About</a> <a target="_blank" href="privacy-policy/">Privacy Policy</a> <a target="_blank" href="youtube-mini/">YouTube Mini</a> <a target="_blank" href="biz-admin/" style="font-size:18px;">M O N O L O G U E - Admin</a>
+      <div id="mySidenav" onclick="closeNav();document.body.scrollTop = 0;document.documentElement.scrollTop = 0;document.getElementById('imgcon').style.display='none';" class="sidenav" align="center"> 
+        <a target="_blank" href="about/">About</a> <a target="_blank" href="privacy-policy/">Privacy Policy</a> <a target="_blank" href="youtube-mini/">YouTube Mini</a> <a target="_blank" href="biz-admin/" style="font-size:18px;">M O N O L O G U E - Admin</a>
         <div class="glow">
           <p style="font-family: 'Shadows Into Light', sans-sarif;font-size:40px;">!! mind Without Fear !!</p>
-        </div>
-        <div align="center" id="navFoot">
-          <p><span style="color:#66ff33;float:center;float:right;" data-toggle="mmodal">© 2022 by <b>m W F BIZ</b></span></p>
-          <p></p>
         </div>
       </div>
     </div>
@@ -220,15 +215,17 @@
     </section>
     <!------------------------------->
     <section>
-      <div id="radiomwf" onclick="$('#frameradio').toggle();" title="Online Radio">
+      <div id="radiomwf" onclick="$('#frameradio').toggle('slow');" title="Online Radio">
         <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
             <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z" /></svg></p>
         <p>......</p>
       </div>
-      <div id="frameradio"> <span id="spclose" style="top:70px;right:24px;position: absolute;cursor: pointer;" onclick="$('#frameradio').hide();"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+      <div id="frameradio"> <span id="spclose" onclick="$('#frameradio').hide();"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /> </svg></span> <span id="spright" style="top:106px;right:24px;position: absolute;cursor: pointer;" onclick="$('#spright').hide();$('#spleft').show();document.getElementById('fmr').src='https://tunein.com/radio/home/';"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" /> </svg></span> <span id="spleft" style="top:106px;right:24px;position: absolute;cursor: pointer;display: none;" onclick="$('#spright').show();$('#spleft').hide();document.getElementById('fmr').src='https://onlineradiofm.in';"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /> </svg></span>
+            <span id="spright" onclick="$('#spright').hide();$('#spleft').show();document.getElementById('fmr').src='https://tunein.com/radio/home/';"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" /> </svg></span> 
+            <span id="spleft" onclick="$('#spright').show();$('#spleft').hide();document.getElementById('fmr').src='https://onlineradiofm.in';"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" /> </svg></span><iframe id="fmr" src="https://onlineradiofm.in" width="100%" height="100%" frameborder="0"></iframe>
         <div></div>
       </div>
@@ -261,6 +258,7 @@
       </div>
     </section>
     <!--------Footer----->
+    <span id="fdbackhm"><a target="_blank" href="feedback/">Feedback</a></span>
     <footer style="background:black;">
       <div> <span data-toggle="modal" data-target="#mmodal" style="position:fixed;bottom:36px;float:left;left:20px;"><img src="image/color-widgets.png" width="70px;" style="cursor:pointer;" class="widimg"></span></div>
       <div align="center" style="background:black;padding:20px;min-height:60px;">
@@ -388,6 +386,9 @@
 
     </script>
     <script>
+      jQuery("#bizadmnsh").click(function(){
+       openNav();
+       });
       function HBack() {
         window.open('https://www.mwfbiz.com', '_self');
       }
