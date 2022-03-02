@@ -146,7 +146,7 @@
               <div class="card">Featured</div>
             </a> <a target="_self" href="reel-random/">
               <div class="card">Reel Random</div>
-            </a> <a onclick="closeNav();document.body.scrollTop = 0;document.documentElement.scrollTop = 0; document.getElementById('imgcon').style.display='none'; document.getElementById('otherEx').style.display='block';">
+            </a> <a onclick="closeNav();document.body.scrollTop = 0;document.documentElement.scrollTop = 0; document.getElementById('imgcon').style.display='none'; $('#otherEx').slideDown('slow');">
               <div class="card">Spoiler</div>
             </a> <a target="_self" id="bizadmnsh">
               <div class="card"><span style="font-size: 16px;">BIZ Admin &#8250;&#8250;</span></div>
@@ -254,7 +254,7 @@
           </div>
           <hr style="width:100%;border-width:2px;max-width:1200px;"> <br>
         </div>
-        <p><a class="hm" onclick="document.getElementById('otherEx').style.display= 'none';document.body.scrollTop = 0;document.documentElement.scrollTop = 0;">Close</a></p> <br><br>
+        <p><a class="hm" onclick="$('#otherEx').slideUp('slow');document.body.scrollTop = 0;document.documentElement.scrollTop = 0;">Close</a></p> <br><br>
       </div>
     </section>
     <!--------Footer----->
