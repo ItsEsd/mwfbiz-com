@@ -71,18 +71,19 @@
     z-index: 1;
   }
   .hm{
+    width:100%;
     font-family: 'Courier New', Courier, monospace;
     color:white;
-    background-color: #e93b35;
+    background-color: #816f07;
     padding:4px 10px;
-    margin-bottom: 80px;
-    margin-right:10px;
-    float:right;
     font-size: 14px;
     cursor: pointer;
+    bottom:60px;
+    left:0px;
+    position: fixed;
   }
  .hm:hover{
-  background-color: #dd2f29;
+  background-color: #534805;
  }
  .dogeuri{
      min-width:300px;
