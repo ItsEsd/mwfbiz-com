@@ -1651,14 +1651,6 @@
       width: 100%;
     }
 
-    #navFoot {
-      bottom: 0;
-      position: fixed;
-      width: 100%;
-      padding: 20px;
-      display: none;
-    }
-
     audio {
       -webkit-transition: all 0.5s linear;
       -moz-transition: all 0.5s linear;
@@ -1696,9 +1688,9 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #111111f8;
+      background-color: #0f0f0ffd;
       overflow-x: hidden;
-      padding-top: 140px;
+      padding-top: 120px;
     }
 
     .sidenav a {
@@ -1707,11 +1699,14 @@
       font-size: 24px;
       color: #818181;
       display: block;
-      text-align: center;
+      text-align: left;
+      max-width:600px;
+      border-bottom: 1px solid #1f1e1eee;
     }
 
     .sidenav a:hover {
       color: #f1f1f1;
+      background-color: #1f1e1eee;
     }
 
     .sidenav .closebtn {
@@ -1737,6 +1732,7 @@
     }
 
     .glow {
+      margin-top:30px;
       color: #fff;
       text-align: center;
       animation: glow 1s ease-in-out infinite alternate;
