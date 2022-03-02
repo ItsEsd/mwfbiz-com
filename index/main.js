@@ -5,4 +5,4 @@ $(document).ready(function(){
 $('#promodiv_l').click(function(){
     $('#promodiv').fadeOut('fast');
     document.getElementById('promodiv').style.height = '0px';
-})
+});
