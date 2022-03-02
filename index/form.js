@@ -262,7 +262,7 @@ logmwf.addEventListener('submit', (event) => {
   } else {
     return false;
   }
-
+console.log(url);
 });
 
 function userfound(e) {
