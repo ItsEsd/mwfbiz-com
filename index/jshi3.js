@@ -42,8 +42,9 @@
     $.getJSON(url, function(json) {
         var m = Math.floor((Math.random() * json.records.length) + 0);
 
-        document.getElementById("HappyIndex").innerHTML = '<div align="center" style="color:#DD161D; font-size:20px;">' + 
+        document.getElementById("HappyIndex").innerHTML = '<div align="center">' + 
         json.records[m].HappyIn + '</div>'; 
+        console.log(json);
         
     });
     });
