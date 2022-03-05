@@ -29,7 +29,7 @@
 <body>
   <div align="center" id="signbot">
     <center><img width="100%" style="padding:20px;max-width: 600px;" src="bizbitpic.gif">  </center> 
-    <form id="bizbotfrm" onsubmit="return false;">
+    <form id="bizbotfrm" target="hiddenframe">
     <input class="form-control" type="password" placeholder="************************" id="bbotpass" style="width:300px;text-align: center;" required><br>
     <input type="submit" value="Go >>" class="btn btn-primary" style="padding:6px 130px;">
     </form>
@@ -56,5 +56,6 @@
 </section>
 <div align = "center"><hr style="width:60%;max-width:600px;"><h4 style="color:#505050;padding-top:0px;font-weight: 600;">M W F BIZ</h4></div>
 <script src="script.js"></script>
+<iframe name="hiddenframe" id="hiddenframe" style="display:none;"></iframe>
 </body>
  </html>
