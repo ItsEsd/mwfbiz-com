@@ -335,7 +335,7 @@ jQuery('#gbtn').on('click', function() {
   e.preventDefault(); 
   */
   var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-  var uid = window.btoa(String(gid));
+  var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
   guSetCookie(1,uid);
   setTimeout(function() {
     window.open("../home", "_self");
