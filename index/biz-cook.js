@@ -53,18 +53,14 @@ function getCookie(cname) {
         else if(usergu != ""){
             setTimeout(function(){
                 $('#falsebacksigup').fadeIn('fast');
-                $('#sigcontainer').fadeIn('fast');
-              document.getElementById('falsebacksigup').style.display = "block";
-              document.getElementById('sigcontainer').style.display = "block";},
-              1000);
+                $('#sigcontainer').fadeIn('fast');},
+              000);
               }
            else if(userel != ""){
             setTimeout(function(){
               $('#falsebacksigup').fadeIn('fast');
-              $('#sigcontainer').fadeIn('fast');
-            document.getElementById('falsebacksigup').style.display = "block";
-            document.getElementById('sigcontainer').style.display = "block";},
-            1000); 
+              $('#sigcontainer').fadeIn('fast');},
+            000); 
               } 
               else {
                 window.open("../", "_self"); 
