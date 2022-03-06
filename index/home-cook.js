@@ -114,7 +114,6 @@ var request = jQuery.ajax({
 
 function profetch(e){
 var res = e.records;
-console.log(res);
 if(res!="ID not found!"){
 document.getElementById('bizuserin').innerHTML ="<div class='bizusrp'>BIZ user: "+res[0].FirstName+" "+res[0].LastName+"<br>User email: "+res[0].Email+"</div>";
 document.getElementById('bizprost').style.backgroundImage = "none";
