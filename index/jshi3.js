@@ -44,7 +44,6 @@
 
         document.getElementById("HappyIndex").innerHTML = '<div align="center">' + 
         json.records[m].HappyIn + '</div>'; 
-        console.log(json);
         
     });
     });
