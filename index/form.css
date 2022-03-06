@@ -39,7 +39,10 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
-
+  .animback div{
+    padding-top:10px;
+    padding-bottom:10px;
+}
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -56,8 +59,8 @@ body {
 
   .animcon {
     background: linear-gradient(-75deg, blue,#08cf08);
-    background-size: 150% 150%;
-    animation: gradient2 15s ease infinite;
+    background-size: 200% 200%;
+    animation: gradient2 15s ease infinite;   z-index:2;
   }
 
   @keyframes gradient2 {
@@ -75,12 +78,6 @@ body {
   }
 
 
-#container {
-    background-image:linear-gradient(-45deg, #fa3c3c,#b1ce10); 
-    border-radius: 20px; margin-top:-80px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    width: 90%; max-width:600px; min-height:240px; box-shadow: 0 2px 8px 1px #727272;;
-}
 
 form {
     max-width: 600px;
@@ -225,7 +222,19 @@ z-index: 999;
     width:50px;
     border-radius:6px;
     z-index: 301;}
-
+#promodiv{
+  transition: 0.5s;
+  display:block;
+  z-index:4;
+  background-color:black;
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity: 0.96;
+  top:0px;
+  left:0px;
+  position:fixed;
+}
     #promodiv_l{
       bottom:60px;
       right:20px;
@@ -293,3 +302,54 @@ transform: scale(1.04);
         font-size: 16px;
         font-family: 'Courier New', Courier, monospace;
       }
+      .bizinface{
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        position: absolute;
+      }
+      .bizfacecon{
+      color:white;
+      padding-top:140px;
+      padding-left:40px;
+      padding-bottom:40px;
+      text-align: right; 
+      width:100%;
+      max-width:600px;
+      display: inline-block;
+      }
+      .bizfacecon-tw{
+        margin:10px;
+        margin-top:80px; 
+        max-width:600px;
+        float:right;
+      }
+
+      
+#container {
+  background-image:linear-gradient(-45deg, #fa3c3c,#b1ce10); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px; 
+  box-shadow: 0 2px 8px 1px #727272;
+}
+.bizfacecon h1{
+  text-align:left;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+.bizfacecon h4{
+  margin-top:20px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+  padding-right: 10px;
+}
+.sptttds{
+  font-size: 60px;
+  font-weight: 600;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
