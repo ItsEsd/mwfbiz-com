@@ -83,20 +83,45 @@
   <body onload="GenerateCaptcha();" class="animbody">
     <!----Nav----->
     <header>
-      <div style="margin:0px;display:block;">
+      <div class="sticky">
         <div class="animback">
-          <div align="center"><img src="image/mwfLogo.gif" frameBorder="0" id="titleImg" style="pointer-events: none;float:center;" alt="M W F BIZ" /></div>
+          <div><img src="image/mwfLogo.gif" frameBorder="0" id="titleImg" alt="M W F BIZ" /></div>
         </div>
+       
       </div>
     </header>
     <div id="butter"><img src="https://media0.giphy.com/media/8Wak0dQZbKmwf9eJCj/giphy.gif"> </div>
     <!----------------->
+   
+   <div class="bizinface">
+  
+   
+ 
+  <div class="bizfacecon" align="center">
+    <h1><span class="sptttds">E</span>nhancing<br><span class="sptttds">S</span>ocietal <span class="sptttds">V</span>alues</h1>
+    <h4>Powering Brands, Personalities, Pedagogy, Culture, Ethics, and Environment</h4>
+    <div id="periinfomwf"> 
+      <span><a href="about/">&#9673; About</a></span> 
+      <span><a href="https://feed.mwfbiz.com">&#9673; M W F BIZ Feed Gist</a></span> 
+      <span><a href="privacy-policy/">&#9673; Privacy Policy</a></span>
+      <br><p id="accrecov" title="Account Recovery"><a href="reset-pass/">🔐</a></p> 
+    </div>
+     
+  </div>
+    
+   
+   <div class="bizfacecon-tw" align="center" >
     <div id="container" class="animcon">
       <form id="formsign" target="hiddenfrm">
-        <h1><b>W E L C O M E</b></h1> <small></small> <input type="text" style="text-transform: capitalize;" id="fname" placeholder="First Name" required> <small></small> <input type="text" style="text-transform: capitalize;" id="lname" placeholder="Last Name" required> <small></small> <input type="email" id="emailid" placeholder="Enter Email Address" required> <small></small> <input type="text" id="txtCompare" placeholder="Enter the Captcha Text" autocomplete="off" required /> <input type="text" id="txtCaptcha" disabled /> <input type="button" id="chngcap" onclick="GenerateCaptcha()" style="width:18%;float:right;font-size:18px;" value="&#8635;" /> <input type="submit" onclick="gonextver()" id="signup" value="Sign up >>">
-        <div id="loader_e"> <img src="image/loader-log.gif" style="padding:0px;background-color: transparent;width:50px;border-radius:6px;"></div> <span id="loginmwf" style="float:right;padding:10px;font-size:16px;cursor:pointer;color:white;">Login <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="padding-top:0px;" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
-            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" /> </svg></span><span style="float:left;padding:10px;"><a href="reset-pass/" style="color:#000000;text-decoration: none;">Forgot Passcode?</a></span> <input id="flagSign" style="display:none;" />
+        <span id="loginmwf" style="cursor:pointer;">Login <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+          <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" /> </svg>
+        </span>
+        <hr>
+        <input type="text" style="text-transform: capitalize;" id="fname" placeholder="First Name" required> <small></small> <input type="text" style="text-transform: capitalize;" id="lname" placeholder="Last Name" required> <small></small> <input type="email" id="emailid" placeholder="Enter Email Address" required> <small></small> <input type="text" id="txtCompare" placeholder="Enter the Captcha Text" autocomplete="off" required /> <input type="text" id="txtCaptcha" disabled /> <input type="button" id="chngcap" onclick="GenerateCaptcha()" style="width:18%;float:right;font-size:18px;" value="&#8635;" /> <input type="submit" onclick="gonextver()" id="signup" value="Sign up >>">
+        <div id="loader_e"> <img src="image/loader-log.gif" style="padding:0px;background-color: transparent;width:50px;border-radius:6px;"></div>
+     
+        <input id="flagSign" style="display:none;" />
       </form>
       <form id="veremail" style="display: none;" target="hiddenfrm">
         <h1 style="font-family: 'Shadows Into Light', sans-sarif;font-size:28px;color:white;">Confirm Email</h1> <input id="vercode" type="text" placeholder="Enter Confirmation Code" required /> <input id="vercodepre" type="text" disabled style="display:none;" /> <span id="rescode" onclick="sendEmail();onClick();" style="float:right;color:white;padding-bottom:4px;cursor: pointer;">Resend Code</span>
@@ -122,8 +147,21 @@
         </div>
       </form>
     </div> 
+
+    <p id="cprght">  <span id="showpromodiv">🔽</span>  © 2022 by <b>m W F BIZ</b></p>
+ 
+  </div>
+   
+  
+
+
+</div>
+
+
+
+
     <iframe name="hiddenfrm" id="hiddenfrm" style="display:none;"></iframe>
-    <div style="bottom:68px;position:fixed;z-index:0;" align="center" id="periinfomwf"> <span style="bottom:65px;margin-right:6px;"><a href="about/">&#9673; About</a></span> <span style="bottom:65px;margin-right:6px;"><a href="https://feed.mwfbiz.com">&#9673; M W F BIZ Feed Gist</a></span> <span style="bottom:65px;"><a href="privacy-policy/">&#9673; Privacy Policy</a></span> <span></span> </div>
+   
     <div style="display:none;">
       <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeNP9HWI8C12PiBaEs7f4VJt8LwW_p9gZ_vBr_UotY6ZQXc9w/formResponse?" target="hidden_iframe" onsubmit="submitted=true;"> 
         First name:<br> <input type="text" name="entry.94444331" id="entry.94444331"><br> 
@@ -135,15 +173,15 @@
     </div><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     <div id="seclog"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /></svg> User Email already Registered</div>
-    <div id="promodiv" style="transition: 0.5s;display:block;z-index:4;background-color:black;width:100%;height:100%;background-color: black;opacity: 0.94;top:0px;left:0px;position:fixed;">
+    <div id="promodiv">
       <div class="container">
         <h2 style="color:white;padding-top:40px;">H E L L O</h2>
         <h2 style="color:white;padding-left:0px;">W E L C O M E ..✨</h2>
       </div>
-      <div class="animback" style="border-top:2px solid white;border-bottom:2px solid white;width:100%;height:220px;top:200px;left:0px;position:absolute;background-image: linear-gradient(-45deg,purple,#ce1414);" align="center">
+      <div class="animback" id="bizdivcon" align="center">
         <!-- <h2 style="color:white;padding-left:0px;font-size: 30px;">🤩 www.mwfbiz.com 😎</h2> -->
         <h2 style="color:white;padding-left:0px;font-size: 30px;">🎭</h2>
-        <h2 style="color:white;padding-left:0px;font-size: 24px;">M O N O L O G U E - IMI</h2>
+        <h2 style="color:white;padding-left:0px;font-size: 24px;"><a href="https://imi.mwfbiz.com" target="_self">M O N O L O G U E - IMI</a></h2>
         <h2 style="color:white;padding-left:0px;font-size: 18px;">Ontology Based Data Management Service</h2>
         <h2 style="color:#ffd904;padding-left:0px;font-size: 24px;">|| Mind Without Fear | M W F ||</h4>
           <div id="premiumpromo" align="center">
