@@ -1,18 +1,28 @@
-header,
+
 .sticky {
   width: 100%;
   position: fixed;
-  bottom: 0 !important;
-  left: 0;
+  top: 0px;
+  left: 0px;
   border: none;
   margin-bottom: 0px;
+  box-shadow: 0px 4px 20px 0px #ffffff5d;
+  z-index: 2;
+  border-bottom:1px solid #ffffffb7;
 }
 
 #titleImg {
   width: 100%;
   max-width: 310px;
+  pointer-events: none;
+  padding-left:6px;
+  padding-bottom:2px;
 }
-
+#periinfomwf{
+  width:100%;
+  z-index:0;
+  padding-right: 10px;
+}
 #periinfomwf a {
   text-decoration: none;
   color: #272626;
@@ -29,10 +39,7 @@ header,
     font-size: 30px;
     cursor:pointer;
 }
-.animback div{
-    padding-top:10px;
-    padding-bottom:10px;
-}
+
 
 #butter{
     top:0px;left:0px;
@@ -41,12 +48,59 @@ header,
 #butter img{
     width:300px;height:600px;pointer-events: none;
 }
-.animcon{
-    z-index:2;
-}
+
 
 #formsign h1{
     margin-top:4px;
     font-family: 'Shadows Into Light', sans-sarif;
     font-size:28px;color:white;
+}
+#loginmwf{
+  font-size:24px;
+  color:white;
+  cursor:pointer;
+}
+
+header span{
+  cursor: pointer;
+}
+
+#accrecov{
+top:0px;
+right:0px;
+position: fixed;
+font-size:30px;
+cursor: pointer;
+padding:9px;
+z-index: 3;
+border-left:1px solid #e2dddd85;
+}
+#cprght{
+  margin-top:20px;
+  font-weight:600;
+  text-align: right;
+  font-family: 'Shadows Into Light', sans-sarif;
+  color:#0f0e0ede;
+} 
+
+#showpromodiv{
+  width:60px;
+  height:60px;
+  font-size:16px;
+  cursor: pointer;
+}
+
+#bizdivcon{
+  border-top:2px solid white;
+  border-bottom:2px solid white;
+  width:100%;height:220px;top:200px;
+  left:0px;position:absolute;
+  background-image: linear-gradient(-45deg,purple,#ce1414);
+}
+#bizdivcon a{
+  color:white;
+}
+#bizdivcon a:hover,#bizdivcon a:active,#bizdivcon a:focus{
+  color:#ecc513e8;
+  text-decoration: none;
 }
