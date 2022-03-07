@@ -1222,6 +1222,7 @@
         flex: 50%;
         max-width: 50%;
       }
+    
     }
 
     @media screen and (max-width: 600px) {
@@ -1230,6 +1231,7 @@
         flex: 100%;
         max-width: 100%;
       }
+
     }
 
     .p1 {
