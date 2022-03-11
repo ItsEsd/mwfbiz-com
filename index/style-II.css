@@ -141,11 +141,7 @@
  }
  #closespon{
   font-size:16px;
-  float:left;
-  padding:2px;
-  padding-bottom:0px;
-  padding-right:6px;
-  padding-left:6px;
+  padding:2px 10px;
   cursor: pointer;
   border:none;
  background-color:#464343;
