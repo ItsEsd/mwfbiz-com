@@ -92,9 +92,10 @@
 
   <body onload="myFunction();typeWriter();" style="margin:0;">
     <!----Nav----->
-    <div class="stickytitle">
-      <div align="left" style="padding-bottom:10px;padding-top:10px;padding-left: 6px;"><a target="_self" href="../home"><img src="../image/mwfLogo.gif" frameBorder="0" id="titleImg" style="pointer-events: none;float:center;" alt="M W F"></a></div><span class="qb"><a target="_self" href="https://qubit.mwfbiz.com/" style="float:right;padding-bottom:2px;color: #d6d6d6;">&#10020; Post or Show QuBit >></a></span>
-    <br></div>
+    <div class="stickytitle" id="headtit">
+      <div align="left"><a target="_self" href="../home"><img src="../image/mwfLogo.gif" frameBorder="0" id="titleImg" style="pointer-events: none;float:center;" alt="M W F"></a></div>
+      <span class="qb"><a target="_self" href="https://qubit.mwfbiz.com/">&#10020; Post or Show QuBit >></a></span>
+ </div>
     <!----------------->
     <div id="lds-spinner">
       <div></div>
@@ -134,7 +135,8 @@
     </div>
     <div id="tsrp" style="background-image: linear-gradient(-25deg, #009900,#ffff00,orange);height:70px;">
       <h3 style="padding:20px;"><span id="togBtn" style="float:right;color:white;cursor:pointer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-collapse" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z" /></svg></span><b> #Toss & Repeat</b></h3><span class="qb"><a onclick="goBack()" style="float:right;padding-bottom:2px;cursor:pointer;color:white;">&#10020; Go Back >></a></span>
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z" /></svg></span><b> #Toss & Repeat</b></h3>
+            <span class="qbgbck"><a onclick="goBack()" style="float:right;padding-bottom:2px;cursor:pointer;color:white;">&#10020; Go Back >></a></span>
     </div>
     <hr>
     <div class="container" align="center" id="togBdy" style="display:none;max-width:900px;background-image:linear-gradient(-45deg, #009900,yellow,blue,red,orange);padding-top:15px;padding-bottom:10px;">
