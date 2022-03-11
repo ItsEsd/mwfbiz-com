@@ -137,7 +137,7 @@ html {
 
   #myDiv {
     display: none;
-    margin-top: 80px;
+    margin-top: 100px;
     z-index: 1;
   }
 
@@ -225,10 +225,10 @@ html {
   }
 
   .qb a {
-    margin-right: 10px;
-    float: right;
+    right: 10px;
+    top:6px;
+    position: absolute;
     color: white;
-    margin-bottom: 2px;
     text-decoration: none;
   }
 
@@ -240,6 +240,9 @@ html {
   #titleImg {
     width: 100%;
     max-width: 300px;
+    margin-bottom:10px;
+    margin-top:16px;
+    margin-left: 6px;
   }
 
   footer a {
@@ -249,6 +252,10 @@ html {
   footer a:hover {
     color: #ffd703;
     text-decoration: underline;
+  }
+  .qbgbck a{
+    color: white;
+    text-decoration: none;
   }
 
   #myProgress {
@@ -312,7 +319,7 @@ display:none;
     top: 0;
     z-index: 10;
     height:80px;
-    background-color: #191a19cc;
+    background-color: #363636ab;
   }
 
   #myNav{
@@ -334,3 +341,4 @@ display:none;
     width:100%;
     background-size: 100% 100%;
   }
+  
