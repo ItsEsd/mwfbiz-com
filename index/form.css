@@ -33,30 +33,6 @@ body {
 
 
 
-
-.animback {
-    background: linear-gradient(-75deg, blue, #dd1d16, #ffd703);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-  .animback div{
-    padding-top:10px;
-    padding-bottom:10px;
-}
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
   .animcon {
     background: linear-gradient(-75deg, blue,#08cf08);
     background-size: 200% 200%;
@@ -320,7 +296,7 @@ transform: scale(1.04);
       }
       .bizfacecon-tw{
         margin:10px;
-        margin-top:80px; 
+        margin-top:90px; 
         max-width:600px;
         float:right;
       }
