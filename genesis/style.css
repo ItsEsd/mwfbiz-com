@@ -335,6 +335,13 @@ html {
   }
 
   .qb a {
+    right: 10px;
+    top:54px;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+  }
+  .qbt a {
     margin-right: 10px;
     float: right;
     color: white;
@@ -342,7 +349,7 @@ html {
     text-decoration: none;
   }
 
-  .qb a:hover {
+  .qb a:hover,.qbt a:hover {
     margin-right: 18px;
     transition: 0.3s;
   }
