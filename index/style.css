@@ -1482,7 +1482,7 @@
 
     #titleImg {
       width: 100%;
-      max-width: 310px;
+      max-width: 340px;
     }
 
     .cards {
@@ -1547,12 +1547,10 @@
     }
 
     .qb a {
-      font-family: Arial;
-      font-size: 14px;
-      margin-right: 10px;
-      float: right;
+      right: 10px;
+      top:56px;
+      position: absolute;
       color: white;
-      margin-bottom: 2px;
       text-decoration: none;
     }
 
@@ -1825,6 +1823,9 @@ cursor: pointer;
   }
   #mg {
     display: none;
+}
+.titleImg{
+  width:310px;
 }
 }
 @media screen and (min-width: 900px) {
