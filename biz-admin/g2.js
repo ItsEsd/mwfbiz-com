@@ -128,6 +128,7 @@ document.getElementById('mottoobdm').value = mottotit;
 document.getElementById('mottothumb').value = mottothumb[0];
 document.getElementById('mottothumbpicpost').src = mottothumb[0];
 document.getElementById('coneditmotto').innerHTML = mottothumb[2];
+document.getElementById('confirmobdmkey').value = res[0].IDOPM;
 document.getElementById('motopicthumbpre').style.display = "none";
 document.getElementById('mottothumbpicpost').style.display = "inline-block";
   }
