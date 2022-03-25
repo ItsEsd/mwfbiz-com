@@ -80,7 +80,6 @@ function userCookie() {
   var ca = decodedCookie.split(';'); 
   for (var i = 0; i < ca.length; i++) {
      var c = ca[i]; 
-  
     } 
 var cookstr = ca[0].split('.');
 var paem = window.atob(cookstr[1]);
