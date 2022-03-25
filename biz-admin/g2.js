@@ -5,8 +5,8 @@ var obdm_mi = ur1+ur2+"/exec";
 function LogAdmin() {
   var pass = document.getElementById("idop").value;
   var paes = $('#hkhds').val();
-  
-  if(pass == paes ){
+  var mkey = $('#idop').val();
+  if(pass == paes && mkey !=""){
     document.getElementById("loader1").style.visibility = "visible";
     document.getElementById("iamin").style.display = "block";
     document.getElementById("logAd").style.display = "none";
