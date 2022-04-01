@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 6,399/- per month</p>";
+    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 7,200/- per year</p>";
     });
 
 $('#promodiv_l').click(function(){
