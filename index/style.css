@@ -1121,11 +1121,11 @@
     .close {
       color: white;
       float: right;
-      font-size: 40px;
+      font-size: 24px;
       font-weight: 400;
       padding-right: 2px;
       padding-left: 4px;
-      padding:23px;
+      padding:18px;
       border-color: none;
       background-color: #720505;
 
