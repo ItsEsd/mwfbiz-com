@@ -63,7 +63,7 @@ function validateEmail(input) {
     success(input) :
     error(input, 'Enter a Valid Email');
 }
-
+ 
 
 function GenerateCaptcha() {
   var chr1 = Math.ceil(Math.random() * 10) + '';
