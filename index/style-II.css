@@ -303,3 +303,7 @@ display:block;
 #mySidenav{
   border-bottom: 4px solid #e93b35e0;
 }
+
+#PProfile{
+  position:relative;
+}
