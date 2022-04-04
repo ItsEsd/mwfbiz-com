@@ -11,5 +11,8 @@ $(document).ready( function(){
             json.records[i].Bio + '</b>' + '</div>' + '</div>' + '</div>' + '</div>' + '</a>';
            
         }
+        var element = document.getElementById("divac");
+        element.classList.remove("animback");
+        element.classList.add("procontain");
     });
     });
