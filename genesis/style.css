@@ -16,7 +16,7 @@ html {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: white;
+    background: #e2e2e2;
   }
 
   /* Handle */
@@ -385,4 +385,36 @@ width: 100%;
 position: fixed;
 z-index:10000;
 display:none;
+}
+
+
+#PProfile,#PSpgProfile,#PEnProfile,#PArcProfile{
+  position:relative;
+}
+.procontain{
+  min-height:100px;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+}
+
+.animback {
+  border-radius: 10px;
+  min-height:100px;
+  background: linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
