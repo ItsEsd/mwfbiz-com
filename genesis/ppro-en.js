@@ -13,5 +13,9 @@
             
            
         }
+        var element = document.getElementById("diventp");
+        element.classList.remove("animback");
+        element.classList.add("procontain");
+    
     });
     });
