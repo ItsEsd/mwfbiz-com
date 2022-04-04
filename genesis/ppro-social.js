@@ -13,5 +13,8 @@
             
            
         }
+        var element = document.getElementById("divso");
+        element.classList.remove("animback");
+        element.classList.add("procontain");
     });
     });
