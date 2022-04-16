@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 7,200/- per year</p>";
+    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 720K for Free**<br>Initial Pay: 7,200/-</p>";
     });
 
 $('#promodiv_l').click(function(){
