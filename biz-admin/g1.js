@@ -383,7 +383,6 @@
             break;
           }
 
-         
           }
           });*/
 
@@ -407,7 +406,22 @@
             var s, j;
             var news = JSON.parse(res[0].imiNews);
             var s = news.newsTitle.length;
+            console.log(news.newsTitle);
             for (var prop in news.newsTitle) {
+              var k =0;
+              for(k;k<=7;k++){
+                if(news.newsTitle[k]==undefined){
+                  news.newsTitle[k] = "Edit MONOLOGUE!";
+                  news.newsLink[k] = "/#";
+                  news.newsThumb[k] = "../image/emptymono.png";
+                  news.conSiteName1[k] = "____________________ Empty!";
+                  news.conLink1[k] = "/#";
+                  news.conTitle1[k] = "";
+                  news.conSiteName2[k] = "____________________ Empty!";
+                  news.conLink2[k] = "/#";
+                  news.conTitle2[k] = "";
+              }
+            }
               document.getElementById("News1").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000"> <div class="carousel-inner"> <div class="carousel-item active"> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[0] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[0] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[0] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[0] + '<a target="_blank" class="readmore" href="' + news.conLink1[0] + '">' + news.conSiteName1[0] + '</a> </p> <hr> <p>' + news.conTitle2[0] + '<a target="_blank" class="readmore" href="' + news.conLink2[0] + '">' + news.conSiteName2[0] + '</a></p> </div> </div> </div> </div> </div> <div class="carousel-item "> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[1] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[1] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[1] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[1] + '<a target="_blank" class="readmore" href="' + news.conLink1[1] + '">' + news.conSiteName1[1] + '</a> </p> <hr> <p>' + news.conTitle2[1] + '<a target="_blank" class="readmore" href="' + news.conLink2[1] + '">' + news.conSiteName2[1] + '</a></p> </div> </div> </div> </div> </div> <div class="carousel-item"> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[2] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[2] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[2] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[2] + '<a target="_blank" class="readmore" href="' + news.conLink1[2] + '">' + news.conSiteName1[2] + '</a> </p> <hr> <p>' + news.conTitle2[2] + '<a target="_blank" class="readmore" href="' + news.conLink2[2] + '">' + news.conSiteName2[2] + '</a></p> </div> </div> </div> </div> </div> <div class="carousel-item"> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[3] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[3] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[3] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[3] + '<a target="_blank" class="readmore" href="' + news.conLink1[3] + '">' + news.conSiteName1[3] + '</a> </p> <hr> <p>' + news.conTitle2[3] + '<a target="_blank" class="readmore" href="' + news.conLink2[3] + '">' + news.conSiteName2[3] + '</a></p> </div> </div> </div> </div> </div> <div class="carousel-item"> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[4] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[4] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[4] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[4] + '<a target="_blank" class="readmore" href="' + news.conLink1[4] + '">' + news.conSiteName1[4] + '</a> </p> <hr> <p>' + news.conTitle2[4] + '<a target="_blank" class="readmore" href="' + news.conLink2[4] + '">' + news.conSiteName2[4] + '</a></p> </div> </div> </div> </div> </div> <div class="carousel-item"> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[5] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[5] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[5] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[5] + '<a target="_blank" class="readmore" href="' + news.conLink1[5] + '">' + news.conSiteName1[5] + '</a> </p> <hr> <p>' + news.conTitle2[5] + '<a target="_blank" class="readmore" href="' + news.conLink2[5] + '">' + news.conSiteName2[5] + '</a></p> </div> </div> </div> </div> </div> <div class="carousel-item"> <div class="container newz"> <div class="iteam-news"> <div class="wrapTODPre card"><a target="_blank" href="' + news.newsLink[6] + '"> <img class="card-img-top cardImg" src="' + news.newsThumb[6] + '"> <div class="card-body bg-light text-dark "> <h4>' + news.newsTitle[6] + '</h4> </div> </a> <div class=" bg-danger text-white" style="text-align:left;"> <p>' + news.conTitle1[6] + '<a target="_blank" class="readmore" href="' + news.conLink1[6] + '">' + news.conSiteName1[6] + '</a> </p> <hr> <p>' + news.conTitle2[6] + '<a target="_blank" class="readmore" href="' + news.conLink2[6] + '">' + news.conSiteName2[6] + '</a></p> </div> </div> </div> </div> </div> </div><br><br> <ol class="carousel-indicators"> <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> <li data-target="#carouselExampleIndicators" data-slide-to="4"></li> <li data-target="#carouselExampleIndicators" data-slide-to="5"></li> <li data-target="#carouselExampleIndicators" data-slide-to="6"></li> </ol> <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a></div>';
             }
             var y = Math.floor((Math.random() * 6) + 1);
@@ -440,7 +454,6 @@
           }
           
             }     
-
 
         function getId(url) {
           var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
