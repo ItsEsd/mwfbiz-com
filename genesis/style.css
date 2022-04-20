@@ -158,19 +158,27 @@ html {
   }
 
   .item1:hover {
-    box-shadow: 0 0px 10px 0 #555;
+    box-shadow: 0 4px 10px 2px #555;
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
   }
 
   .item2:hover {
-    box-shadow: 0 0px 10px 0 #555;
+    box-shadow: 0 4px 10px 2px #555;
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
   }
 
   .item3:hover {
-    box-shadow: 0 0px 10px 0 #555;
+    box-shadow: 0 4px 10px 2px #555;
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
   }
 
   .item4:hover {
-    box-shadow: 0 0px 10px 0 #555;
+    box-shadow: 0 4px 10px 0 #555;
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
   }
 
   a {
@@ -193,7 +201,10 @@ html {
     color: white;
     padding: 4px 10px;
   }
-
+.item4 img,.item3 img,.item2 img,.item1 img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
   .previous1:active {
     background-color: #555;
     color: white;
@@ -327,6 +338,7 @@ html {
     background-image: linear-gradient(-25deg, blue,red);
     box-shadow:0 2px 6px grey;
     border-bottom: 1px solid white;height:80px;
+    z-index: 1000;
   }
 
   .sticky img {
@@ -417,4 +429,8 @@ display:none;
   100% {
     background-position: 0% 50%;
   }
+}
+
+#genbodyal{
+  z-index: 2000;
 }
