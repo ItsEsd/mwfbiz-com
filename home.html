@@ -106,7 +106,8 @@
       <div align="center" style="display: none;"> </div>
       <!-------Modal----------->
       <div align="center" id="hififood">
-        <div class="modal animate" id="myModal"  data-backdrop="false">
+        <base target="_blank">
+        <div class="modal" id="myModal" tabindex="-1" role="dialog" data-backdrop="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content"><span class="close">✖</span>
               <div class="hiMod"><img onclick="openFullscreen();" class="namaskar" style="cursor:none;" src="image/hi2.gif" width="90px">
@@ -115,19 +116,21 @@
                 <hr>
               </div>
               <div align="center">
-                <h2 style="color:#DD1D16; margin-left:10px; float:left;padding:10px;width:100%;">Poetry & Posts</h2>
-                <div class="row" style="border:1px solid grey;border-radius:10px;width:100%;max-width:1000px;">
+                <h2 style="color:#DD1D16;padding:0px;width:100%;">Poetry & Posts</h2>
+                <div class="row" style="border:1px solid grey;border-radius:10px;width:100%;max-width:1000px;min-height:300px;">
                   <div class="column"> <br> <br>
-                    <div style="width:85%;max-width:400px;" align="center" id="FBpost"></div>
+                    <div style="width:85%;max-width:400px;" align="center" class="backhifood" id="FBpost"><p class="falseload">Loading..</p></div>
                   </div>
                   <div class="column"><br><br>
-                    <div align="center" id="FBvidpost"></div>
+                    <div align="center" id="FBvidpost" class="backhifood"><p class="falseload">Loading..</p></div>
                   </div>
                 </div>
-                <hr style="border-top: 1px dashed white;width:94%;max-width:600px;">
+                <hr style="border-top: 1px dashed white;width:96%;">
                 <h2 style="color:#DD1D16; margin:0px;">Quotes & Thoughts</h2>
-                <hr style="border-top: 1px dashed white;width:94%;max-width:600px;">
-                <div align="center" class="quoteImg" id="HappyIndex" style="border:1px solid grey;border-radius:10px;"></div><br>
+                <hr style="border-top: 1px dashed white;width:96%;">
+                <div align="center" class="backhifood" id="HappyIndex" style="border:1px solid grey;border-radius:10px;min-height:300px;">
+                  <p class="falseload">Loading..</p>
+                </div><br>
                 <hr><img type="button" data-dismiss="myModal" onclick="closeFullscreen();" class="hi" style="cursor:pointer;" src="image/hi3.gif" width="70px">
                 <h3 style="color:#FFD703;padding:10px;" align="left">mind Without Fear - m W F</h3>
                 <hr>
@@ -336,14 +339,16 @@
 【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】
 【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】-->
     <script>
-      var modal = document.getElementById("myModal");
-      var btn = document.getElementById("myBtn");
+     var modal = document.getElementById("myModal");
+     var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
       btn.onclick = function() {
-        modal.style.display = "block";
+       // modal.style.display = "block";
+        $('#myModal').slideDown('slow');
       }
       span.onclick = function() {
-        modal.style.display = "none";
+        $('#myModal').slideUp('slow');
+       // modal.style.display = "none";
         if (document.exitFullscreen) {
           document.exitFullscreen();
         } else if (document.mozCancelFullScreen) {
