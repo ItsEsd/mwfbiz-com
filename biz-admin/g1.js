@@ -445,7 +445,7 @@
             var motostr = res[0].ADMIINMotto;
             var motocon = motostr.split('{biz}');
             document.getElementById('motoincon').style.display = 'block';
-            document.getElementById('motoincon').innerHTML = '<div class="motocondone"><img class="mottoconimg" src="'+motocon[0]+'"><span class="motocontit">'+motocon[1]+'</span></div><hr><div class="motocondtwo">'+motocon[2]+'</div>';
+            document.getElementById('motoincon').innerHTML = '<div class="motocondone"><img class="mottoconimg" src="'+motocon[0]+'"><div class="motocontit">'+motocon[1]+'</div></div><hr><div class="motocondtwo">'+motocon[2]+'</div>';
           }
           else{
             document.getElementById("GIF2").innerHTML =
