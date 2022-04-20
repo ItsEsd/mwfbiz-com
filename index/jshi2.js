@@ -41,12 +41,11 @@ $(document).ready( function(){
     var url = url1+url2+"/exec"+ "?action=read";
     $.getJSON(url, function(json) {
         var m = Math.floor((Math.random() * json.records.length) + 0);
-
+        document.getElementById("FBpost").classList.remove('backhifood');
             document.getElementById("FBpost").innerHTML = '<div>' + '<img style=" pointer-events: none;" src="' +
             json.records[m].postPic + '">' + '<div style="padding-bottom:0px;">' + '<a href="' +
             json.records[m].postLink + '" target="_blank">' + '<h4 style="color:#FFD703;">' +
             json.records[m].postTitle + '</h4>' + '</a>' + '</div>';
-           
         
     });
     });
