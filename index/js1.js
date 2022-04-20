@@ -65,19 +65,6 @@ jQuery(document).ready(function() {
   jQuery('[data-toggle="tooltip"]').tooltip();
 });
 
-jQuery(function(jQuery) {
-  jQuery.fn.hScroll = function(amount) {
-    amount = amount || 120;
-    jQuery(this).bind("DOMMouseScroll mousewheel", function(event) {
-      var oEvent = event.originalEvent,
-        direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
-        position = jQuery(this).scrollLeft();
-      position += direction > 0 ? -amount : amount;
-      jQuery(this).scrollLeft(position);
-      event.preventDefault();
-    })
-  };
-});
 
 jQuery(document).ready(function() {
   jQuery('#box').hScroll(40);
@@ -115,8 +102,11 @@ window.addEventListener("DOMContentLoaded", event => {
   function scrollFunctionhead(){
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
      $('#head').slideUp('slow');
+     $('.qb').hide();
+
     } else {
       $('#head').slideDown('slow');
+     $('.qb').show();
     }
   }
 
