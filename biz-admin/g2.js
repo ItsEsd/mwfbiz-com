@@ -128,7 +128,7 @@ document.getElementById('mottoobdm').value = mottotit;
 document.getElementById('mottothumb').value = mottothumb[0];
 document.getElementById('mottothumbpicpost').src = mottothumb[0];
 document.getElementById('coneditmotto').innerHTML = mottothumb[2];
-document.getElementById('confirmobdmkey').value = res[0].IDOPM;
+document.getElementById('obdmkey').value = res[0].IDOPM;
 document.getElementById('motopicthumbpre').style.display = "none";
 document.getElementById('mottothumbpicpost').style.display = "inline-block";
   }
@@ -136,7 +136,7 @@ document.getElementById('mottothumbpicpost').style.display = "inline-block";
 
 $('#upmotto').on('click',function(){
   $('#continuemotoreg').hide();
-  $('#updatemotoreg').show();
+  $('#updatemotoreg').show(); 
   $('#updateobdm').hide();
 });
 document.getElementById('updatemotoreg').addEventListener('click',updateobdm);
