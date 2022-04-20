@@ -1149,11 +1149,11 @@
       float: right;
       font-size: 24px;
       font-weight: 400;
-      padding-right: 2px;
-      padding-left: 4px;
-      padding:18px;
+      padding:10px;
+      padding-right: 20px;
+      padding-left: 20px;
       border-color: none;
-      background-color: #b10b0b;
+      background-color: #920707;
       opacity: 1;
 
     }
