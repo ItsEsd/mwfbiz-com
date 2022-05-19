@@ -235,9 +235,20 @@ transform: scale(1.04);
       margin-top:10px;
       margin-bottom:10px;
       float:right;
-      padding:4px 10px;
-      background-color: white;
+      padding:6px 10px;
+      background-color: #111111f1;
       border-radius: 6px;
+      color:#e0c006;
+      width:240px;
+      font-size: 16px;
+      font-family:monospace;
+    }
+
+    .guestbtn:hover{
+      -webkit-transform: scale(0.98);
+      background-color: #1414149c;
+      transform: scale(0.98);
+      color:#f8e008;
     }
     .guestbtn svg{
       margin-bottom:-4px;}
