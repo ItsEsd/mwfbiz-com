@@ -81,7 +81,13 @@
   color:white;
   cursor:pointer;
 }
-
+#loginmwf:hover{
+  color:#5e4803af;
+  transition: 0.2s;
+}
+#loginsvg{
+  float:right;
+}
 header span{
   cursor: pointer;
 }
@@ -127,3 +133,14 @@ border-left:1px solid #e2dddd85;
   text-decoration: none;
 }
 
+#clslogin{
+  float:right;
+  color:black;
+  cursor: pointer;
+  background-color: white;
+  padding:4px 6px;
+}
+
+#clslogin:hover{
+  opacity: 0.8;
+}
