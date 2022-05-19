@@ -295,7 +295,7 @@ function onClick() {
   }
 }
 jQuery('#gbtn').on('click', function() {
-
+/*
  var optionsv = {
     "key": "rzp_live_zeJJQym7llbiEc",
     "amount": "9900",
@@ -333,15 +333,16 @@ jQuery('#gbtn').on('click', function() {
   var rzpv = new Razorpay(optionsv);
   rzpv.open();
   e.preventDefault(); 
-  
- /*
+  */
+
+  document.getElementById("loader_e").style.display = "block";
   var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
   var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
   guSetCookie(1,uid);
   setTimeout(function() {
     window.open("../home", "_self");
   }, 2000); 
-*/
+
 });
 
 function guGetCookie(cname) {
