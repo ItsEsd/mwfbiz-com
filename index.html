@@ -137,23 +137,23 @@
    
    <div class="bizfacecon-tw" align="center" >
     <div id="container" class="animcon">
-      <form id="formsign" target="hiddenfrm">
+      <form id="formsign" target="hiddenfrm" >
         <span id="loginmwf" style="cursor:pointer;">Login <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16" id="loginsvg">
           <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
           <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" /> </svg>
         </span>
         <hr>
-        <input type="text" style="text-transform: capitalize;" id="fname" placeholder="First Name" required> <small></small> <input type="text" style="text-transform: capitalize;" id="lname" placeholder="Last Name" required> <small></small> <input type="email" id="emailid" placeholder="Enter Email Address" required> <small></small> <input type="text" id="txtCompare" placeholder="Enter the Captcha Text" autocomplete="off" required /> <input type="text" id="txtCaptcha" disabled /> <input type="button" id="chngcap" onclick="GenerateCaptcha()" style="width:18%;float:right;font-size:18px;" value="&#8635;" /> <input type="submit" onclick="gonextver()" id="signup" value="Sign up >>">
+        <input type="text" style="text-transform: capitalize;" id="fname" placeholder="First Name" required> <small></small> <input type="text" style="text-transform: capitalize;" id="lname" placeholder="Last Name" required> <small></small> <input type="email" id="emailid" placeholder="Enter Email Address" required> <small style="float:right;"></small> <input type="text" id="txtCompare" placeholder="Enter the Captcha Text" autocomplete="off" required /> <input type="text" id="txtCaptcha" disabled /> <input type="button" id="chngcap" onclick="GenerateCaptcha()" style="width:18%;float:right;font-size:18px;" value="&#8635;" /> <input type="submit" id="signup" value="Sign up >>">
         <div id="loader_e"> <img src="image/loader-log.gif" style="padding:0px;background-color: transparent;width:50px;border-radius:6px;"></div>
      
         <input id="flagSign" style="display:none;" />
       </form>
-      <form id="veremail" style="display: none;" target="hiddenfrm">
+      <form id="veremail" class="signupfrm" style="display: none;" target="hiddenfrm">
         <h1 style="font-family: 'Shadows Into Light', sans-sarif;font-size:28px;color:white;">Confirm Email</h1> <input id="vercode" type="text" placeholder="Enter Confirmation Code" required /> <input id="vercodepre" type="text" disabled style="display:none;" /> <span id="rescode" onclick="sendEmail();onClick();" style="float:right;color:white;padding-bottom:4px;cursor: pointer;">Resend Code</span>
         <p style="display:none;color:white;" id="msg"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> Incorrect Verification Code</p> <input type="submit" id="checktopay" value="Verify">
       </form>
-      <form id="createpass" style="display: none;" target="hiddenfrm" action="home.html" method="GET">
+      <form class="signupfrm" id="createpass" style="display: none;" target="hiddenfrm" action="home.html" method="GET">
         <h1 style="font-family: 'Shadows Into Light', sans-sarif;font-size:28px;color:white;">Create Passcode</h1> <input id="CreatePasscode" placeholder="Create Passcode" type="password" required /> <span style="float:right;color:#ffffff;" id="matched"></span> <input id="ConfirmPasscode" placeholder="Confirm Passcode" type="password" required /> <input type="submit" value="Continue >>" id="conhome" disabled>
       </form>
       <div id="notifyver"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin-bottom:-4px;" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -197,10 +197,10 @@
         <!-- <h2 style="color:white;padding-left:0px;font-size: 30px;">🤩 www.mwfbiz.com 😎</h2> -->
         <h2 style="color:white;padding-left:0px;font-size: 30px;">🎭</h2>
         <h2 style="color:white;padding-left:0px;font-size: 24px;"><a href="https://imi.mwfbiz.com" target="_self">M O N O L O G U E - IMI</a></h2>
-        <h2 style="color:white;padding-left:0px;font-size: 18px;">Ontology Based Data Management Service</h2>
+        <h2 style="color:white;padding-left:0px;font-size: 18px;">Ontology Based Data Management System</h2>
         <h2 style="color:#ffd904;padding-left:0px;font-size: 24px;">|| Mind Without Fear | M W F ||</h4>
-          <div id="premiumpromo" align="center">
-          </div>
+        <center>  <div id="premiumpromo" align="center">
+          </div></center>
       </div>
       <div id="sunf" style="top:40px;right:20px;position:fixed;color:white;"><img src="https://media0.giphy.com/media/2wgWvXFyK1zmMm8NTe/giphy.gif" style="width:180px;pointer-events: none;"></div>
       <div style="top:200px;left:0px;position:fixed;color:white;"> <img src="https://media4.giphy.com/media/SYch3Z4NrI4MrufOrp/giphy.gif" style="width:180px;pointer-events: none;"> </div>
