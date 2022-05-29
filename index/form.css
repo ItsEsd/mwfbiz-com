@@ -109,11 +109,12 @@ form input[type="button"]:active {
 }
 
 form input.success {
-    border-color: #c3e6cb
+    border-color: #c3e6cb;
+    
 }
 
 form input.error {
-    border-color: #e74c3c
+    border-color: #e74c3c;
 }
 
 form small {
@@ -286,6 +287,7 @@ transform: scale(1.04);
       #premiumpromo{
         color:#e6e6e6;
         width:100%;
+        max-width:400px;
         padding:20px;
         left:0;
         margin-top:20px;
@@ -311,7 +313,8 @@ transform: scale(1.04);
       display: inline-block;
       }
       .bizfacecon-tw{
-        margin:10px;
+        width:100%;
+        padding:10px;
         margin-top:90px; 
         max-width:600px;
         float:right;
@@ -365,3 +368,10 @@ transform: scale(1.04);
     font-size: 50px;
   }
 }
+
+
+.signupfrm{
+ padding-top:40px;
+min-height:300px;
+}
+
