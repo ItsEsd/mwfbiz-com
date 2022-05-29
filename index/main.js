@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 720K/- ** 👑</p>";
+    document.getElementById('premiumpromo').innerHTML=" <p>👑 OBDM User (BIZ Admin) 720K/- ** Initial Fee - 7200/- 👑</p>";
     });
 
 $('#promodiv_l').click(function(){
