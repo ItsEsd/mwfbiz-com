@@ -137,9 +137,12 @@ const requiredFields = [{
   if (!valid) {
     event.preventDefault();
   } else {
-    sendEmail();
-    document.getElementById('formsign').style.display = 'none';
-    document.getElementById('veremail').style.display = 'block';
+   // sendEmail();
+    //document.getElementById('formsign').style.display = 'none';
+    //document.getElementById('veremail').style.display = 'block';
+    rzp1.open();
+    e.preventDefault();
+    document.getElementById('createpass').style.display = 'block';
   }
 });
 
@@ -148,9 +151,9 @@ function sendEmail() {
   var mailat = document.getElementById('emailid').value;
   document.getElementById('vercodepre').value = k;
   Email.send({
-      SecureToken: "dbf44fb7-ece0-4e31-8339-203856bb0796",
+      SecureToken: "262ef989-71b4-4257-a609-f3b7f8d5fc0f",
       To: mailat,
-      From: "M W F BIZ<donotreply@mwfbiz.com>",
+      From: "donotreply@mwfbiz.com",
       Subject: "Email Verification",
       Body: "<html><body style='background-color:#161616;color:white;border-radius:10px;'><div align='center' style='padding:40px;'><h2 style='color:white'>W E L C O M E</h2><h2><a target='_blank' href='https://mwfbiz.com' style='text-decoration:none;'>Mind Without Fear - M W F</a></h2>" + "<p style='color:white;'>Your Confirmation Code is: </p><h3 style='color:black;width:140px;background-color:#e6e6e6;border-radius:4px;padding:6px;'>" + k + "</h3><br><p style='color:white;'>Contact: <a href='mailto:info@mwfbiz.com'>info@mwfbiz.com</a></p><h4 style='color:white;'>Thank You</h4><p style='font-size:12px;color:#ffd703;'>N.B. Do not reply to this email</p></div></body></html>",
     })
