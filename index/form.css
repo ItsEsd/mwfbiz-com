@@ -12,9 +12,9 @@ body {
 }
 
 .animbody {
-  background: linear-gradient(10deg,#e6e6e6,#ffa500,purple,black);
-  background-size: 150% 150%;
-  animation: gradient_b 15s ease infinite;
+   background: linear-gradient(10deg,#e6e6e6,#ffa500,purple,black); 
+  background-size: 400% 400%;
+  animation: gradient_b 3s ease infinite;
 }
 
 @keyframes gradient_b {
@@ -34,9 +34,9 @@ body {
 
 
   .animcon {
-    background: linear-gradient(-75deg, blue,#08cf08);
+    background-image:linear-gradient(-45deg, #0c0c0c52,#272727e0); 
     background-size: 200% 200%;
-    animation: gradient2 15s ease infinite;   z-index:2;
+    animation: gradient2 3s ease infinite;   z-index:2;
   }
 
   @keyframes gradient2 {
@@ -252,11 +252,12 @@ transform: scale(1.04);
       color:#f8e008;
     }
     .guestbtn svg{
-      margin-bottom:-4px;}
+      margin-bottom:-4px;
+    float:right;}
 
       #frelite {
-        float:right;
-        margin-right:10px;
+        /* float:right; */
+        /* margin-right:10px; */
         margin-top: 20px;
       }
   
@@ -297,40 +298,42 @@ transform: scale(1.04);
         font-family: 'Courier New', Courier, monospace;
       }
       .bizinface{
-        top:0px;
+        top:20px;
         left:0px;
         width:100%;
-        height:100%;
         position: absolute;
+         /* background-image: linear-gradient(-45deg,red,yellow,purple); */
+         /* background-size: 100% 200%; */
       }
       .bizfacecon{
       color:white;
-      padding-top:140px;
+      padding-top:40px;
       padding-bottom:20px;
       text-align: right; 
       width:100%;
-      max-width:600px;
-      display: inline-block;
+      /* max-width:600px; */
+      display: block;
       }
       .bizfacecon-tw{
         width:100%;
         padding:10px;
-        margin-top:90px; 
+        margin-top:80px; 
         max-width:600px;
-        float:right;
+        z-index:10000;
+        /* float:center;  */
+          display: none;  
       }
 
       
 #container {
-  background-image:linear-gradient(-45deg, #fa3c3c,#b1ce10); 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   border-radius: 20px; 
   box-shadow: 0 2px 8px 1px #727272;
 }
 .bizfacecon h1{
   text-align:right;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 60px;
+  line-height: 80px;
   font-weight: 600;
   color:#cfcfcf7e;
   padding-right: 10px;
@@ -338,34 +341,42 @@ transform: scale(1.04);
 
 .bizfacecon h4{
   margin-top:20px;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 50px;
   font-weight: 400;
+  /* max-width: 800px; */
   font-family: 'Courier New', Courier, monospace;
   padding-right: 10px;
 }
 .sptttds{
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 600;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 @media screen and (max-width: 900px) {
  
   .bizfacecon h1{
-    font-size: 35px;
+    font-size: 55px;
   }
   .sptttds{
-    font-size: 50px;
+    font-size: 70px;
   }
+  .bizfacecon h4{
+    font-size: 35px;
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
  
   .bizfacecon h1{
-    font-size: 35px;
+    font-size: 55px;
   }
   .sptttds{
-    font-size: 50px;
+    font-size: 70px;
+  }
+  .bizfacecon h4{
+    font-size: 35px;
   }
 }
 
