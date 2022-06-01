@@ -242,7 +242,7 @@ if (ewf_expire) {
 
 $('#loginmwf').on('click', function(e) {
   $('#formsign').hide();
-  $('#logmwf').show();
+  $('#logmwf').show();$('.bizfacecon-tw').show();
 });
 
 
