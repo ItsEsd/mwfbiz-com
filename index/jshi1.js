@@ -40,7 +40,6 @@
     var url2 = "AKfycbyer2m_4bx3ipOETKCZu1JQFP6ofaacH5Jk2_tO9i7ewmiPnn5M7loscUnSz5CvGrGbxA";
     var url = url1+url2+"/exec"+ "?action=read";
     $.getJSON(url, function(json) {
-        console.log(json);
         var m = Math.floor((Math.random() * json.records.length) + 0);
         document.getElementById("HappyIndex").classList.remove('backhifood');
         document.getElementById("FBvidpost").classList.remove('backhifood');
