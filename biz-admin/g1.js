@@ -406,7 +406,6 @@
             var s, j;
             var news = JSON.parse(res[0].imiNews);
             var s = news.newsTitle.length;
-            console.log(news.newsTitle);
             for (var prop in news.newsTitle) {
               var k =0;
               for(k;k<=7;k++){
