@@ -357,12 +357,14 @@ transform: scale(1.04);
  
   .bizfacecon h1{
     font-size: 45px;
+    line-height: normal;
   }
   .sptttds{
     font-size: 60px;
   }
   .bizfacecon h4{
     font-size: 30px;
+    line-height: normal;
   }
   
 }
@@ -371,12 +373,15 @@ transform: scale(1.04);
  
   .bizfacecon h1{
     font-size: 45px;
+    line-height: normal;
   }
   .sptttds{
     font-size: 60px;
+    line-height: normal;
   }
   .bizfacecon h4{
     font-size: 30px;
+    line-height: normal;
   }
 }
 
