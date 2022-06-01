@@ -166,7 +166,7 @@ else{
         setTimeout(function() {
           jQuery('#notifyver').fadeOut('fast');
         }, 5000);
-        console.log(k);
+        // console.log(k);
           });
       }
 var clicks = 0;
