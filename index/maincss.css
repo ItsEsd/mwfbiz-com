@@ -7,7 +7,7 @@
   left: 0px;
   border: none;
   margin-bottom: 0px;
-  box-shadow: 0px 2px 10px 0px #ffffff5d;
+  box-shadow: 0px 4px 10px 0px #2020205d;
   z-index: 2;
   border-bottom:1px solid #ffffffb7;
   background: linear-gradient(-75deg, blue, #dd1d16, #ffd703);
@@ -63,12 +63,13 @@
 
 
 #butter{
-    top:0px;left:0px;
-    position:fixed;color:white;
+    bottom:0px;left:0px;
+    position:fixed;color:white;height:100%;width:100%;
+     background-image: url('https://media0.giphy.com/media/8Wak0dQZbKmwf9eJCj/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: 400px 100%;
 }
-#butter img{
-    width:300px;height:600px;pointer-events: none;
-}
+
 
 
 #formsign h1{
@@ -77,14 +78,24 @@
     font-size:28px;color:white;
 }
 #loginmwf{
-  font-size:24px;
+      border:none;
+      display:block;
+      text-align: center;
+      margin-bottom:10px;
+      float:right;
+      padding:6px 10px;
+      background-color: #111111f1;
+      border-radius: 6px;
+      color:#e0c006;
+      width:240px;
+      font-size: 16px;
+      font-family:monospace;
+}
+#signupmwf{
+  font-size:20px;
   color:white;
-  cursor:pointer;
 }
-#loginmwf:hover{
-  color:#5e4803af;
-  transition: 0.2s;
-}
+
 #loginsvg{
   float:right;
 }
@@ -103,8 +114,19 @@ padding:9px;
 z-index: 3;
 border-left:1px solid #e2dddd85;
 }
+#accrecov a{
+  color:#2726269f;
+  font-weight: 600;
+  text-decoration: underline;
+}
+#accrecov a:hover{
+  color:rgba(255, 255, 255, 0.575);
+  text-decoration: underline;
+}
 #cprght{
-  margin-top:10px;
+  width:100%;
+  margin-top:90px;
+  padding-right:10px;
   font-weight:600;
   text-align: right;
   font-family: 'Shadows Into Light', sans-sarif;
@@ -134,11 +156,13 @@ border-left:1px solid #e2dddd85;
 }
 
 #clslogin{
-  float:right;
+ float:right;
+  margin-top:10px;
+  float:center;
   color:black;
   cursor: pointer;
-  background-color: white;
-  padding:4px 6px;
+  padding:6px 20px;
+  border-radius: 20px;
 }
 
 #clslogin:hover{
