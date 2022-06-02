@@ -369,6 +369,10 @@ transform: scale(1.04);
    .bizinface{
      top:40px;
    }
+
+    #frelite {
+        margin-top: 60px;
+      }
   
 }
 
@@ -388,6 +392,9 @@ transform: scale(1.04);
   }
   .bizinface{
     top:40px;
+  }
+  #frelite {
+    margin-top: 60px;
   }
 }
 
