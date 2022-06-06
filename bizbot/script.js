@@ -140,3 +140,84 @@ else{
   document.getElementById("falseback").style.display = "none";
 }
  }
+
+ $('#resetpbiz').click(function(){
+   $('#repass').show();
+ });
+
+ $('#clsrest').click(function(){
+  $('#repass').hide();
+})
+
+/////////////////////////////
+
+document.getElementById("verem").addEventListener("click", verifyEmail);
+function verifyEmail() {
+  $('#copmail').hide();
+    var ur1 ="https://script.google.com/macros/s/";
+    var ur2="AKfycbxvBawTU7ggkrT-akgPHHlm1nmlacuKSTiSUFAwbL6jPVdojuP5xWwYv3ANwowk-UUh2g"
+    var ursc = ur1+ur2+"/exec";
+    var ml = $("#biusrem").val();
+    if (ml != 0) {
+      document.getElementById("falseback").style.display = "block";
+     // document.getElementById("mcheck").style.display = "none";
+      var urscv = ursc +"?callback=ctrlqchmail&mid="+ml+"&action=chmail";
+      var request = jQuery.ajax({
+        crossDomain: true,
+        url: urscv,
+        method: "GET",
+        dataType: "jsonp"
+      });
+
+    }
+    
+    else {
+      return false;
+    }
+  }
+function ctrlqchmail(e){
+var res = e.records;
+var ml2 = window.btoa($("#biusrem").val());
+var ml3 = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
+var ml1 = Math.random().toString(26).substring(2, 16) + Math.random().toString(26).substring(2, 16);
+if(res =="ID found!"){
+var ptone = "https://mwfbiz.com/reset-pass/?"+"usrem=" +ml3+"-"+ml2+"-"+ml1+"&state=v";
+  document.getElementById("messagert").style.display = "block";
+  document.getElementById("messagert").value = ptone;
+  document.getElementById("falseback").style.display = "none";
+  document.getElementById("copmail").style.display ="block"
+  document.getElementById("copmbody").innerHTML =`
+  <div class="default-style"><base target="_blank">
+<div>Reset your passcode?</div>
+<div>&nbsp;</div>
+<div>To create new passcode click the link below</div>
+<div>&nbsp;</div>
+<div style="text-align: center;"><a href="`+ptone+`">`+ptone+`</a></div>
+<div>&nbsp;</div>
+<div class="default-style"><span style="color: #000000;">Thanks &amp; regards,</span></div>
+<div><a href="https://mwfbiz.com/"><span style="color: #000000;"><strong>mwfbiz.COM</strong></span></a></div></div>
+`;
+
+}
+else{
+  document.getElementById("messagert").style.display = "block";
+  document.getElementById("messagert").value = "User Not Found";
+  document.getElementById("falseback").style.display = "none";
+}
+
+}
+
+/*
+$('#copyem').click(function(){
+  cpembody();
+});
+
+function cpembody(){
+  var embody = document.getElementById('copmbody').innerHTML;
+  var textA = document.createElement("input");
+  textA.value = embody;
+  textA.select();
+  textA.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(textA.value);
+}
+*/
