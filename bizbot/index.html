@@ -51,9 +51,31 @@
   <div align="center" id="btncontainer">
  <center><img width="100%" style="padding:20px;max-width: 600px;" src="bizbitpic.gif">  </center> 
 <div style="padding-top:35px;padding-bottom:35px;"><button class="btn btn-primary" id="fvlbtn">Featured Video List</button>
-<button class="btn btn-primary" id="rrbtn">Reel Random</button></div>
+<button class="btn btn-primary" id="rrbtn">Reel Random</button>
+<button class="btn btn-warning" id="resetpbiz">Create Reset Pass Link</button>
+<button class="btn btn-danger" onclick='window.open("https://email.godaddy.com","_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400")'>Webmail</button>
+<button class="btn btn-info" onclick='window.open("https://das-esd.github.io/prop/bit-edit.html","_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400")'>BitEdit</button>
+
+</div>
 </div>
 </section>
+<section>
+<center><div id="repass"><div id="repass-tw">
+<form id="ckeckusem" align="left" onsubmit="return false">
+<input class="form-control" type="email" placeholder="Enter User Email" id="biusrem" required/>
+<div><br><input class="btn btn-danger"  type="submit" id="verem" value="Create Reset Link"/>
+<button class="btn btn-default" id="clsrest">Close</button></div>
+</form>
+</div>
+
+<input id="messagert"/>
+<div id="copmail">
+<div id="copmbody"></div><button class="btn btn-danger" onclick='window.open("https://email.godaddy.com","_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400")'>Send Mail</button>
+</div>
+</div></center>
+
+</section>
+
 <div align = "center"><hr style="width:60%;max-width:600px;"><h4 style="color:#505050;padding-top:0px;font-weight: 600;">M W F BIZ</h4></div>
 <script src="script.js"></script>
 <iframe name="hiddenframe" id="hiddenframe" style="display:none;"></iframe>
