@@ -40,6 +40,7 @@ jQuery('#confirmobdmkey').on('keyup', function() {
   }
 });
 
+/*
 obdmmottoform.addEventListener('submit', (event) => {
 var mtpicthumb = $('#mottothumb').val();
 var mtmotto = $('#mottoobdm').val();
@@ -59,20 +60,7 @@ var ur1 = "https://script.google.com/macros/s/";
     });
     document.getElementById('continuemotoreg').disabled = true;
 });
-
-function upobdm(e){
-  var res = e.result;
- // document.getElementById('coneditmotto').innerHTML=`<p onclick="document.getElementById('coneditmotto').innerHTML='';">Description..</p>`;
-  $('#updateobdm').show();
-  document.getElementById('continuemotoreg').disabled = false;
-  document.getElementById('updatemotoreg').disabled = false;
-  document.getElementById('mottoupdatd').style.display = "block";
-  document.getElementById('mottoupdatd').style.zIndex = "400";
-  document.getElementById('mottoupdatd').innerHTML ="Motto Updated!"
-  setTimeout(function(){
-    document.getElementById('mottoupdatd').style.display = "none";},6000);
-  show_wall(locksee);
-}
+*/
 
 $(document).ready(function(){
   var mtdescp = $('#mottocondescp').val();
@@ -142,7 +130,7 @@ $('#upmotto').on('click',function(){
 document.getElementById('updatemotoreg').addEventListener('click',updateobdm);
 function updateobdm(){
   var mtpicthumb = $('#mottothumb').val();
-var mtmotto = $('#mottoobdm').val();
+var mtmotto = escape($('#mottoobdm').val());
 var mtdescp = $('#mottocondescp').val();
 var mtobdmk = escape($('#confirmobdmkey').val());
 var mtobdmusd = $('#usidobdmdef').val();
@@ -153,7 +141,7 @@ if(mtpicthumb !='' && mtmotto!='' && mtdescp!='' && mtobdmk!=''){
   var ur1 = "https://script.google.com/macros/s/";
       var ur2 = "AKfycbya6mMrGOM5UhgyD8If_5ZyUNq3vWN9bzpQqIGMiIF5Eqq1MF0XywDtom8LV1W67L-dHw";
       var urdm = ur1 + ur2 + "/exec";
-      var url = urdm + "?callback=upobdm&motto=" + obdmstr + "&obpass=" + mtobdmk +  "&mottotitle=" + mtmotto +  "&usid=" + mtobdmusd +"&action=upobdm";
+      var url = urdm + "?callback=upobdmre&motto=" + obdmstr + "&obpass=" + mtobdmk +  "&mottotitle=" + mtmotto +  "&usid=" + mtobdmusd +"&action=upobdm";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -166,6 +154,20 @@ else{
   document.getElementById('updatemotoreg').disabled = true;
   return false;
 }
+}
+
+function upobdmre(e){
+  var res = e.result;
+ // document.getElementById('coneditmotto').innerHTML=`<p onclick="document.getElementById('coneditmotto').innerHTML='';">Description..</p>`;
+  $('#updateobdm').show();
+  document.getElementById('continuemotoreg').disabled = false;
+  document.getElementById('updatemotoreg').disabled = false;
+  document.getElementById('mottoupdatd').style.display = "block";
+  document.getElementById('mottoupdatd').style.zIndex = "400";
+  document.getElementById('mottoupdatd').innerHTML ="Motto Updated!"
+  setTimeout(function(){
+    document.getElementById('mottoupdatd').style.display = "none";},6000);
+  show_wall(locksee);
 }
 
 creltfrm.addEventListener('submit', (event) => {
