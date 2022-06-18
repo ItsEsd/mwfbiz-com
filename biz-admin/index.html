@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,39 +32,21 @@
     <script src="../vendor/scripts/kit.fontawesome.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-      var myVar;
-
-      function loaderSpin() {
-        myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("lds-spinner").style.display = "none";
-        document.getElementById("miv").style.display = "block";
-      }
-
-    </script>
   </head>
-
   <body style="margin:0;" onload="typeWriter();">
     <div id="falsebacksigup"></div>
     <section>
-     
     <div align="center" id="sigcontainer">
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" style="color:white;" class="bi bi-people-fill" viewBox="0 0 16 16">
         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
         <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
         <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
       </svg><br><br>
-      
       <div id="sigup" onclick="deleteAllCookies(); ">
                   🎭 Sign Up as Admin / Login</div><br>
                   <p id="commntsm" style="font-family: 'Courier New', Courier, monospace;color:white;"></p>
             </div> 
-    
     </section> 
-
 <div id="adminmoto" align="center">
 <div id="mmottocontent">
 <form id="obdmmottoform" target="hiddenframe" autocomplete="off">
@@ -87,14 +68,12 @@
   <input type="password" class="form-control" placeholder="OBDM Admi-in Key" id="obdmkey"required>
   <span id="message" style="float:right;"></span>
   <input type="text" class="form-control" placeholder="Confirm Key" id="confirmobdmkey" required>  
- 
 <button class="btn btn-warning" id="continuemotoreg" type="submit" style="width:98%;">Continue</button>
 <button class="btn btn-warning" id="updatemotoreg" type="button" style="width:98%;display: none;">Update</button>
 <br><br>
 </form>
 </div>
 <button class="btn btn-outline-warning" id="mnbtnsh" onclick="$('#mmottocontent').toggle('slow');">M O N O L O G U E Motto</button>
-
    </div>
    <div id="mottoupdatd"></div>
     <div>
@@ -104,7 +83,6 @@
         </div>
         <div id="loader1" class="spinner-border text-light"></div> <br><br><br><br>
       </div>
-
       <!------------------------->
       <div id="upd" style="display:none;">
         <div align="center"><br>
@@ -233,7 +211,6 @@
               <input id="epasstwo" type="text" class="form-control creltin" placeholder="6K" maxlength="2" style="text-transform: uppercase;" required />
               <input id="epassthree" type="text" class="form-control creltin" placeholder="7458" maxlength="4" style="text-transform: uppercase;" required />
               <input id="epassfour" type="text" class="form-control creltin" placeholder="DE" maxlength="2" style="text-transform: uppercase;" required />
-
               <select id="sessionexp" class="form-control" required>
                 <option value="">- Session Expire</option>
                 <option value="1">1 Day</option>
@@ -252,21 +229,17 @@
             </form>
           </div>
           <div id="elpasinfo">
-
             <div id="elpasscreated"></div>
             <div align="right"><button class='btn btn-light' onclick='downloadpass(this)'>Save ⬇⬇</button>
               <button class='btn btn-light' onclick='$("#elpasinfo").hide("fast")';>Close</button></div>
               <div id="AppShare"></div>
           </div>
-
         </section>
       </div>
       <!------------------------------------>
-
       <div id="id03" align="center" style="display:none;"><br><br><br><br><img src="https://qotoqot.com/sad-animations/img/400/low_battery/low_battery.gif" width="180px" style="pointer-events:none;"> <br><br>
         <button id="imie" onclick="show_wall();"><b>i____m____i</b></button><br>
         <button class="btneb" id="update">Edit</button></div><br>
-
       <div align="center" id="showhtml" style="display:none;">
         <div id="motoinfoicon"><div>
           <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -283,7 +256,6 @@
           </div>
         </div>
         <div id="loader" class="spinner-border text-light"></div>
-      
         <div align="center">
           <div id="News1"></div>
         </div><br>
@@ -317,14 +289,12 @@
       var i = 0;
       var txt = 'Thank you for visiting. Have a nice day. ';
       var speed = 200;
-      
       function typeWriter() {
         if (i < txt.length) {
           document.getElementById("commntsm").innerHTML += txt.charAt(i);
           i++;
           setTimeout(typeWriter, speed);  
         }
-        
         else if(i = txt.length){
           i= 0;
           document.getElementById("commntsm").innerHTML = "";
@@ -332,8 +302,4 @@
           i++;
           setTimeout(typeWriter, speed);  
         }
-      }
-            </script>
-  </body>
-
-</html>
+}</script></body></html>
