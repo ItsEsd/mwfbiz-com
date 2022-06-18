@@ -175,8 +175,6 @@ else{
 </svg> Service not available. Please try after some time.`;
 }
 
-        
-        console.log(message);
           });
       }
 var clicks = 0;
