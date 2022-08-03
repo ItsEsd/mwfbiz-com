@@ -340,7 +340,7 @@ jQuery('#gbtn').on('click', function() {
   document.getElementById("loader_e").style.display = "block";
   var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
   var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
-  guSetCookie(1,uid);
+  guSetCookie(3,uid);
   setTimeout(function() {
     window.open("../home", "_self");
   }, 2000); 
