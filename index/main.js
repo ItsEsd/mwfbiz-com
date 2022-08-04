@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    document.getElementById('premiumpromo').innerHTML=" <p>👑 Memebership (BIZ Admin) 720K/- ** Initial Fee - 7200/- 👑</p>";
+    document.getElementById('premiumpromo').innerHTML=" <p>👑 Membership (BIZ Admin) 720K/- ** Initial Fee - 7200/- 👑</p>";
     });
 
 $('#promodiv_l').click(function(){
