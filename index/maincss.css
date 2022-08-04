@@ -112,15 +112,15 @@ font-size:30px;
 cursor: pointer;
 padding:9px;
 z-index: 3;
-border-left:1px solid #e2dddd85;
+border-left:1px solid #e2ddddbe;
 }
 #accrecov a{
-  color:#2726269f;
+  color:#27262669;
   font-weight: 600;
   text-decoration: underline;
 }
 #accrecov a:hover{
-  color:rgba(255, 255, 255, 0.575);
+  color:#ffffff93;
   text-decoration: underline;
 }
 #cprght{
