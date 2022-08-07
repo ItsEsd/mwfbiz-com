@@ -52,12 +52,12 @@ function getCookie(cname) {
       var usergu = getCookie("_ybizv0"); 
       var userel = getCookie("_ybize0"); 
       if (user != "" ) {
-        document.getElementById('audioP').style.display = "block";
+        // document.getElementById('audioP').style.display = "block";
         document.getElementById('falsebacksigup').style.display = "none"; 
         document.getElementById('sigcontainer').style.display = "none"; 
         } 
          else if(usergu != ""){   
-            document.getElementById('audioG').style.display = "block";   
+            // document.getElementById('audioG').style.display = "block";   
             document.getElementById('bizprost').style.display = "none";     
             setTimeout(function(){
                 document.getElementById('falsebacksigup').style.display = "block";
@@ -66,7 +66,7 @@ function getCookie(cname) {
               3600000);
            } 
            else if(userel != ""){   
-            document.getElementById('audioG').style.display = "block";  
+            // document.getElementById('audioG').style.display = "block";  
             document.getElementById('bizprost').style.display = "none";       
             setTimeout(function(){
                 document.getElementById('falsebacksigup').style.display = "block";
