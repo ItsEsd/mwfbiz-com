@@ -15,18 +15,14 @@
     h2,
     h3,
     p {
-      /* font-family: 'Shadows Into Light', sans-sarif; */
-      font-family: 'Courier New', Courier, monospace;
-      /* font-size: 16px; */
+      font-family: 'Shadows Into Light', sans-sarif;
     }
 
     h4 {
       font-family: 'Shadows Into Light', sans-sarif;
-      /* font-family: 'Courier New', Courier, monospace; */
       color: #2d2d2d;
       /* font-size:10px; */
     }
-
     @-webkit-keyframes wrench {
       0% {
         -webkit-transform: rotate(-12deg);
@@ -1562,11 +1558,11 @@
 #hififood{
   width: 100%;
   max-width: 800px;
-  font-family: 'Shadows Into Light', sans-sarif;
+  /* font-family: 'Shadows Into Light', sans-sarif; */
 }
     #HappyIndex {
       max-width: 800px;
-      /* font-family: 'Shadows Into Light', sans-sarif; */
+      font-family: 'Shadows Into Light', sans-sarif;
     }
 #HappyIndex iframe{
   border-bottom-left-radius: 10px;
@@ -1710,7 +1706,7 @@ font-family: 'Courier New', Courier, monospace;
     }
 
     footer {
-      /* font-family: 'Shadows Into Light', sans-sarif; */
+      font-family: 'Shadows Into Light', sans-sarif;
       bottom: 0;
       position: fixed;
       width: 100%;
