@@ -389,12 +389,9 @@ function enteringelop() {
 
 function ctrlqelp(e) {
   var outp = e.result;
- // console.log(outp);
   if (outp != "Pass not found!") {
-
     var sessexp = outp[0].SessionExpireDT;
     var elkey = outp[0].UserRefId;
-
     var k = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
     var uid =k+"."+window.btoa(String(outp[0].UserRefId));
     elSetCookie(sessexp,uid);
