@@ -65,9 +65,9 @@
 #butter{
     bottom:0px;left:0px;
     position:fixed;color:white;height:100%;width:100%;
-     background-image: url('https://media0.giphy.com/media/8Wak0dQZbKmwf9eJCj/giphy.gif');
+     background-image: url('../image/bcspiral.gif');
     background-repeat: no-repeat;
-    background-size: 400px 100%;
+    background-size: 50% 100%;
 }
 
 
