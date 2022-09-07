@@ -1,13 +1,13 @@
 hr{border-color: #848684;}
 #rfitem {
-    border: none;
-    width:100%;
-    padding:10px;
-    display:inline-block;
-    margin: 2px;
+border: none;
+width:100%;
+padding:10px;
+display:inline-block;
+margin: 2px;
 
-    background-color: #161616;
-    border-radius:10px;
+background-color: #161616;
+border-radius:10px;
 }
 #rfitem p{color:#6969e9}
 
