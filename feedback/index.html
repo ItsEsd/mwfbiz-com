@@ -230,15 +230,6 @@ transform: scale(1.02);
     </div>
       </div></center>
     </div><br>
-  <!--  <div align="center">
-      <div style="background-color:black;width:98%;border-radius:4px;max-width:1000px;"><br>
-        <h5 align="center" style="color:white;">Start a Discussion </h5>
-        <div class="container2">
-          <div id="disqus_thread"></div> <br>
-        </div>
-      </div>
-    </div> 
-    <br><br>-->
     <div class="container" align="center">
       <div id="parent1">
         <div class="icon"> <a href="https://www.facebook.com/mindwithoutfearmwf" target="_top"><img src="https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw"><br>Facebook</a> </div>
@@ -247,7 +238,6 @@ transform: scale(1.02);
       </div> <button style="background-color: white; cursor: pointer; border-radius:5px; border-color: #FFD703;padding:10px 10px;"><a style="font-size:17px; text-decoration:none" type="button" target="_blank" href="https://wa.me/?text=https://mwfbiz.com" data-action="share/whatsapp/share"><b>Share On WhatsApp </b><i class="fa fa-whatsapp" aria-hidden="true" style="font-size:20px;color:#30CD20"></i></a></button>
       <div align="center" style="display:inline-block; padding:5px;"><br><button style="background-color: black; cursor: pointer; border-radius:5px; border:none;padding:10px 10px;"><a style="color:white;font-size:17px;text-decoration:none;" href="mailto:info@mwfbiz.com"><i class="fa fa-envelope" style="font-size:20px;color:#FC520D"> </i><b> Send Mail</b></a></button> </div>
     </div><br> <br>
-    <!--<p class="qb"><a onclick="goBack()" style="cursor:pointer;color:black;">&#10020; Go Back >></a></p><br>-->
     <!--------Footer----->
     <footer style="background:black;">
       <div align="center" style="background:black;padding:10px;padding-top:15px;padding-bottom:10px;height:50px;">
@@ -255,59 +245,42 @@ transform: scale(1.02);
       </div>
     </footer>
     <!--------Footer----->
- <!--- <script>
-      var disqus_config = function() {
-        this.page.url = 'https://mwfbiz.com/feedback';
-        this.page.identifier = 'livelifekingsize';
-      };
-      (function() {
-        var d = document,
-          s = d.createElement('script');
-        s.src = 'https://mind-without-fear.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
+  <script>
+  formwall.addEventListener('submit', (event) => {
+  var sendur = "https://script.google.com/macros/s/AKfycby4DqWAvEb7MqrTf1NW_PyUKgFBcxjmObqgHQ7kPStijyay_TxHJFveyAKd_QXthY8J/exec";
+  var fback = escape($('#dimprv').val());
+  var emid = $('#dmail').val();
+  var url = sendur + "?callback=ctrlq&dmail=" + emid + "&dimprv=" + fback + "&action=inexp";
+  var request = jQuery.ajax({
+  crossDomain: true,
+  url: url,
+  method: "GET",
+  dataType: "jsonp"
+  });
+  document.body.style.pointerEvents="none";
+  });
+  function ctrlq(){
+  document.body.style.pointerEvents="auto";
+  document.getElementById('con').style.display = "none";
+  document.getElementById('success').style.display = "block";
+  }
+  </script>
+  <script>
+  function Reset() {
+  document.getElementById("formwall").reset();
+  }
 
-    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <script id="dsq-count-scr" src="//mind-without-fear.disqus.com/count.js" async></script>
+  function goBack() {
+  window.open('https://www.mwfbiz.com','_self');
+  }
 
-    ---->
-    <script>
-    formwall.addEventListener('submit', (event) => {
-          var sendur = "https://script.google.com/macros/s/AKfycby4DqWAvEb7MqrTf1NW_PyUKgFBcxjmObqgHQ7kPStijyay_TxHJFveyAKd_QXthY8J/exec";
-          var fback = escape($('#dimprv').val());
-          var emid = $('#dmail').val();
-          var url = sendur + "?callback=ctrlq&dmail=" + emid + "&dimprv=" + fback + "&action=inexp";
-          var request = jQuery.ajax({
-            crossDomain: true,
-            url: url,
-            method: "GET",
-            dataType: "jsonp"
-          });
-         document.body.style.pointerEvents="none";
-        });
-function ctrlq(){
-         document.body.style.pointerEvents="auto";
-         document.getElementById('con').style.display = "none";
-         document.getElementById('success').style.display = "block";
-}
-    </script>
-    <script>
-      function Reset() {
-        document.getElementById("formwall").reset();
-      }
-
-      function goBack() {
-        window.open('https://www.mwfbiz.com','_self');
-      }
-
-    </script>
-    <script>
-      function textAreaAdjust(element) {
-        element.style.height = "140px";
-        element.style.height = (30 + element.scrollHeight) + "px";
-      }
-    </script>
+  </script>
+  <script>
+  function textAreaAdjust(element) {
+  element.style.height = "140px";
+  element.style.height = (30 + element.scrollHeight) + "px";
+  }
+  </script>
   </body>
 
-</html>
+  </html>
