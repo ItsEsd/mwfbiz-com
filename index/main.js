@@ -1,3 +1,4 @@
+/* mwfbiz.COM  */
 $(document).ready(function(){
     document.getElementById('premiumpromo').innerHTML=" <p>👑 Membership (BIZ Admin) 720K/- ** Initial Fee - 7200/- 👑</p>";
     });
