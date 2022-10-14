@@ -296,10 +296,10 @@ function onClick() {
   }
 }
 jQuery('#gbtn').on('click', function() {
-/*
+
  var optionsv = {
     "key": "rzp_live_zeJJQym7llbiEc",
-    "amount": "9900",
+    "amount": "1000",
     "currency": "INR",
     "name": "Visitor Pass",
     "image": "../image/imgicon.gif",
@@ -334,15 +334,15 @@ jQuery('#gbtn').on('click', function() {
   var rzpv = new Razorpay(optionsv);
   rzpv.open();
   e.preventDefault(); 
-  */
 
-  document.getElementById("loader_e").style.display = "block";
-  var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-  var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
-  guSetCookie(3,uid);
-  setTimeout(function() {
-    window.open("../home", "_self");
-  }, 2000); 
+
+  // document.getElementById("loader_e").style.display = "block";
+  // var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
+  // var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
+  // guSetCookie(3,uid);
+  // setTimeout(function() {
+  //   window.open("../home", "_self");
+  // }, 2000); 
 
 });
 
