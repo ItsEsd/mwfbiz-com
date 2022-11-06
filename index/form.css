@@ -363,8 +363,12 @@ transform: scale(1.04);
     font-size: 45px;
     line-height: normal;
   }
-  .sptttds{
-    font-size: 60px;
+  
+  #rspnsvfr{
+    font-size: 40px;
+  }
+  #rspnsvfr .sptttds{
+    font-size: 55px;
   }
   .bizfacecon h4{
     font-size: 30px;
@@ -386,9 +390,14 @@ transform: scale(1.04);
     font-size: 45px;
     line-height: normal;
   }
-  .sptttds{
-    font-size: 60px;
+ 
+  #rspnsvfr {
+    font-size:40px;
     line-height: normal;
+
+  }
+  #rspnsvfr .sptttds{
+    font-size:55px;
   }
   .bizfacecon h4{
     font-size: 30px;
