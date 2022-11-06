@@ -299,9 +299,9 @@ jQuery('#gbtn').on('click', function() {
 
  var optionsv = {
     "key": "rzp_live_zeJJQym7llbiEc",
-    "amount": "1000",
+    "amount": "10000",
     "currency": "INR",
-    "name": "Visitor Pass",
+    "name": "Visitor Pass (3 Days)",
     "image": "../image/imgicon.gif",
     "callback_url": "https://mwfbiz.com/privacy-policy/",
     "handler": function(response) {
@@ -322,7 +322,7 @@ jQuery('#gbtn').on('click', function() {
       });
       var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
   var uid = window.btoa(String(gid));
-  guSetCookie(1,uid);
+  guSetCookie(3,uid);
   setTimeout(function() {
     window.open("../home", "_self");
   }, 2000);
@@ -334,7 +334,6 @@ jQuery('#gbtn').on('click', function() {
   var rzpv = new Razorpay(optionsv);
   rzpv.open();
   e.preventDefault(); 
-
 
   // document.getElementById("loader_e").style.display = "block";
   // var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
