@@ -307,7 +307,7 @@ transform: scale(1.04);
       }
       .bizfacecon{
       color:white;
-      padding-top:40px;
+      padding-top:50px;
       padding-bottom:20px;
       text-align: right; 
       width:100%;
@@ -323,7 +323,10 @@ transform: scale(1.04);
         /* float:center;  */
           display: none;  
       }
-
+.bizfacecon a{
+  color:white;
+  text-decoration: underline;
+}
       
 #container {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -331,12 +334,12 @@ transform: scale(1.04);
   box-shadow: 0 2px 8px 1px #727272;
 }
 .bizfacecon h1{
-  text-align:right;
+  text-align:center;
   font-size: 60px;
   line-height: 80px;
-  font-weight: 600;
-  color:#cfcfcf7e;
-  padding-right: 10px;
+  font-weight: 700;
+  color:#fdce357e;
+  padding-left: 10px;
 }
 
 .bizfacecon h4{
@@ -347,6 +350,7 @@ transform: scale(1.04);
   /* max-width: 800px; */
   font-family: 'Courier New', Courier, monospace;
   padding-right: 10px;
+  text-align: center;
 }
 .sptttds{
   font-size: 80px;
@@ -397,6 +401,7 @@ transform: scale(1.04);
     margin-top: 60px;
   }
   #accrecov{
+    margin-top: 8px;
     font-size:24px;
   }
 }
