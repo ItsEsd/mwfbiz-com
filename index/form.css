@@ -213,7 +213,7 @@ z-index: 999;
   position:fixed;
 }
     #promodiv_l{
-      bottom:60px;
+      bottom:40px;
       right:20px;
       position:absolute;
       background-color: #631e9c;
@@ -222,7 +222,9 @@ z-index: 999;
       cursor: pointer;
       color:white;
     }
-
+#promodiv_l h2{
+  line-height: normal;
+}
     #promodiv_l:hover{
 -webkit-transform: scale(1.04);
 transform: scale(1.04);
@@ -414,7 +416,17 @@ transform: scale(1.04);
     font-size:24px;
   }
 }
+@media screen and (max-width: 400px) {
+  .bizfacecon h1{
+    font-size: 40px;
+    line-height: normal;
+  }
+  #rspnsvfr {
+    font-size:35px;
+    line-height: normal;
 
+  }
+}
 
 .signupfrm{
  padding-top:40px;
