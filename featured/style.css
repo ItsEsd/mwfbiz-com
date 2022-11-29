@@ -209,12 +209,6 @@ html {
     border-color: none;
   }
 
-  footer {
-    font-family: 'Shadows Into Light', sans-sarif;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-  }
 
   .sticky {
     position: sticky;
@@ -245,13 +239,20 @@ html {
     margin-left: 6px;
   }
 
+  footer {
+    font-family: 'Shadows Into Light', sans-sarif;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
   footer a {
-    color: #ffd703;
+    color: #ffd503bd;
+    text-decoration: none;
   }
 
   footer a:hover {
-    color: #ffd703;
-    text-decoration: underline;
+    color: #d9d9d9;
+    text-decoration: none;
   }
   .qbgbck a{
     color: white;
