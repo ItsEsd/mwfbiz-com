@@ -160,7 +160,7 @@ body {
     color: #ffd703;
   }
 
-  footer a:hover {
+  footer a:hover,footer a:active,footer a:focus {
     color: #ffd703;
     text-decoration: underline;
   }
