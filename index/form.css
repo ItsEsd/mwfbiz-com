@@ -326,7 +326,7 @@ transform: scale(1.04);
         margin-top:20px; 
         z-index:10000;
         display: none;  
-        background-color: #000000d3;
+        background-image: linear-gradient(180deg,#1111110a,#11111163,#0c0c0cde);
       }
 .bizfacecon a{
   color:white;
