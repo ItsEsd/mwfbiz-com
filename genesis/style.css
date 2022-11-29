@@ -315,19 +315,22 @@ html {
   }
 
   footer a {
-    color: #ffd703;
+    color: #ffd503bd;
+    padding:0px;
   }
 
   footer a:hover {
-    color: #ffd703;
-    text-decoration: underline;
+    color: #d9d9d9;
   }
 
   footer {
     font-family: 'Shadows Into Light', sans-sarif;
-    bottom: 0;
+    bottom: 0px;
+    left:0px;
     position: fixed;
     width: 100%;
+    padding:0px;
+    margin:0px;
   }
 
   .sticky {
