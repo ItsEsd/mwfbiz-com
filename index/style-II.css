@@ -80,7 +80,7 @@ background-color: #816f07;
 padding:4px 10px;
 font-size: 14px;
 cursor: pointer;
-bottom:60px;
+bottom:29px;
 left:0px;
 position: fixed;
 }
@@ -264,7 +264,7 @@ display: none;
 }
 
 #fdbackhm{
-bottom:60px;
+bottom:25px;
 right:10px;
 position: fixed;
 font-size: 14px;
