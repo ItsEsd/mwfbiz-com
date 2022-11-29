@@ -40,14 +40,20 @@ margin-top:10px;
 margin-left:6px;
 }
 #periinfomwf{
+    bottom:0px;
+    left:0px;
+    position: fixed;
+    background-color: #141414dc;
+    padding: 5px;
 width:100%;
 z-index:0;
 padding-right: 10px;
-text-align: center;
+text-align: left;
 }
 #periinfomwf a {
 text-decoration: none;
-color: #ebb70d;
+color: #ffffff;
+font-size: 12px;
 }
 
 #periinfomwf a:hover {
@@ -73,14 +79,17 @@ background-size: 100% 100%;
 filter:opacity(0.6);
 }
 
-
+#formsign{
+    max-height:400px;
+    overflow-y: scroll;
+}
 
 #formsign h1{
 margin-top:4px;
 font-family: 'Shadows Into Light', sans-sarif;
 font-size:28px;color:white;
 }
-#loginmwf{
+/* #loginmwf{
 border:none;
 display:block;
 text-align: center;
@@ -93,7 +102,7 @@ color:#e0c006;
 width:240px;
 font-size: 16px;
 font-family:monospace;
-}
+} */
 #signupmwf{
 font-size:20px;
 color:white;
@@ -121,20 +130,19 @@ background-color: #16161662;
 #accrecov a{
 color:#27262669;
 font-weight: 600;
-/* text-decoration: underline; */
+text-decoration: none;
 }
 #accrecov a:hover{
 color:#ffffff93;
-/* text-decoration: underline; */
+text-decoration: none;
 }
 #cprght{
-width:100%;
-margin-top:90px;
-padding-right:10px;
-font-weight:600;
+/* width:100%; */
+font-weight:400;
 text-align: right;
+float:right;
 font-family: 'Shadows Into Light', sans-sarif;
-color:#104ffd;
+color:#ffffff;
 } 
 
 #showpromodiv{
@@ -165,10 +173,15 @@ margin-top:10px;
 float:center;
 color:black;
 cursor: pointer;
-padding:6px 20px;
+padding:10px;
 border-radius: 20px;
+width:100%;
 }
 
 #clslogin:hover{
 opacity: 0.8;
+}
+
+.bizfacecon h4{
+    max-width:1000px;
 }
