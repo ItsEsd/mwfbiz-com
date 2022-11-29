@@ -1697,18 +1697,19 @@ font-family: 'Courier New', Courier, monospace;
     }
 
     footer a {
-      color: #ffd703;
+      color: #ffd503bd;
     }
 
     footer a:hover {
-      color: #ffd703;
-      text-decoration: underline;
+      color: #b9b9b9;
     }
 
     footer {
       font-family: 'Shadows Into Light', sans-sarif;
-      bottom: 0;
+      bottom:0px;
+      left:0px;
       position: fixed;
+      text-align: left;
       width: 100%;
     }
 
@@ -1751,7 +1752,7 @@ font-family: 'Courier New', Courier, monospace;
       left: 0;
       background-color: #0f0f0ffd;
       overflow-x: hidden;
-      padding-top: 120px;
+      padding-top: 160px;
     }
 
     .sidenav a {
