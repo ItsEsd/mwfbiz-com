@@ -1,6 +1,6 @@
 /* mwfbiz.COM  */
 $(document).ready(function(){
-    document.getElementById('premiumpromo').innerHTML=" <p>👑 Membership (BIZ Admin) 720K/- ** Initial Fee - 7200/- 👑</p>";
+    document.getElementById('premiumpromo').innerHTML=" <p>👑 BIZ Admin (OBDM): <a href='https://mwfbiz.com/feedback'>Contact Desk</a> ** Admin Trial - 7200/- 👑</p>";
     });
 
 $('#promodiv_l').click(function(){
