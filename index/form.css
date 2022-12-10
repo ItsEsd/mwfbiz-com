@@ -256,7 +256,7 @@ transform: scale(1.04);
     float:right;}
 
       #frelite {
-        margin-top: 20px;
+        margin-top: 10px;
       }
   
       #passcontain {
@@ -291,13 +291,17 @@ transform: scale(1.04);
         color:#e6e6e6;
         width:100%;
         max-width:400px;
-        padding:20px;
+        padding:10px;
+        padding-top:30px;
         left:0;
-        margin-top:20px;
+        margin-top:10px;
         position: inherit;
         display: inline-block;
         font-size: 16px;
         font-family: 'Courier New', Courier, monospace;
+      }
+      #premiumpromo a{
+        text-decoration: none;
       }
       .bizinface{
         top:20px;
@@ -349,14 +353,14 @@ transform: scale(1.04);
 }
 
 .bizfacecon h4{
-  margin-top:20px;
-  font-size: 40px;
+  margin-top:0px;
+  font-size: 20px;
   line-height: 50px;
   font-weight: 400;
   /* max-width: 800px; */
   font-family: 'Courier New', Courier, monospace;
-  padding-right: 10px;
-  text-align: center;
+  padding: 10px;
+  text-align: right;
 }
 .sptttds{
   font-size: 80px;
@@ -377,7 +381,7 @@ transform: scale(1.04);
     font-size: 55px;
   }
   .bizfacecon h4{
-    font-size: 30px;
+    font-size: 20px;
     line-height: normal;
   }
    .bizinface{
@@ -406,7 +410,7 @@ transform: scale(1.04);
     font-size:55px;
   }
   .bizfacecon h4{
-    font-size: 30px;
+    font-size: 18px;
     line-height: normal;
   }
   .bizinface{
