@@ -6,28 +6,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Primary Meta Tags -->
 <title>Mind Without Fear | 🌐 mwfbiz.COM</title>
-<script>
-    function gcookmwf(cname) {
-   var name = cname + "="; 
-   var decodedCookie = decodeURIComponent(document.cookie); 
-   var ca = decodedCookie.split(';'); 
-   for (var i = 0; i < ca.length; i++) {
-      var c = ca[i]; while (c.charAt(0) == ' ') { c = c.substring(1); } 
-      if (c.indexOf(name) == 0) { 
-       var cookstr = ca[i].split(name);
-       var cook = cookstr[1].split(".");
-       var paem = window.atob(cook[1]);
-       return c.substring(name.length, c.length); } 
-     } return ""; 
-   }
-    var user = gcookmwf("_ybizc0"); 
-    var usergu = gcookmwf("_ybizv0"); 
-    var userel = gcookmwf("_ybize0");
-   if(user =="" || usergu =="" || userel==""){
-    window.stop ();
-    window.open("../", "_self"); 
-   } 
-</script>
 <meta name="author" content="Es D">
 <meta name="title" content="Mind Without Fear | 🌐 mwfbiz.COM">
 <meta name="description" content="To collate relevantly with wide-ranging information about the media representation of social work, human rights, economic development, SDGs, health, education, culture, peace and security, and the issues journalists aim to respond to shape the complexities of these issues."> <!-- Open Graph / Facebook -->
