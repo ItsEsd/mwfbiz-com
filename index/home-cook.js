@@ -57,7 +57,8 @@ function getCookie(cname) {
         document.getElementById('sigcontainer').style.display = "none"; 
         } 
          else if(usergu != ""){   
-            // document.getElementById('audioG').style.display = "block";   
+            // document.getElementById('audioG').style.display = "block";  
+            document.getElementById('sgoutmw').style.display = "none"; 
             document.getElementById('bizprost').style.display = "none";     
             setTimeout(function(){
                 document.getElementById('falsebacksigup').style.display = "block";
