@@ -76,6 +76,7 @@ function getCookie(cname) {
               3600000);
            } 
            else {
+              window.stop ();
               window.open("../", "_self"); 
               } 
 function deleteAllCookies() {
