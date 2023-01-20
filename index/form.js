@@ -293,51 +293,51 @@ function onClick() {
 }
 jQuery('#gbtn').on('click', function() {
 
-//  var optionsv = {
-//     "key": "rzp_live_zeJJQym7llbiEc",
-//     "amount": "10000",
-//     "currency": "INR",
-//     "name": "Visitor Pass (3 Days)",
-//     "image": "../image/imgicon.gif",
-//     "callback_url": "https://mwfbiz.com/privacy-policy/",
-//     "handler": function(response) {
-//       var payid = response.razorpay_payment_id;
-//       var peid = "Visitor";
-//       var psign = "Visitor";
-//       var refid = "rpv" + Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 10);
-//       var d = new Date();
-//       var currentTime = d.toLocaleString();
-//       var ur1 = 'https://script.google.com/macros/s/';
-//       var ur2 = 'AKfycbxpVqtT4y1MDj4B1oc-VWI4-fhV3kqDJxzUSyNnkJ_wmQYajdXlU3qtjHdvYzDNEorJ5g';
-//       var url = ur1 + ur2 + '/exec' + '?callback=ctrlqpcheck&tstamp=' + currentTime + '&tpid=' + payid + '&torid=' + peid + '&tpsign=' + psign + '&refid=' + refid + '&action=paycheck';
-//       var request = jQuery.ajax({
-//         crossDomain: true,
-//         url: url,
-//         method: "GET",
-//         dataType: "jsonp"
-//       });
-//       var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-//   var uid = window.btoa(String(gid));
-//   guSetCookie(3,uid);
-//   setTimeout(function() {
-//     window.open("../home", "_self");
-//   }, 2000);
-//     },
-//     "theme": {
-//       "color": "#dd1d16"
-//     }
-//   };
-//   var rzpv = new Razorpay(optionsv);
-//   rzpv.open();
-//   e.preventDefault(); 
-
-  document.getElementById("loader_e").style.display = "block";
-  var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-  var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
+ var optionsv = {
+    "key": "rzp_live_zeJJQym7llbiEc",
+    "amount": "55900",
+    "currency": "INR",
+    "name": "Visitor Pass (7 Days)",
+    "image": "../image/imgicon.gif",
+    "callback_url": "https://mwfbiz.com/privacy-policy/",
+    "handler": function(response) {
+      var payid = response.razorpay_payment_id;
+      var peid = "Visitor";
+      var psign = "Visitor";
+      var refid = "rpv" + Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 10);
+      var d = new Date();
+      var currentTime = d.toLocaleString();
+      var ur1 = 'https://script.google.com/macros/s/';
+      var ur2 = 'AKfycbxpVqtT4y1MDj4B1oc-VWI4-fhV3kqDJxzUSyNnkJ_wmQYajdXlU3qtjHdvYzDNEorJ5g';
+      var url = ur1 + ur2 + '/exec' + '?callback=ctrlqpcheck&tstamp=' + currentTime + '&tpid=' + payid + '&torid=' + peid + '&tpsign=' + psign + '&refid=' + refid + '&action=paycheck';
+      var request = jQuery.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+      });
+      var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
+  var uid = window.btoa(String(gid));
   guSetCookie(7,uid);
   setTimeout(function() {
     window.open("../home", "_self");
-  }, 2000); 
+  }, 2000);
+    },
+    "theme": {
+      "color": "#dd1d16"
+    }
+  };
+  var rzpv = new Razorpay(optionsv);
+  rzpv.open();
+  e.preventDefault(); 
+
+  // document.getElementById("loader_e").style.display = "block";
+  // var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
+  // var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
+  // guSetCookie(7,uid);
+  // setTimeout(function() {
+  //   window.open("../home", "_self");
+  // }, 2000); 
 
 });
 
