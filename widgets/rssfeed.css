@@ -20,3 +20,78 @@ border-radius:10px;
 
 #rfitem .descp {color:#f4f75a}
 #rfitem img{width:100%;max-width:600px;pointer-events: none;}
+
+body {
+    font-family: Verdana, Open-sans;
+    background: white;
+    border-radius: 4px;
+    padding: 4px;
+    overflow-x:hidden; 
+    }
+    
+    .btn {
+    background-color: #ffd703;
+    border: none;
+    }
+    
+    .btn:hover {
+    background-color: #ffd703;
+    border: none;
+    }
+    
+    a {
+    color: blue;
+    }
+    
+    .btn:focus {
+    outline: 0px;
+    }
+    
+    .btn:active {
+    outline: none;
+    }
+    
+    .sticky {
+    position: fixed;
+    top: 0px;
+    text-align: right;
+    }
+    
+    div.stickFoot {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: yellow;
+    padding-bottom: -40px;
+    
+    }
+    
+    #conprnews,
+    #conpressrel {
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    
+    /* width */
+    ::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    
+    border-radius: 2px;
+    background: white;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #a6a6a6;
+    border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #a6a6a6;
+    }
