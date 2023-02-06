@@ -20,7 +20,7 @@ document.getElementById('bizframe').src="/reel-random";
 document.getElementById('opnintb').href="/reel-random";
 });
 $('#clsbizfrm').click(function(){
-    $('#frmcontnt').slideUp();
+    $('#frmcontnt').slideUp();document.getElementById('bizframe').src="";
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
