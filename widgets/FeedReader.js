@@ -54,7 +54,7 @@ type: 'GET',
 url: API + userUrl,
 dataType: 'jsonp',
 success: function (data) {
-console.log(data);
+// console.log(data);
 data.items.forEach(item => {
 var content = document.getElementById('content');
 
