@@ -298,7 +298,7 @@ jQuery('#gbtn').on('click', function() {
     "amount": "55900",
     "currency": "INR",
     "name": "Visitor Pass (7 Days)",
-    "image": "../image/imgicon.gif",
+    "image": "../image/mwfbizlogo.png",
     "callback_url": "https://mwfbiz.com/privacy-policy/",
     "handler": function(response) {
       var payid = response.razorpay_payment_id;
