@@ -4,7 +4,7 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "image/manifestIcon.png",
+            "src": "image/manifest.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable any"
@@ -15,5 +15,5 @@
     "start_url": "/",
     "url": "https://mwfbiz.com/",
     "manifestUrl": "https://mwfbiz.com/manifest.json",
-    "lang": ""
+    "lang": "en"
 }
