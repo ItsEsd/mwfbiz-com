@@ -547,3 +547,8 @@ min-height:300px;
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
  
 
+#deskmob img{
+  width:100%;
+  max-width:120px;
+  margin-bottom:10px;
+}
