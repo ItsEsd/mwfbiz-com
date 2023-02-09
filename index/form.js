@@ -295,9 +295,9 @@ jQuery('#gbtn').on('click', function() {
 
  var optionsv = {
     "key": "rzp_live_zeJJQym7llbiEc",
-    "amount": "55900",
+    "amount": "5900",
     "currency": "INR",
-    "name": "Visitor Pass (7 Days)",
+    "name": "VISITOR PASS",
     "image": "../image/mwfbizlogo.png",
     "callback_url": "https://mwfbiz.com/privacy-policy/",
     "handler": function(response) {
@@ -318,13 +318,13 @@ jQuery('#gbtn').on('click', function() {
       });
       var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
   var uid = window.btoa(String(gid));
-  guSetCookie(7,uid);
+  guSetCookie(1,uid);
   setTimeout(function() {
     window.open("../home", "_self");
   }, 2000);
     },
     "theme": {
-      "color": "#dd1d16"
+      "color": "#eaeaea"
     }
   };
   var rzpv = new Razorpay(optionsv);
