@@ -87,7 +87,7 @@ for (var i = 0; i < cookies.length; i++) {
 var cookie = cookies[i];
 var eqPos = cookie.indexOf("=");
 var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=mwfbiz.com";
+document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;favicondomain=mwfbiz.com";
 }
 setTimeout(function(){window.open("https://www.mwfbiz.com/", "_self");},2000);
 }    
