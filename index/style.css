@@ -1910,7 +1910,8 @@ padding:10px;}
   float:center;
   cursor: pointer;
   font-size:20px;
-  
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
 }
 .dogespan:hover{
   opacity:0.9;
