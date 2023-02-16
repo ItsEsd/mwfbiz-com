@@ -34,6 +34,55 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link type="text/css" rel="stylesheet" href="index/style.css" />
 <link type="text/css" rel="stylesheet" href="index/style-II.css" />
+<script>
+  function getCookieHPG(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+  var c = ca[i];
+  while (c.charAt(0) == ' ') {
+  c = c.substring(1);
+  }
+  if (c.indexOf(name) == 0) {
+  return c.substring(name.length, c.length);
+  }
+  }
+  return "";
+  }
+  var user = getCookieHPG("_ybizc0");
+  var usergu = getCookieHPG("_ybizv0");
+  var userel = getCookieHPG("_ybize0");
+  if (user != "" ) {
+  document.getElementById('falsebacksigup').style.display = "none";
+  document.getElementById('sigcontainer').style.display = "none";
+  } 
+  else if(usergu != ""){
+  setTimeout(function(){
+  document.getElementById('falsebacksigup').style.display = "block";
+  document.getElementById('sigcontainer').style.display = "block";},
+  3600000);
+  }
+  else if(userel != ""){
+  setTimeout(function(){
+  document.getElementById('falsebacksigup').style.display = "block";
+  document.getElementById('sigcontainer').style.display = "block";},
+  3600000);
+  }
+  else {
+  window.open("../", "_self");
+  }
+  function deleteAllCookies() {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+  var cookie = cookies[i];
+  var eqPos = cookie.indexOf("=");
+  var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+  document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=mwfbiz.com";
+  }
+  setTimeout(function(){location.reload();},2000);
+  }     
+  </script>  
 <script src="index/js1.js"></script>
 <script src="index/jsppro.js"></script>
 <script src="index/jshi1.js"></script>
@@ -136,17 +185,17 @@
 <div id="goto" style="display: block;">
 <div align="center" style="width:100%;display:block;padding-top:0px;">
 <div class="cards"> 
-    <!-- <a target="_self" href="https://imi.mwfbiz.com/"> -->
-<div class="card" id="monolg">IMI - MONOLOGUE</div>
 <!-- </a> <a target="_self" href="genesis/"> -->
 <div class="card" id="bizgen">G E N E S I S</div>
 <!-- </a> <a target="_self" href="featured/"> -->
-<div class="card" id="bizfeat">Featured</div>
+<div class="card" id="bizfeat">F E A T U R E D</div>
 <!-- </a> <a target="_self" href="reel-random/"> -->
 <div class="card" id="bizrr">Reel Random</div>
+<!-- <a target="_self" href="https://imi.mwfbiz.com/"> -->
+<div class="card" id="monolg">IMI - MONOLOGUE</div>
 <!-- </a>  -->
 <a onclick="closeNav();document.body.scrollTop = 0;document.documentElement.scrollTop = 0; document.getElementById('imgcon').style.display='none'; $('#otherEx').slideDown('slow');">
-<div class="card">Spoiler</div>
+<div class="card">S P O I L E R</div>
 </a> <a target="_self" id="bizadmnsh">
 <div class="card"><span style="font-size: 16px;">BIZ Admin &#8250;&#8250;</span></div>
 </a> </div><br><br>
