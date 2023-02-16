@@ -335,13 +335,17 @@ border-radius: 50%;
     z-index: 100000;
 }
 #frmcontnt iframe{
-    /* top:30px; */
     position: relative;
     width:100%;
     max-width:1000px;
     height:94%;
     border:0px;
     background-color: #161616;
+    /* pointer-events: none; */
+    background-image: url('../image/logoSVG.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
 }
 #clsbizfrmdv{
     bottom:0;
