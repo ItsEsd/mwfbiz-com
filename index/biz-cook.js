@@ -51,12 +51,13 @@ return c.substring(name.length, c.length); }
 var user = getCookie("_ybizc0"); 
 var usergu = getCookie("_ybizv0"); 
 var userel = getCookie("_ybize0"); 
+var userm = getCookie("_ybizm0");
 if (user != "" ) {
 document.getElementById('falsebacksigup').style.display = "none"; 
 document.getElementById('sigcontainer').style.display = "none"; 
 // userCookie();
 } 
-else if(usergu != ""){
+else if(usergu != "" || userm != ""){
 document.getElementById('adminmoto').innerHTML='';
 document.getElementById('logAd').innerHTML='';
 document.getElementById('upd').innerHTML='';
