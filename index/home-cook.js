@@ -51,12 +51,13 @@ function getCookie(cname) {
       var user = getCookie("_ybizc0"); 
       var usergu = getCookie("_ybizv0"); 
       var userel = getCookie("_ybize0"); 
+      var userm = getCookie("_ybizm0");
       if (user != "" ) {
         // document.getElementById('audioP').style.display = "block";
         document.getElementById('falsebacksigup').style.display = "none"; 
         document.getElementById('sigcontainer').style.display = "none"; 
         } 
-         else if(usergu != ""){   
+         else if(usergu != "" || userm != ""){   
             // document.getElementById('audioG').style.display = "block";  
             document.getElementById('sgoutmw').style.display = "none"; 
             document.getElementById('bizprost').style.display = "none";     
