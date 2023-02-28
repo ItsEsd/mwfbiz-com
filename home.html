@@ -53,11 +53,12 @@
   var user = getCookieHPG("_ybizc0");
   var usergu = getCookieHPG("_ybizv0");
   var userel = getCookieHPG("_ybize0");
+  var userm = getCookieHPG("_ybizm0");
   if (user != "" ) {
   document.getElementById('falsebacksigup').style.display = "none";
   document.getElementById('sigcontainer').style.display = "none";
   } 
-  else if(usergu != ""){
+  else if(usergu != "" || userm != ""){
   setTimeout(function(){
   document.getElementById('falsebacksigup').style.display = "block";
   document.getElementById('sigcontainer').style.display = "block";},
