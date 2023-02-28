@@ -407,7 +407,8 @@ function elGetCookie(cname) {
 var user = elGetCookie("_ybizc0"); 
 var usergu = elGetCookie("_ybizv0"); 
 var userel = elGetCookie("_ybize0"); 
- if(usergu != "" || user !="" || userel !=""){
+var userm = getCookie("_ybizm0");
+ if(usergu != "" || user !="" || userel !="" || userm != ""){
       setTimeout(function(){
         window.open("https://mwfbiz.com/home", "_self")},
         1000);
