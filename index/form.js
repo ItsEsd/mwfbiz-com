@@ -192,8 +192,8 @@ jQuery('#ConfirmPasscode').on('keyup', function() {
 createpass.addEventListener('submit', (event) => {
   if (jQuery('#CreatePasscode').val() == jQuery('#ConfirmPasscode').val()) {
     var usid = $('#entry.176463742').val();
-    var k = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
-    var uid =k+"."+window.btoa(String(usid));
+    // var k = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
+    var uid =window.btoa(String('BIZADMN'))+"."+window.btoa(String(usid))+"."+window.btoa(String('valid'));
     ewfSetCookie(30,uid);
     document.getElementById('gform').submit();
     setTimeout(function() {
@@ -268,7 +268,7 @@ function userfound(e) {
   if (res != "ID not found!") {
     document.getElementById("pcheck").innerHTML = "";
     var k = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
-    var uid =k+"."+window.btoa(String(res[0].UserID));
+    var uid =window.btoa(String('BIZADMN'))+"."+window.btoa(String(res[0].UserID))+"."+window.btoa(String('valid'));
     ewfSetCookie(30,uid);
     setTimeout(function() {
       window.open("https://mwfbiz.com/home", "_self");
@@ -333,7 +333,9 @@ jQuery('#gbtn').on('click', function() {
 
   document.getElementById("loader_e").style.display = "block";
   var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-  var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
+  // var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
+  // guSetCookie(7,uid);
+  var uid =gid+"."+window.btoa(String("iamavisitor"))
   guSetCookie(7,uid);
   setTimeout(function() {
     window.open("../home", "_self");
@@ -380,14 +382,17 @@ function enteringelop() {
     return false;
   }
 }
+var elSetCookie = function(sessexp,uid) {
+ 
+  var expires = "expires=" + sessexp;
+  document.cookie = "_ybize0="+uid+"; expires=" + expires + ";path=/;domain=mwfbiz.com";
+};
 
 function ctrlqelp(e) {
   var outp = e.result;
   if (outp != "Pass not found!") {
     var sessexp = outp[0].SessionExpireDT;
-    var elkey = outp[0].UserRefId;
-    var k = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
-    var uid =k+"."+window.btoa(String(outp[0].UserRefId));
+    var uid =window.btoa(String('ELITE'))+"."+window.btoa(String(outp[0].UserRefId));
     elSetCookie(sessexp,uid);
     setTimeout(function() {
       window.open("https://mwfbiz.com/home", "_self");
@@ -415,11 +420,6 @@ var userm = getCookie("_ybizm0");
         }
    
 
-var elSetCookie = function(sessexp,uid) {
- 
-  var expires = "expires=" + sessexp;
-  document.cookie = "_ybize0="+uid+"; expires=" + expires + ";path=/;domain=mwfbiz.com";
-};
 // $('#loginmwf').click(function(){
 //   $('html,body').animate({
 //     scrollTop: $(".bizfacecon-tw").offset().top
