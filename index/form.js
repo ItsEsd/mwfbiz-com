@@ -370,7 +370,7 @@ function enteringelop() {
     $('#promodiv').fadeIn('fast');
     document.getElementById('promodiv').style.height = '100%';
     var ur1 = 'https://script.google.com/macros/s/';
-    var ur2 = 'AKfycbxLpTl0uEgh8Y4PY9k_wPp7afNz3kogMQDTv6D-WSFW1Z_fVyswlMk1bU-pJ6NGy71N';
+    var ur2 = 'AKfycbyXc4fYfTpBu5Fo371PeG4IxAVcOi3Zd_TxbAoku2-QkJEVdOh-nHk5oOrALw13E2J7';
     var url = ur1 + ur2 + '/exec' + '?callback=ctrlqelp&elpass=' + elop + '&action=chelite';
     var request = jQuery.ajax({
       crossDomain: true,
