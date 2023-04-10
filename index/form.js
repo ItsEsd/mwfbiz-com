@@ -387,7 +387,6 @@ var elSetCookie = function(sessexp,uid) {
   var expires = "expires=" + sessexp;
   document.cookie = "_ybize0="+uid+"; expires=" + expires + ";path=/;domain=mwfbiz.com";
 };
-
 function ctrlqelp(e) {
   var outp = e.result;
   if (outp != "Pass not found!") {
@@ -399,7 +398,6 @@ function ctrlqelp(e) {
     }, 500);
   }
 }
-
 function elGetCookie(cname) {
   var name = cname + "="; 
     var decodedCookie = decodeURIComponent(document.cookie); 
@@ -418,13 +416,6 @@ var userm = getCookie("_ybizm0");
         window.open("https://mwfbiz.com/home", "_self")},
         1000);
         }
-   
-
-// $('#loginmwf').click(function(){
-//   $('html,body').animate({
-//     scrollTop: $(".bizfacecon-tw").offset().top
-//   }, 1000);
-// });
 /*【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】
 【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】
 【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】【I】【t】【s】【E】【s】【D】
