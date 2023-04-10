@@ -203,10 +203,11 @@ html {
   }
 
   .close {
-    filter: contrast(200%);
+    filter: brightness(1000%);
     float: right;
     margin-right: 10px;
-    border-color: none;
+    margin-top: 10px;
+    border-color: none;z-index:1000;
   }
 
 
@@ -214,8 +215,8 @@ html {
     position: sticky;
     top: 0;
     padding: 6px;
+    z-index:1000;
     background: #161616;
-    ;
   }
 
   .qb a {
@@ -324,6 +325,8 @@ display:none;
   }
 
   #myNav{
+    width:100%;
+    height:0%;
       z-index: 100;
   }
 
