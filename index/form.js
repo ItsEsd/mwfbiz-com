@@ -316,9 +316,9 @@ jQuery('#gbtn').on('click', function() {
 //         method: "GET",
 //         dataType: "jsonp"
 //       });
-//       var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-//   var uid = window.btoa(String(gid));
-//   guSetCookie(1,uid);
+//         var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
+//         var uid =gid+"."+window.btoa(String("iamavisitor"));
+//   guSetCookie(7,uid);
 //   setTimeout(function() {
 //     window.open("../home", "_self");
 //   }, 2000);
@@ -333,9 +333,7 @@ jQuery('#gbtn').on('click', function() {
 
   document.getElementById("loader_e").style.display = "block";
   var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-  // var uid =gid+"."+window.btoa(String("bizbebpi85gkgfhd4g58ld01n"))
-  // guSetCookie(7,uid);
-  var uid =gid+"."+window.btoa(String("iamavisitor"))
+  var uid =gid+"."+window.btoa(String("iamavisitor"));
   guSetCookie(7,uid);
   setTimeout(function() {
     window.open("../home", "_self");
