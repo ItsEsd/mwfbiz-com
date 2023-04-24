@@ -94,7 +94,7 @@ var res = loca.split("/", 1);
 if ( res != "Asia"){ window.location.href = "https://feed.mwfbiz.com";} 
 else{ window.location.href = "https://mwfbiz.com"; }</script> -->
 </head>
-<body style="margin:0px;" onload="typeWriter();">
+<body style="margin:0px;" onload="typeWriter();deleteAllCookies();">
 <div id="main">
 <!----Nav----->
 <header>
@@ -476,10 +476,8 @@ if (ipadds != 0 && locadds != 0 && timeadds != 0) {
 document.forms["glocform"].submit();
 }
 }
-
 </script>
 <script src="index/home-cook.js"></script>
-<!-- <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script> -->
 <script>
 var i = 0;
 var txt = 'Thank you for visiting. Have a nice day. ';
