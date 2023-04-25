@@ -10,6 +10,30 @@
 <meta name="title" content="Mind Without Fear | 🌐 mwfbiz.COM">
 <link rel="stylesheet" href="pg-style.css">  
 <base target="_blank">
+<script>
+  function getCookieHPG(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+  var c = ca[i];
+  while (c.charAt(0) == ' ') {
+  c = c.substring(1);
+  }
+  if (c.indexOf(name) == 0) {
+  return c.substring(name.length, c.length);
+  }
+  }
+  return "";
+  }
+  var user = getCookieHPG("_ybizc0"); console.log(usergu);
+  var usergu = getCookieHPG("_ybizv0");
+  var userel = getCookieHPG("_ybize0");
+  var userm = getCookieHPG("_ybizm0");
+  if(user =="" ||  usergu  =="" || userel =="" ||  userm ==""){
+    window.open("../", "_self");
+  }
+  </script>
 </head>
     <body>
       <div class="items">
