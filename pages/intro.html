@@ -26,13 +26,21 @@
   }
   return "";
   }
-  var user = getCookieHPG("_ybizc0"); console.log(usergu);
+  var user = getCookieHPG("_ybizc0");
   var usergu = getCookieHPG("_ybizv0");
   var userel = getCookieHPG("_ybize0");
   var userm = getCookieHPG("_ybizm0");
-  if(user =="" ||  usergu  =="" || userel =="" ||  userm ==""){
-    window.open("../", "_self");
+  function ckexst(){if(user !="" ||  
+  usergu  !="" || userel !="" ||  userm !=""){
+   return true;
   }
+else{
+return false;
+}
+}
+if(ckexst()==false){
+  window.open("../", "_self"); 
+}
   </script>
 </head>
     <body>
