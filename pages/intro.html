@@ -119,9 +119,17 @@ if(ckexst()==false){
     </body>
     <script>
     const slider = document.querySelector(".items");
-		const slides = document.querySelectorAll(".item");
+		const slidess = document.querySelectorAll(".item");
 		const button = document.querySelectorAll(".button");
-    var listlen=document.getElementsByClassName("item").length; 
+    if(user !=""){
+      slidess[0].classList.remove("active");
+      slidess[0].classList.remove("item");
+      slidess[0].style.display='none';
+      slidess[1].classList.remove("next");
+      slidess[1].classList.add("active");
+      slidess[2].classList.add("next");}
+    const listlen=document.getElementsByClassName("item").length;
+    const slides = document.querySelectorAll(".item");
 		let current = 0;
 		let prev = listlen-1;
 		let next = 1;
