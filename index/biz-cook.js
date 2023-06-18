@@ -66,7 +66,7 @@ document.getElementById('adminmoto').style.display='none';
 setTimeout(function(){
 $('#falsebacksigup').fadeIn('fast');
 $('#sigcontainer').fadeIn('fast');},
-000);
+100);
 }
 else if(userel != ""){
 document.getElementById('adminmoto').innerHTML='';
@@ -77,7 +77,7 @@ document.getElementById('adminmoto').style.display='none';
 setTimeout(function(){
 $('#falsebacksigup').fadeIn('fast');
 $('#sigcontainer').fadeIn('fast');},
-000); 
+100); 
 } 
 else {
 window.open("../", "_self"); 
