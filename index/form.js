@@ -295,9 +295,9 @@ jQuery('#gbtn').on('click', function() {
 
  var optionsv = {
     "key": "rzp_live_zeJJQym7llbiEc",
-    "amount": "10000",
+    "amount": "20000",
     "currency": "INR",
-    "name": "VISITOR PASS (7 Days)",
+    "name": "VISITOR PASS",
     "image": "../image/mwfbizlogo.png",
     "callback_url": "https://mwfbiz.com/privacy-policy/",
     "handler": function(response) {
@@ -388,8 +388,9 @@ var elSetCookie = function(sessexp,uid) {
 function ctrlqelp(e) {
   var outp = e.result;
   if (outp != "Pass not found!") {
+    var ftchpic = outp[0].Motto.split('{biz}');
     var sessexp = outp[0].SessionExpireDT;
-    var uid =window.btoa(String('ELITE'))+"."+window.btoa(String(outp[0].UserRefId));
+    var uid =window.btoa(String('ELITE'))+"."+window.btoa(String(outp[0].UserRefId))+"."+window.btoa(ftchpic[0])+"."+ window.btoa(sessexp);
     elSetCookie(sessexp,uid);
     setTimeout(function() {
       window.open("https://mwfbiz.com/home", "_self");
