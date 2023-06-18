@@ -1,6 +1,7 @@
 $('#monolg').click(function(){
     $('#frmcontnt').slideDown();
 document.getElementById('bizframe').src="https://imi.mwfbiz.com";
+// document.getElementById('bizframe').src="http://127.0.0.1:5503/";
 document.getElementById('opnintb').href="https://imi.mwfbiz.com";
 });
 $('#bizgen').click(function(){
