@@ -136,12 +136,7 @@ const requiredFields = [{
   if (!valid) {
     event.preventDefault();
   } else {
-   // sendEmail();
-    //document.getElementById('formsign').style.display = 'none';
-    //document.getElementById('veremail').style.display = 'block';
-    rzp1.open();
-    e.preventDefault();
-    document.getElementById('createpass').style.display = 'block';
+   sendEmail();
   }
 });
 
@@ -150,18 +145,26 @@ function sendEmail() {
   var mailat = document.getElementById('emailid').value;
   document.getElementById('vercodepre').value = k;
   Email.send({
-      SecureToken: "262ef989-71b4-4257-a609-f3b7f8d5fc0f",
+      SecureToken: "a24b6cee-3019-4cce-a423-313583615b01",
       To: mailat,
-      From: "donotreply@mwfbiz.com",
+      From: "🌐 mwfbiz.COM <donotreply@mwfbiz.com>",
       Subject: "Email Verification",
       Body: "<html><body style='background-color:#161616;color:white;border-radius:10px;'><div align='center' style='padding:40px;'><h2 style='color:white'>W E L C O M E</h2><h2><a target='_blank' href='https://mwfbiz.com' style='text-decoration:none;'>Mind Without Fear - M W F</a></h2>" + "<p style='color:white;'>Your Confirmation Code is: </p><h3 style='color:black;width:140px;background-color:#e6e6e6;border-radius:4px;padding:6px;'>" + k + "</h3><br><p style='color:white;'>Contact: <a href='mailto:info@mwfbiz.com'>info@mwfbiz.com</a></p><h4 style='color:white;'>Thank You</h4><p style='font-size:12px;color:#ffd703;'>N.B. Do not reply to this email</p></div></body></html>",
     })
     .then(function(message) {
-      document.getElementById('notifyver').style.display = 'block';
-      setTimeout(function() {
-        jQuery('#notifyver').fadeOut('fast');
-      }, 5000);
-
+      if(message=="OK"){
+        document.getElementById('notifyver').style.display = 'block';
+        document.getElementById('formsign').style.display = 'none';
+        document.getElementById('veremail').style.display = 'block';
+        setTimeout(function() {
+          jQuery('#notifyver').fadeOut('fast');
+        }, 5000);
+      }
+      else{
+        rzp1.open();
+        e.preventDefault();
+        document.getElementById('createpass').style.display = 'block';
+      }
     });
 }
 
@@ -191,19 +194,41 @@ jQuery('#ConfirmPasscode').on('keyup', function() {
 
 createpass.addEventListener('submit', (event) => {
   if (jQuery('#CreatePasscode').val() == jQuery('#ConfirmPasscode').val()) {
-    var usid = $('#entry.176463742').val();
-    // var k = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
-    var uid =window.btoa(String('BIZADMN'))+"."+window.btoa(String(usid))+"."+window.btoa(String('valid'));
-    ewfSetCookie(30,uid);
-    document.getElementById('gform').submit();
-    setTimeout(function() {
-      window.open("https://mwfbiz.com/home", "_self");
-    }, 3000);
-
+    document.getElementById('conhome').disabled = true;
+    const flnm = $('#fname').val();
+    const llnm = $('#lname').val();
+    const elmd = $('#emailid').val();
+    const psmd = $('#ConfirmPasscode').val();
+    var k =Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
+    const ussd = "biz"+k;
+    document.getElementById('ussddvl').value= ussd;
+    var d = new Date();
+    var currentTime = d.toLocaleString();
+    var ur1 = 'https://script.google.com/macros/s/';
+    var ur2 = 'AKfycbxjEWkVAO6VRGrU7GnmlVQuvXzT19jY-6AJ8urPlM5mzdr2YQiNKDMH3xqc3mw3Top1eQ';
+    var url = ur1 + ur2 + '/exec' + '?callback=instdactn&tstamp=' + currentTime + '&flnm=' + flnm + '&llnm=' + llnm + '&elmd=' + elmd + '&psmd=' + psmd +'&usmd=' + ussd + '&action=biznw';
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp"
+    });
   } else {
     event.preventDefault();
   }
 });
+
+function instdactn(e){
+if(e.result =="Insertion successful!"){
+  var usid = $('#ussddvl').val();
+  var uid =window.btoa(String('BIZADMN'))+"."+window.btoa(String(usid))+"."+window.btoa(String('valid'));
+  ewfSetCookie(30,uid); 
+  setTimeout(function() {
+    window.open("https://mwfbiz.com/home", "_self");
+  }, 3000);
+}
+}
+
 
 var ewf_expire, formfullid = 'formsign',
   form = document.getElementById(formfullid),
@@ -340,7 +365,9 @@ jQuery('#gbtn').on('click', function() {
   // }, 2000); 
 
 });
-
+function ctrlqpcheck(e){
+console.log(e.result);
+}
 function guGetCookie(cname) {
   var name = cname + "="; 
     var decodedCookie = decodeURIComponent(document.cookie); 
