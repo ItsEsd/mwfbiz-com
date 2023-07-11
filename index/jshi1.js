@@ -37,7 +37,7 @@
 ∙∙·▫▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ ｉтŞᵉˢᗪ ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫▫·∙∙*/
  $(document).ready( function(){
     var url1 = "https://script.google.com/macros/s/";
-    var url2 = "AKfycbyer2m_4bx3ipOETKCZu1JQFP6ofaacH5Jk2_tO9i7ewmiPnn5M7loscUnSz5CvGrGbxA";
+    var url2 = "AKfycbzyqDIUbsbo7xmfuqci9jtG3g7j34ugV5WmMK5YPadx_9TDuF2Bq9H1Vggyp3xg02X_0A";
     var url = url1+url2+"/exec"+ "?action=read";
     $.getJSON(url, function(json) {
         var m = Math.floor((Math.random() * json.records.length) + 0);
