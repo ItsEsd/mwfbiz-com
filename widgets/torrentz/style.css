@@ -1,0 +1,38 @@
+body a {
+	color:#369;
+	text-decoration:none
+}
+
+body a:hover, div.results a:hover, div.trackers a:hover, div.index-stats a:hover {
+	color:#F51;
+	text-decoration:underline
+}
+
+body {
+	font-family:Verdana,Tahoma,sans-serif;
+	font-size:10px;
+	margin:0 auto;
+	max-width:600px;
+    overflow-x: hidden;
+    /* min-width: 360px!important */
+}
+
+form.gsc-search-box {
+    padding: 10px;
+    border-radius: 0px;
+    background-color: #ef1414;
+	width: 98%!important;
+    top:-1px;
+    position: sticky;
+    z-index:1000;
+}
+.gsc-input-box {
+    border-radius: 0px;
+}
+.cse .gsc-search-button-v2, .gsc-search-button-v2 {
+    border-radius: 0px;
+}
+.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    border-bottom-color: #ef1414 !important;
+    word-wrap: break-word;
+}
