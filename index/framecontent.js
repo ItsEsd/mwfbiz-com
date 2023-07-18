@@ -25,3 +25,22 @@ $('#clsbizfrm').click(function(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
+
+function opentrrnt() {
+    var modal = document.getElementById("trntmodal");
+    modal.style.display = "block";
+    document.getElementById('trntln').src="/widgets/torrentz/";
+  }
+  
+  function closetrrnt() {
+    var modal = document.getElementById("trntmodal");
+    modal.style.display = "none";
+    document.getElementById('trntln').src="";
+  }
+  
+  window.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("trntmodal");
+    modal.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+    });
+  });
