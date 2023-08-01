@@ -179,7 +179,7 @@ html {
     background: #BB1B16;
   }
 
-  button {
+  #PProfile button {
     background-color: black;
     border: 2px solid #DD1D16;
     color: white;
@@ -192,17 +192,17 @@ html {
     cursor: pointer;
   }
 
-  button:active {
+  #PProfile button:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     border: 2px solid #dd1d16;
   }
 
-  button:focus {
+ #PProfile button:focus {
     outline: none;
   }
 
-  .close {
+ #PProfile .close {
     filter: brightness(1000%);
     float: right;
     margin-right: 10px;
@@ -211,14 +211,16 @@ html {
   }
 
 
-  .sticky {
+  #PProfile .sticky {
     position: sticky;
     top: 0;
-    padding: 6px;
+    padding-top: 6px;
     z-index:1000;
     background: #161616;
   }
-
+  #PProfile .sticky h3{
+    padding-left: 6px;
+  }
   .qb a {
     right: 10px;
     top:56px;
