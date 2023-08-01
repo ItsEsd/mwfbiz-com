@@ -1442,7 +1442,7 @@
       }
     }
 
-    button {
+    /* button {
       width: 100%;
       max-width: 600px;
       height: 65px;
@@ -1457,12 +1457,12 @@
       display: inline-block;
       cursor: pointer;
       border-radius: 4px;
-    }
+    } */
 
-    button:hover {
+    /* button:hover {
       color: white;
       background-image: linear-gradient(to bottom right, black, #dd1d16, black, #dd1d16);
-    }
+    } */
 
     #ogame {
       display: block;
