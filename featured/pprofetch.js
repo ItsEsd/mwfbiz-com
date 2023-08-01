@@ -8,7 +8,7 @@ var x = Math.floor((Math.random() * (json.records.length-1))); console.log(x);
 if(x===0){x=1;}console.log(x);
 document.getElementById("PProfile").innerHTML = '<div class="Name">' + 
 json.records[x].Name + '</div>' + '<hr style="width:50%;">' + '<div align="center">' +
-'<a href=' + json.records[x].PLink + ' target="_parent">' + '<img src=' + 
+'<a href=' + json.records[x].PLink + ' target="_blank">' + '<img src=' + 
 json.records[x].ImageLink + ' width="70%" class="imgC" >' + '</a>' + '</div>' + 
 '<hr style="width:70%;">' + '<div class="Bio">' + json.records[x].Guj + '</div>';
 });
