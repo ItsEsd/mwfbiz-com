@@ -205,6 +205,9 @@ transform: scale(1.02);
   min-height:120px;
   max-height:200px;
 }
+#formwall input,#formwall label,#formwall textarea{
+  font-size:14px;
+}
     </style>
   </head>
 
@@ -221,16 +224,18 @@ transform: scale(1.02);
       <div class="col-md-6 conone">
       <div class="container2" id="con">
         <form id="formwall" target="hiddenframe">
-          <div class="form-group"> <label for="Email">Email*:</label> <input type="email" list="Email" name="Email" class="form-control" id="dmail" placeholder="Your email" required> </div> 
-          <div class="form-group"> <label for="ImprovementQ">Feedback*:</label> <textarea name="ImprovementQ" class="form-control" id="dimprv" onkeyup="textAreaAdjust(this)" style="width: 100%;height:100px;" placeholder="Write a review" required></textarea> </div>
+          <div class="form-group"  style="width:48%;float:left;margin:2px;"> <label for="Email">Name*:</label> <input type="text" list="Name" name="Name" class="form-control" id="nmvl" style="text-transform: capitalize;" placeholder="Full Name" required> </div> 
+          <div class="form-group"  style="width:48%;float:right;margin:2px;"> <label for="Email">Email*:</label> <input type="email" list="Email" name="Email" class="form-control" id="dmail" placeholder="Your email" required> </div> 
+          <div class="form-group"> <label for="ImprovementQ">Feedback / Review*:</label> <textarea name="ImprovementQ" class="form-control" id="dimprv" onkeyup="textAreaAdjust(this)" style="width: 100%;height:100px;" placeholder="Send a feedback or write us a review" minlength="200" required></textarea> </div>
          <button style="background-color:#DD1D16;color:white;border-radius:4px;border:none; padding:10px 10px; width:100%;" type="submit" id="btnsubmit">Submit</button>
         </form>
       </div>
       <iframe name="hiddenframe" id="hiddenframe" style="display:none;"></iframe>
-      <div align="center" id="success" style="color:#DD1D16;display:none;"><br><br>
-        <h3 style='font-size:60px;color:green;'>&#9786;</h3>
-        <h3 style="color:green;">Thank You</h3>
-        <h5>Feedback Submitted</h5> <br>
+      <div align="center" id="success" style="color:#535353;display:none;"><br><br>
+        <h3 style='font-size:60px;color:#535353;'>&#9786;</h3>
+        <h5 style="color:#535353;">Thank You</h5>
+        <h5>Feedback submitted</h5> <br>
+        <p style="font-size:12px;font-family:'Courier New', Courier, monospace;padding:5px;">We will carefully consider your feedback and use it to enhance our products/services further. Thank you for taking the time to share your thoughts with us. If you have any more comments or questions, please feel free to reach out to us. We value your continued support and look forward to serving you again.</p>
       </div> <br>
     </div>
     <div class="col-md-6 contwo">
@@ -245,8 +250,11 @@ transform: scale(1.02);
         <div class="icon"> <a href="https://www.facebook.com/mindwithoutfearmwf" target="_top"><img src="https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw"><br>Facebook</a> </div>
         <div class="icon"> <a href="https://www.linkedin.com/company/mind-without-fear" target="_top"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw=w480-h960-rw"> <br>LinkedIn</a> </div>
         <div class="icon"> <a href="https://www.instagram.com/mwfbiz/" target="_top"><img src="https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw=s180-rw"><br>Instagram</a> </div>
-      </div> <button style="background-color: white; cursor: pointer; border-radius:5px; border-color: #FFD703;padding:10px 10px;"><a style="font-size:17px; text-decoration:none" type="button" target="_blank" href="https://wa.me/?text=https://mwfbiz.com" data-action="share/whatsapp/share"><b>Share On WhatsApp </b><i class="fa fa-whatsapp" aria-hidden="true" style="font-size:20px;color:#30CD20"></i></a></button>
-      <div align="center" style="display:inline-block; padding:5px;"><br><button style="background-color: black; cursor: pointer; border-radius:5px; border:none;padding:10px 10px;"><a style="color:white;font-size:17px;text-decoration:none;" href="mailto:info@mwfbiz.com"><i class="fa fa-envelope" style="font-size:20px;color:#FC520D"> </i><b> Send Mail</b></a></button> </div>
+      </div> <button style="background-color: white; cursor: pointer; border-radius:5px; border-color: #FFD703;padding:10px 10px;"><a style="font-size:17px; text-decoration:none" type="button" target="_blank" href="https://wa.me/?text=Mind Without Fear - MWF [ mwfbiz.COM - https://mwfbiz.com ] is a dynamic and inclusive online platform that curates a wealth of pertinent information pertaining to social work, human rights, economic development, SDGs, health, education, culture, peace and security. Spread the word and share the goodness with others. They deserve to know about this platform too. Take care and hope you enjoy exploring [ mwfbiz.COM ] as much as I have!" data-action="share/whatsapp/share"><b>Share On WhatsApp </b><i class="fa fa-whatsapp" aria-hidden="true" style="font-size:20px;color:#30CD20"></i></a></button>
+      
+        
+      <div align="center" style="display:inline-block; padding:5px;"><br>
+        <button style="background-color: black; cursor: pointer; border-radius:5px; border:none;padding:10px 10px;"><a style="color:white;font-size:17px;text-decoration:none;" onclick="sendEmail()"><i class="fa fa-envelope" style="font-size:20px;color:#FC520D"> </i><b> Send Mail</b></a></button> </div>
     </div><br> <br>
     <!--------Footer----->
     <footer style="background:black;">
@@ -262,7 +270,8 @@ transform: scale(1.02);
   formwall.addEventListener('submit', (event) => {
   var sendur = "https://script.google.com/macros/s/AKfycby4DqWAvEb7MqrTf1NW_PyUKgFBcxjmObqgHQ7kPStijyay_TxHJFveyAKd_QXthY8J/exec";
   var fback = escape($('#dimprv').val());
-  var emid = $('#dmail').val();
+  var nmvl = $("#nmvl").val();var emvl = $("#dmail").val();
+  var emid = nmvl+"{BIZREVIEW}"+emvl;
   var url = sendur + "?callback=ctrlq&dmail=" + emid + "&dimprv=" + fback + "&action=inexp";
   var request = jQuery.ajax({
   crossDomain: true,
@@ -290,10 +299,19 @@ transform: scale(1.02);
   </script>
   <script>
   function textAreaAdjust(element) {
-  element.style.height = "140px";
+  element.style.height = "130px";
   element.style.height = (30 + element.scrollHeight) + "px";
   }
+
   </script>
+
+<script>
+  function sendEmail() {
+      var mailtoLink = 'mailto:recipient@example.com?subject=Greetings!%20from%20%F0%9F%8C%90%20mwfbiz.COM&body=Dear%20Recipient,%0D%0A%0D%0AGreetings%20from%20mwfbiz.COM!%20We%20hope%20this%20email%20finds%20you%20well.%0D%0A%0D%0ABest%20regards,%0D%0AYour%20Name';
+      window.location.href = mailtoLink;
+  }
+</script>
+
   </body>
 
   </html>
