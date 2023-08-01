@@ -179,7 +179,7 @@ html {
     background: #BB1B16;
   }
 
-  #PProfile button {
+  #PProfile button,#togBdy button {
     background-color: black;
     border: 2px solid #DD1D16;
     color: white;
@@ -192,7 +192,7 @@ html {
     cursor: pointer;
   }
 
-  #PProfile button:active {
+  #PProfile button:active,#togBdy button:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     border: 2px solid #dd1d16;
