@@ -50,29 +50,25 @@
   }
   return "";
   }
-  var user = getCookieHPG("_ybizc0");
-  var usergu = getCookieHPG("_ybizv0");
-  var userel = getCookieHPG("_ybize0");
-  var userm = getCookieHPG("_ybizm0");
-  if (user != "" ) {
-  document.getElementById('falsebacksigup').style.display = "none";
-  document.getElementById('sigcontainer').style.display = "none";
-  } 
-  else if(usergu != "" || userm != ""){
-  setTimeout(function(){
-  document.getElementById('falsebacksigup').style.display = "block";
-  document.getElementById('sigcontainer').style.display = "block";},
-  3600000);
-  }
-  else if(userel != ""){
-  setTimeout(function(){
-  document.getElementById('falsebacksigup').style.display = "block";
-  document.getElementById('sigcontainer').style.display = "block";},
-  3600000);
-  }
-  else {
-  window.open("../", "_self");
-  }
+var user = getCookieHPG("_ybizc0");
+var usergu = getCookieHPG("_ybizv0");
+var userel = getCookieHPG("_ybize0");
+var userm = getCookieHPG("_ybizm0");
+if (user != "" || userel != "" || userm != "") {
+document.getElementById('falsebacksigup').style.display = "none"; 
+document.getElementById('sigcontainer').style.display = "none"; 
+} 
+else if(usergu != ""){   
+setTimeout(function(){
+document.getElementById('falsebacksigup').style.display = "block";
+document.getElementById('sigcontainer').style.display = "block";  
+},
+900000);
+} 
+else {
+window.stop ();
+window.open("../", "_self"); 
+} 
   function deleteAllCookies() {
   var cookies = document.cookie.split(";");
   for (var i = 0; i < cookies.length; i++) {
@@ -83,7 +79,6 @@
   }
   setTimeout(function(){location.reload();},2000);
   }     
-  // $(document).ready(function(){deleteAllCookies();});
   </script>
 <script src="index/jsppro.js"></script>
 <script src="index/jshi1.js"></script>
@@ -112,7 +107,7 @@ else{ window.location.href = "https://mwfbiz.com"; }</script> -->
 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
 <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
 <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /> </svg><br><br>
-<div id="sigup" onclick="deleteAllCookies(); "> 🎭 Sign Up / Login / Enter Elite</div><br>
+<div id="sigup" onclick="deleteAllCookies(); "> 🎭 Sign Up as Admin / Enter Elite<br>or MONOLOGUE - IMI </div><br>
 <p id="commntsm" style="font-family: 'Courier New', Courier, monospace;color:white;"></p>
 </div>
 </section>
@@ -205,16 +200,6 @@ else{ window.location.href = "https://mwfbiz.com"; }</script> -->
 </a> <a target="_self" id="bizadmnsh">
 <div class="card"><span style="font-size: 16px;">BIZ Admin &#8250;&#8250;</span></div>
 </a> </div><br><br>
-<!-- <div id="audioG" align="center"><br>
-<div id="guaudio"> 
-<audio align="center" controls>
-<source src="files/mwfbiz-bio.mp3" type='audio/mpeg'> </audio>
-</div> <br><br>
-</div>
-<div id="audioP" align="center"><br>
-<div id="comaudio"> <audio align="center" controls>
-<source src="https://drive.google.com/uc?view&id=1EOMIg0Ev2K--IRlRzw0AKaynjtnukfZd" type='audio/mpeg'> </audio></div> <br><br>
-</div> -->
 <p style="color:#dd1d16;font-size:16px;text-align:right;margin-right:20px;font-family: 'Courier New', Courier, monospace;"><b>-- Enhancing Societal Values</b>
 </p>
 </div>
