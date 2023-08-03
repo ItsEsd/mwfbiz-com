@@ -52,25 +52,21 @@ var user = getCookie("_ybizc0");
 var usergu = getCookie("_ybizv0");
 var userel = getCookie("_ybize0");
 var userm = getCookie("_ybizm0");
-if (user != "" ) {
-document.getElementById('falsebacksigup').style.display = "none";
-document.getElementById('sigcontainer').style.display = "none";
+if (user != "" || userel != "" || userm != "") {
+document.getElementById('falsebacksigup').style.display = "none"; 
+document.getElementById('sigcontainer').style.display = "none"; 
 } 
-else if(usergu != "" || userm !=""){
+else if(usergu != ""){   
 setTimeout(function(){
 document.getElementById('falsebacksigup').style.display = "block";
-document.getElementById('sigcontainer').style.display = "block";},
-3600000);
-}
-else if(userel != ""){
-setTimeout(function(){
-document.getElementById('falsebacksigup').style.display = "block";
-document.getElementById('sigcontainer').style.display = "block";},
-3600000);
-}
+document.getElementById('sigcontainer').style.display = "block";  
+},
+900000);
+} 
 else {
-window.open("../", "_self");
-}
+window.stop ();
+window.open("../", "_self"); 
+} 
 function deleteAllCookies() {
 var cookies = document.cookie.split(";");
 for (var i = 0; i < cookies.length; i++) {
@@ -324,7 +320,7 @@ color:#ecde14;
 width:70%;
 max-width:300px;
 background-color: #4e4e4e;
-font-size: 18px;
+font-size: 15px;
 border-radius: 40px;
 bottom:20px;
 padding:10px;
@@ -380,7 +376,7 @@ background-size: 100% 100%;
 </svg><br><br>
 
 <div id="sigup" onclick="deleteAllCookies(); ">
-🎭 Sign Up / Login / Enter Elite</div><br>
+🎭 Sign Up as Admin / Enter Elite<br>or MONOLOGUE - IMI</div><br>
 <p id="commntsm" style="font-family: 'Courier New', Courier, monospace;color:white;"></p>
 </div> 
 
