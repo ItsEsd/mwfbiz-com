@@ -1,0 +1,21 @@
+.btn-link{
+    width:100%;
+    text-align: left;
+}
+
+.fa-minus,.fa-plus{
+    float:right;
+}
+#slctitm{
+    max-height:400px;
+    overflow-y:auto;
+}
+.submtnxt{
+    float:right;margin:10px;
+    padding:10px 40px;
+}
+#additm{
+    margin-top:-4px;
+    padding:2px 10px;
+}
+.invntry{display: none;}
