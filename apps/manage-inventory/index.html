@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wiring Materials Inventory</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/apps/manage-inventory/style.css">
+<!-- Include the XLSX library -->
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<link rel="icon" href="/image/favicon.png" type="image/png" sizes="180x180">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div id="itemSelection">
+      <h4>Select Items:</h4>
+      <form id="itemForm">
+        <div id="slctitm">
+            <div id="custmnm">
+                <label for="customItemNameInput">Custom Item Name:</label>
+                <input type="text" id="customItemNameInput" placeholder="Enter item name">
+                <button onclick="addCustomCheckbox()" class="btn btn-dark" id="additm">Add</button>
+              </div>
+        <div class="form-group" id="checkboxContainer">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="copperSingleCore" value="Copper Single-core wires">
+                <label class="form-check-label" for="copperSingleCore">Copper Single-core wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="aluminumSingleCore" value="Aluminum Single-core wires">
+                <label class="form-check-label" for="aluminumSingleCore">Aluminum Single-core wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="multiCore" value="Multicore wires">
+                <label class="form-check-label" for="multiCore">Multicore wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="flexibleWires" value="Flexible wires">
+                <label class="form-check-label" for="flexibleWires">Flexible wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="twinEarth" value="Twin and Earth (T&E) cables">
+                <label class="form-check-label" for="twinEarth">Twin and Earth (T&E) cables</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="armoredCables" value="Armored cables">
+                <label class="form-check-label" for="armoredCables">Armored cables</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="shieldedCables" value="Shielded cables">
+                <label class="form-check-label" for="shieldedCables">Shielded cables</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pvcInsulated" value="PVC (Polyvinyl Chloride) insulated wires">
+                <label class="form-check-label" for="pvcInsulated">PVC (Polyvinyl Chloride) insulated wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="xlpeInsulated" value="XLPE (Cross-Linked Polyethylene) insulated wires">
+                <label class="form-check-label" for="xlpeInsulated">XLPE (Cross-Linked Polyethylene) insulated wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rubberInsulated" value="Rubber insulated wires">
+                <label class="form-check-label" for="rubberInsulated">Rubber insulated wires</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pvcConduits" value="PVC conduits (rigid and flexible)">
+                <label class="form-check-label" for="pvcConduits">PVC conduits (rigid and flexible)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="conduitConnectors" value="Conduit connectors and couplers">
+                <label class="form-check-label" for="conduitConnectors">Conduit connectors and couplers</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="conduitElbows" value="Conduit elbows and bends">
+                <label class="form-check-label" for="conduitElbows">Conduit elbows and bends</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="conduitBoxes" value="Conduit boxes (junction boxes, switch boxes)">
+                <label class="form-check-label" for="conduitBoxes">Conduit boxes (junction boxes, switch boxes)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableTrays" value="Cable trays">
+                <label class="form-check-label" for="cableTrays">Cable trays</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableTrunking" value="Cable trunking">
+                <label class="form-check-label" for="cableTrunking">Cable trunking</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableDucts" value="Cable ducts">
+                <label class="form-check-label" for="cableDucts">Cable ducts</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableRaceways" value="Cable raceways">
+                <label class="form-check-label" for="cableRaceways">Cable raceways</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="lightSwitches" value="Light switches (single pole, double pole, three-way switches)">
+                <label class="form-check-label" for="lightSwitches">Light switches (single pole, double pole, three-way switches)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="plugSockets" value="Plug sockets (single, double, and multi-gang sockets)">
+                <label class="form-check-label" for="plugSockets">Plug sockets (single, double, and multi-gang sockets)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="dimmerSwitches" value="Dimmer switches">
+                <label class="form-check-label" for="dimmerSwitches">Dimmer switches</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="fanControllers" value="Fan speed controllers">
+                <label class="form-check-label" for="fanControllers">Fan speed controllers</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="usbOutlets" value="USB charging outlets">
+                <label class="form-check-label" for="usbOutlets">USB charging outlets</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="circuitBreakers" value="Circuit breakers (Miniature Circuit Breakers - MCBs)">
+                <label class="form-check-label" for="circuitBreakers">Circuit breakers (Miniature Circuit Breakers - MCBs)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rcds" value="Residual Current Devices (RCDs)">
+                <label class="form-check-label" for="rcds">Residual Current Devices (RCDs)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rccbs" value="Residual Current Circuit Breakers (RCCBs)">
+                <label class="form-check-label" for="rccbs">Residual Current Circuit Breakers (RCCBs)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="surgeProtectors" value="Surge protectors">
+                <label class="form-check-label" for="surgeProtectors">Surge protectors</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="consumerUnits" value="Consumer units">
+                <label class="form-check-label" for="consumerUnits">Consumer units</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="mainDistributionBoards" value="Main distribution boards (MDB)">
+                <label class="form-check-label" for="mainDistributionBoards">Main distribution boards (MDB)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="subDistributionBoards" value="Sub-distribution boards (SDB)">
+                <label class="form-check-label" for="subDistributionBoards">Sub-distribution boards (SDB)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="enclosures" value="Enclosures and mounting accessories">
+                <label class="form-check-label" for="enclosures">Enclosures and mounting accessories</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terminalBlocks" value="Terminal blocks and connectors">
+                <label class="form-check-label" for="terminalBlocks">Terminal blocks and connectors</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="wireConnectors" value="Wire connectors (wire nuts, crimp connectors)">
+                <label class="form-check-label" for="wireConnectors">Wire connectors (wire nuts, crimp connectors)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableGlands" value="Cable glands">
+                <label class="form-check-label" for="cableGlands">Cable glands</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableTies" value="Cable ties and clips">
+                <label class="form-check-label" for="cableTies">Cable ties and clips</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableMarkers" value="Cable markers and labeling systems">
+                <label class="form-check-label" for="cableMarkers">Cable markers and labeling systems</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableTesters" value="Cable testers and fault locators">
+                <label class="form-check-label" for="cableTesters">Cable testers and fault locators</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cableStrippingTools" value="Cable stripping and cutting tools">
+                <label class="form-check-label" for="cableStrippingTools">Cable stripping and cutting tools</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="wireManagementSolutions" value="Wire management solutions (clips, channels)">
+                <label class="form-check-label" for="wireManagementSolutions">Wire management solutions (clips, channels)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="copperRods" value="Copper rods">
+                <label class="form-check-label" for="copperRods">Copper rods</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="earthingWire" value="Earthing wire">
+                <label class="form-check-label" for="earthingWire">Earthing wire</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="earthingClamps" value="Earthing clamps and connectors">
+                <label class="form-check-label" for="earthingClamps">Earthing clamps and connectors</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="earthBars" value="Earth bars and terminals">
+                <label class="form-check-label" for="earthBars">Earth bars and terminals</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="groundingPlates" value="Grounding plates">
+                <label class="form-check-label" for="groundingPlates">Grounding plates</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="wireDucts" value="Wire ducts and raceways">
+                <label class="form-check-label" for="wireDucts">Wire ducts and raceways</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="wireMeshGrips" value="Wire mesh grips">
+                <label class="form-check-label" for="wireMeshGrips">Wire mesh grips</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="wirePullingLubricants" value="Wire pulling lubricants">
+                <label class="form-check-label" for="wirePullingLubricants">Wire pulling lubricants</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="junctionCabinets" value="Junction cabinets">
+                <label class="form-check-label" for="junctionCabinets">Junction cabinets</label>
+              </div>
+        </div> 
+
+       
+    
+    </div>
+        <button type="submit" class="btn btn-primary submtnxt" id="nextButton">Next</button>
+      </form>
+    </div>
+
+    <div id="tableCreation" style="display: none;">
+      <h4>My Inventory:</h4>
+      <div id="collapsibleContainer"></div>
+      <button id="exportButton" class="btn btn-primary" onclick="exportToExcel()">Export to Excel</button>
+      <button id="seetbl" class="btn btn-primary" onclick="seetable()">Show Table</button>
+    </div>
+  </div>
+<input style="display:none;" id="itmpos"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="mscript.js"></script>
+</body>
+
+</html>
