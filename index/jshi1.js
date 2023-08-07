@@ -37,7 +37,7 @@
 ∙∙·▫▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ ｉтŞᵉˢᗪ ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫▫·∙∙*/
  $(document).ready( function(){
     var url1 = "https://script.google.com/macros/s/";
-    var url2 = "AKfycbzyqDIUbsbo7xmfuqci9jtG3g7j34ugV5WmMK5YPadx_9TDuF2Bq9H1Vggyp3xg02X_0A";
+    var url2 = "AKfycbw3nGG_Xrl9zy7I-gDdCX4C2qNwDju7ee8-EZlb2T86p_oU5_BWmebT7zhm6Ype-97bWA";
     var url = url1+url2+"/exec"+ "?action=read";
     $.getJSON(url, function(json) {
         var m = Math.floor((Math.random() * json.records.length) + 0);
@@ -51,7 +51,14 @@
             json.records[m].postPic + '">' + '<div style="padding-bottom:0px;">' + '<a href="' +
             json.records[m].postLink + '" target="_blank">' + '<h4 style="color:#FFD703;">' +
             json.records[m].postTitle + '</h4>' + '</a>' + '</div>';
-
+    });
+    var urlbzfd = url1+url2+"/exec"+ "?action=readbzpst";
+    $.getJSON(urlbzfd, function(json) {
+        for (var gk=0;gk<json.records.length-1;gk++){
+        document.getElementById("mwfbzfds").innerHTML="";
+        document.getElementById("mwfbzfds").innerHTML += '<div class="bizpstfn">' +
+        json.records[gk].BIZpst_fd + '</div>';
+        }
         
     });
     });
