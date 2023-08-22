@@ -19,7 +19,7 @@ a = shuffle(a);
 var i;
 for(var d=0;d<a.length;d++){
   i = a[d];
-            document.getElementById("PArcProfile").innerHTML += '<a href=' + json.records[i].PLink + ' target="_parent">' + 
+            document.getElementById("PArcProfile").innerHTML += '<a href=' + json.records[i].PLink + ' target="_blank">' + 
             '<div class="item3">' + '<div align="center" >' + '<img src=' + json.records[i].ImageLink + '>' + 
             '<b>' + '<div class="Name">' + json.records[i].Name + '</b>' + '<b>' + '<div class="Bio">' + 
             json.records[i].Bio + '</b>' + '</div>' + '</div>' + '</div>' + '</div>' + '</a>';
