@@ -56,7 +56,7 @@ var fin;
 for(var d=0;d<a.length;d++){
   fin = a[d];
   document.getElementById("PProfile").innerHTML += '<div class="item-border-wrap">' + '<a href=' + 
-  json.records[fin].PLink + ' target="_self">' + '<div class="item">' + 
+  json.records[fin].PLink + ' target="_blank">' + '<div class="item">' + 
   '<div align="center" >' + '<img src=' + json.records[fin].ImageLink + '>' + '<b>' +
    '<div class="Name">' + json.records[fin].Name + '</b>' + '<b>' + '<div class="Bio">' + 
    json.records[fin].Bio + '</b>' + '</div>' + '</div>' + '</div>' + '</div>' + '</a>' + '</div>';
