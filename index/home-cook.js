@@ -58,12 +58,13 @@ document.getElementById('falsebacksigup').style.display = "none";
 document.getElementById('sigcontainer').style.display = "none"; 
 } 
 else if(usergu != ""){   
-document.getElementById('bizprost').style.display = "none";     
+document.getElementById('bizprost').style.display = "none"; 
+document.getElementById('sgoutmw').style.display = "none";     
 setTimeout(function(){
 document.getElementById('falsebacksigup').style.display = "block";
 document.getElementById('sigcontainer').style.display = "block";  
 },
-900000);
+7200000);
 } 
 else {
 window.stop ();
