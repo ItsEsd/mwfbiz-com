@@ -20,7 +20,7 @@ $(document).ready( function(){
         for(var d=0;d<a.length;d++){
           i = a[d];
             document.getElementById("PSpgProfile").innerHTML +=  '<a href=' + json.records[i].PLink +
-             ' target="_parent">' + '<div class="item4">' + '<div align="center" >' + 
+             ' target="_blank">' + '<div class="item4">' + '<div align="center" >' + 
              '<img src=' + json.records[i].ImageLink + '>' + '<b>' + '<div class="Name">' +
              json.records[i].Name + '</b>' + '<b>' + '<div class="Bio">' +
               json.records[i].Bio + '</b>' + '</div>' + '</div>' + '</div>' + '</div>' + '</a>'; 
