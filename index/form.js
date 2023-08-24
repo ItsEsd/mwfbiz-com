@@ -354,15 +354,7 @@ jQuery('#gbtn').on('click', function() {
   };
   var rzpv = new Razorpay(optionsv);
   rzpv.open();
-  e.preventDefault(); 
-
-  // document.getElementById("loader_e").style.display = "block";
-  // var gid = Math.random().toString(26).substring(2, 20) + Math.random().toString(26).substring(2, 20);
-  // var uid =gid+"."+window.btoa(String("iamavisitor"));
-  // guSetCookie(7,uid);
-  // setTimeout(function() {
-  //   window.open("../home", "_self");
-  // }, 2000); 
+  e.preventDefault();
 
 });
 function ctrlqpcheck(e){
