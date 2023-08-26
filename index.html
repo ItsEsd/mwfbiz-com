@@ -109,7 +109,7 @@ setTimeout(function(){
 </form>
 <form id="veremail" class="signupfrm" style="display: none;" target="hiddenfrm">
 <h1 style="font-family: 'Shadows Into Light', sans-sarif;font-size:28px;color:white;">Confirm Email</h1> <input id="vercode" type="text" placeholder="Enter Confirmation Code" required /> <input id="vercodepre" type="text" disabled style="display:none;" /> <span id="rescode" onclick="sendEmail();onClick();" style="float:right;color:white;padding-bottom:4px;cursor: pointer;">Resend Code</span>
-<p style="display:none;color:white;" id="msg"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+<p style="float:left;display:none;color:white;" id="msg"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> Incorrect Verification Code</p> <input type="submit" id="checktopay" value="Verify">
 </form>
 <form class="signupfrm" id="createpass" style="display: none;" target="hiddenfrm" action="home.html" method="GET">
@@ -127,7 +127,7 @@ setTimeout(function(){
 <div id="loader" align="center"> <img src="image/loader-log.gif"></div> 
 <span style="float:left;padding:10px;margin-top:40px;"><a href="https://user-reset.mwfbiz.com/" style="color:#a8a7a3f3;text-decoration: none;">Forgot Passcode?</a></span>
 </form>
-<button id="clslgsgdv" onclick="$('.bizfacecon-tw').slideUp()">Close</button>
+<button id="clslgsgdv" onclick="$('.bizfacecon-tw,.signupfrm').slideUp()">Close</button>
 </div> 
 </div>
 <input id="ussddvl" style="display:none;">
