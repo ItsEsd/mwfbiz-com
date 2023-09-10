@@ -1188,12 +1188,12 @@
     }
 
     .modal a {
-      color: #FFD703;
+      color: #e64b4b;
     }
 
     .modal a:hover,
     a:active {
-      color: #FFD703;
+      color: #e64b4b;
       text-decoration: underline;
     }
 
@@ -1698,7 +1698,7 @@ font-family: 'Courier New', Courier, monospace;
     a:hover,
     a:focus,
     a:active {
-      color: white;
+      color: #535353;
       text-decoration: none;
     }
 
