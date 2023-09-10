@@ -54,12 +54,11 @@
     });
     var urlbzfd = url1+url2+"/exec"+ "?action=readbzpst";
     $.getJSON(urlbzfd, function(json) {
-        for (var gk=0;gk<json.records.length-1;gk++){
         document.getElementById("mwfbzfds").innerHTML="";
+        for (var gk=0;gk<json.records.length-1;gk++){
         document.getElementById("mwfbzfds").innerHTML += '<div class="bizpstfn">' +
         json.records[gk].BIZpst_fd + '</div>';
-        }
-        
+    }
     });
     });
     
