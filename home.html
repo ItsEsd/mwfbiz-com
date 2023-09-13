@@ -398,9 +398,16 @@ document.msExitFullscreen();
 
 </script>
 <script>
+var user = getCookieHPG("_ybizc0");
+if(user !=""){
+document.getElementById('bizadmnsh').style.opacity='0.5';
 jQuery("#bizadmnsh").click(function(){
 openNav();
-});
+  }); } 
+else{
+  document.getElementById('bizadmnsh').style.opacity='0.5';
+  document.getElementsByClassName('card')[5].style.cursor='not-allowed';
+}
 function HBack() {
 window.open('https://www.mwfbiz.com', '_self');
 }
