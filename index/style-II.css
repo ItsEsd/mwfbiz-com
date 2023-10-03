@@ -84,15 +84,16 @@ width:100%;
 font-family: 'Courier New', Courier, monospace;
 color:white;
 background-color: #816f07;
-padding:4px 10px;
+padding:8px 10px;
 font-size: 14px;
 cursor: pointer;
-bottom:29px;
+bottom:18px;
 left:0px;
 position: fixed;
 }
 .hm:hover{
 background-color: #534805;
+color:white;
 }
 .dogeuri{
 min-width:300px;
@@ -471,6 +472,7 @@ border-radius: 50%;
     float: center;
     font-size: 14px;
     cursor: pointer;
+    padding:5px;
   }
   
   .closetr:hover,
