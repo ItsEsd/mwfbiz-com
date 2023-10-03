@@ -56,13 +56,6 @@ z-index: 2; display:none;
     left: 20px;
     position: fixed;
 }
-.mwimg{
-width: 80px;
-border-radius: 6px;
-box-shadow: 0 1px 6px 0px #f10606;
-opacity: 1; 
-pointer-events: none;
-}
 
 #otherEx {
 top: 0px;
