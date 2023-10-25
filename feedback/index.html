@@ -223,14 +223,13 @@ transform: scale(1.02);
       <div class="row">
       <div class="col-md-6 conone">
       <div class="container2" id="con">
-        <form id="formwall" target="hiddenframe">
+        <form id="formwall" onsubmit="event.preventDefault();">
           <div class="form-group"  style="width:48%;float:left;margin:2px;"> <label for="Email">Name*:</label> <input type="text" list="Name" name="Name" class="form-control" id="nmvl" style="text-transform: capitalize;" placeholder="Full Name" required> </div> 
           <div class="form-group"  style="width:48%;float:right;margin:2px;"> <label for="Email">Email*:</label> <input type="email" list="Email" name="Email" class="form-control" id="dmail" placeholder="Your email" required> </div> 
           <div class="form-group"> <label for="ImprovementQ">Feedback / Review*:</label> <textarea name="ImprovementQ" class="form-control" id="dimprv" onkeyup="textAreaAdjust(this)" style="width: 100%;height:100px;" placeholder="Send a feedback or write us a review" minlength="200" required></textarea> </div>
          <button style="background-color:#DD1D16;color:white;border-radius:4px;border:none; padding:10px 10px; width:100%;" type="submit" id="btnsubmit">Submit</button>
         </form>
       </div>
-      <iframe name="hiddenframe" id="hiddenframe" style="display:none;"></iframe>
       <div align="center" id="success" style="color:#535353;display:none;"><br><br>
         <h3 style='font-size:60px;color:#535353;'>&#9786;</h3>
         <h5 style="color:#535353;">Thank You</h5>
