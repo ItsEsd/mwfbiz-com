@@ -102,17 +102,17 @@ setTimeout(function(){
 </div>
 <div class="bizfacecon-tw" align="center" >
 <div id="container" class="animcon">
-<form id="formsign" target="hiddenfrm" >
+<form id="formsign" onsubmit="event.preventDefault();" >
 <hr>
 <input type="text" style="text-transform: capitalize;" id="fname" placeholder="First Name" required> <small></small> <input type="text" style="text-transform: capitalize;" id="lname" placeholder="Last Name" required> <small></small> <input type="email" id="emailid" placeholder="Enter Email Address" required> <small style="float:right;"></small> <input type="text" id="txtCompare" placeholder="Enter the Captcha Text" autocomplete="off" required /> <input type="text" id="txtCaptcha" disabled /> <input type="button" id="chngcap" onclick="GenerateCaptcha()" style="width:18%;float:right;font-size:18px;" value="&#8635;" /> <input type="submit" id="signup" value="Pay & Create Passcode >>">
 <input id="flagSign" style="display:none;" />
 </form>
-<form id="veremail" class="signupfrm" style="display: none;" target="hiddenfrm">
+<form id="veremail" class="signupfrm" style="display: none;" onsubmit="event.preventDefault();">
 <h1 style="font-family: 'Shadows Into Light', sans-sarif;font-size:28px;color:white;">Confirm Email</h1> <input id="vercode" type="text" placeholder="Enter Confirmation Code" required /> <input id="vercodepre" type="text" disabled style="display:none;" /> <span id="rescode" onclick="sendEmail();onClick();" style="float:right;color:white;padding-bottom:4px;cursor: pointer;">Resend Code</span>
 <p style="float:left;display:none;color:white;" id="msg"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> Incorrect Verification Code</p> <input type="submit" id="checktopay" value="Verify">
 </form>
-<form class="signupfrm" id="createpass" style="display: none;" target="hiddenfrm" action="home.html" method="GET">
+<form class="signupfrm" id="createpass" style="display: none;" onsubmit="event.preventDefault();" action="home.html" method="GET">
 <h1 style="font-family: 'Shadows Into Light', sans-sarif;font-size:28px;color:white;">Create Passcode</h1> <input id="CreatePasscode" placeholder="Create Passcode" type="password" required /> <span style="float:right;color:#ffffff;" id="matched"></span> <input id="ConfirmPasscode" placeholder="Confirm Passcode" type="password" required /> <input type="submit" value="Continue >>" id="conhome" disabled>
 </form>
 <div id="notifyver"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin-bottom:-4px;" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -120,7 +120,7 @@ setTimeout(function(){
 <div align="center" style="display:none;">
 <h2 style="font-family: 'Shadows Into Light', sans-sarif;">mind Without Fear</h2>
 </div>
-<form id="logmwf" style="display:none;padding-bottom:80px;" target="hiddenfrm">
+<form id="logmwf" style="display:none;padding-bottom:80px;" onsubmit="event.preventDefault();">
 <h2 style="color:white;font-family: 'Shadows Into Light', sans-sarif;text-align: center;padding-bottom:20px;">Have a nice day!</h2> <input id="logemail" type="email" placeholder="Email Address" required /> <input id="logpass" placeholder="Enter Passcode" type="password" required /> <input type="submit" Value="Login"> <span id='pcheck' style="display:none;text-align: center;color:white;margin-top: 24px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> Incorrect Credentials</span>
     <button class="btn btn-warning" id="clslogin" onclick="$('#formsign').show();$('#logmwf').hide();">Sign Up</button>
@@ -131,7 +131,7 @@ setTimeout(function(){
 </div> 
 </div>
 <input id="ussddvl" style="display:none;">
-</div><iframe name="hiddenfrm" id="hiddenfrm" style="display:none;"></iframe>
+</div>
 <div id="seclog"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:-4px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /></svg> User Email already Registered</div>
 <div id="promodiv">
