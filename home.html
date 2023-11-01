@@ -134,14 +134,12 @@ window.open("../", "_self");
 </div>
 </div>
 </div>
-<!-----------Ads----------->
-<div align="center" style="display: none;"> </div>
 <!-------Modal----------->
 <div align="center" id="hififood">
 <base target="_blank">
 <div class="modal" id="myModal" tabindex="-1" role="dialog" data-backdrop="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content"><span class="close">X</span>
+<div class="modal-content"><span class="close">&times;</span><span id="reldphi">↻</span>
 <div class="hiMod"><img onclick="openFullscreen();" class="namaskar" style="cursor:none;" src="image/hi2.gif" width="90px">
 <hr>
 <h2 style="color:#FFD703;padding:10px;padding-left:20px;" align="left">Have a nice day 📜</h2>
@@ -149,14 +147,10 @@ window.open("../", "_self");
 </div>
 <div align="center">
 <h2 style="color:#DD1D16;padding:0px;width:100%;">Poetry & Posts</h2>
-<div class="row" style="border:1px solid grey;border-radius:10px;width:100%;max-width:1000px;min-height:300px;">
-<div class="col-md-6"> <br> <br>
-<div style="width:85%;max-width:400px;" align="center" class="backhifood" id="FBpost"><p class="falseload">Loading..</p></div>
-</div>
-<div class="col-md-6"><br><br>
-<div align="center" id="FBvidpost" class="backhifood"><p class="falseload">Loading..</p></div>
-</div>
-</div>
+<div class="pphldr">
+  <div align="center" class="fdpst backhifood" id="FDpost"><p class="falseload">Loading..</p></div>
+  <div align="center" class="fdpst backhifood" id="IFpost"><div class="falseload responsive-container" id="ldfrmcon"><p>Loading..</p></div></div>
+  </div>
 <hr style="border-top: 1px dashed white;width:96%;">
 <h2 style="color:#DD1D16; margin:0px;">Quotes & Thoughts</h2>
 <hr style="border-top: 1px dashed white;width:96%;">
@@ -465,6 +459,7 @@ i++;
 setTimeout(typeWriter, speed);
 }
 }
-setInterval(function(){console.clear();},500);
-</script><noscript> Your browser does not support JavaScript! </noscript>
+setInterval(function(){console.clear();},300);
+</script>
+<noscript> Your browser does not support JavaScript! </noscript>
 </body></html>
