@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
     document.getElementById('bzfd-feedbackBtn').addEventListener('click', function() {
-        console.log('clicked')
         const modal = document.getElementById('bzfd-modal');
         if (modal) {
           modal.style.display = 'block';
