@@ -4,8 +4,8 @@ var url1 = "https://script.google.com/macros/s/";
 var url2 = "AKfycby-4wgYlabbP6rh-itYVubNoFuWdLEcMBVAEHwDTj34cby78capT7zIB3edV7DAmKof8A";
 var url = url1+url2+"/exec"+ "?action=read";
 $.getJSON(url, function(json) { 
-var x = Math.floor((Math.random() * (json.records.length-1))); console.log(x);
-if(x===0){x=1;}console.log(x);
+var x = Math.floor((Math.random() * (json.records.length-1))); 
+if(x===0){x=1;}
 document.getElementById("PProfile").innerHTML = '<div class="Name">' + 
 json.records[x].Name + '</div>' + '<hr style="width:50%;">' + '<div align="center">' +
 '<a href=' + json.records[x].PLink + ' target="_blank">' + '<img src=' + 
