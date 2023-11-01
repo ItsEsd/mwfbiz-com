@@ -46,9 +46,9 @@
             document.getElementById("HappyIndex").classList.remove('backhifood');
             document.getElementById("IFpost").classList.remove('backhifood');
                
-                document.getElementById("FDpost").innerHTML = '<div class="refpst"><img style=" pointer-events: none;" src="' +
-                json.records[m].postPic + '">' + '' + '<a href="' +
-                json.records[m].postLink + '" target="_blank">' + '<h4 style="color:#FFD703;">' +
+                document.getElementById("FDpost").innerHTML = '<div class="refpst">'+'<a href="' +
+                json.records[m].postLink + '" target="_blank">' +'<img style="cursor:pointer;" src="' +
+                json.records[m].postPic + '">' + '<h4 style="color:#FFD703;">' +
                 json.records[m].postTitle + '</h4>' + '</a>' + '<hr></div>';
 
                 var iframeCode =  json.records[m].IFpost;
