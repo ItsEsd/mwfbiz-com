@@ -88,6 +88,8 @@
                 
                 document.getElementById("HappyIndex").innerHTML = '<div align="center" style="color:#DD161D; font-size:20px;">' + 
                 json.records[m].HappyIn + '</div>'; 
+                document.getElementById("reldphi").style.backgroundColor= "#850404";
+                 document.getElementById("reldphi").style.cursor= "pointer";
         });
         var urlbzfd = url1+url2+"/exec"+ "?action=readbzpst";
         $.getJSON(urlbzfd, function(json) {
@@ -100,6 +102,8 @@
     }
     loadsphi();
     $('#reldphi').click(function(){
+        document.getElementById("reldphi").style.backgroundColor= "#2b2b2b";
+        document.getElementById("reldphi").style.cursor= "progress";
         loadsphi();
     })
     
