@@ -1143,7 +1143,21 @@
     padding-right: 2px;
     box-shadow: none;
     }
-
+.closebfd{
+    padding:1px;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:20px;
+    font-weight: 400;
+    float:right;
+    cursor:pointer;
+    background-color: #2d2d2d;
+    color:white;
+    border-top-right-radius: 5px;
+}
+.closebfd:hover{
+    background-color: #535353;
+}
     .close {
     color: white;
     float: right;
