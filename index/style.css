@@ -1199,9 +1199,13 @@
     #IFpost,#FDpost{
     width:100%;
     }
+    #FDpost{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
     .responsive-container{
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for widescreen videos */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     background-color: #bababa5a;
@@ -2016,7 +2020,7 @@ background-color: rgba(255, 255, 255, 0);
     .fdpst{
     padding:10px;
     /* margin-bottom:20px; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     width:100%;
     height:100%;
     }
