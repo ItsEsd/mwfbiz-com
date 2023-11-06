@@ -511,7 +511,10 @@ word-wrap: break-word;
     display:none;
     background-color: #efefef;
      }
-
+#mwfbzfds hr{
+    border-color:#8080806e;
+    border-width:2px;
+}
      #mwfbzfds h1,#mwfbzfds h2,#mwfbzfds h2,#mwfbzfds h4,#mwfbzfds h5,#mwfbzfds p{
     font-family:'Courier New', Courier, monospace;
       }
