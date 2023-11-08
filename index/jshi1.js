@@ -94,10 +94,12 @@
         var urlbzfd = url1+url2+"/exec"+ "?action=readbzpst";
         $.getJSON(urlbzfd, function(json) {
             document.getElementById("mwfbzfds").innerHTML="";
+            var htmsrc ="";
             for (var gk=0;gk<json.records.length-1;gk++){
-            document.getElementById("mwfbzfds").innerHTML += '<div class="bizpstfn">' +
-            json.records[gk].BIZpst_fd + '</div>';
+                htmsrc  += json.records[gk].BIZpst_fd;
         }
+        document.getElementById("mwfbzfds").innerHTML = '<div class="bizpstfn">' +
+        htmsrc + '</div>';
         });
     }
     loadsphi();
