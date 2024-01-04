@@ -1,148 +1,368 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en-IN">
-
   <head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>News RSS | M W F</title>
-<meta name="author" content="Es D">
-<meta name="title" content="Mind Without Fear | 🌐 mwfbiz.COM">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<script src="../vendor/scripts/kit.fontawesome.js"></script>
-<link rel="stylesheet" href="../vendor/style/bootstrap.4.5.2.min.css">
-<link rel="stylesheet" href="../vendor/style/font-awesome.4.7.0.min.css">
-<link rel="icon" href="../image/favicon.png" type="image/png" sizes="16x16">
-<script src="../vendor/scripts/jquery.3.4.0.min.js"></script>
-<script src="../vendor/scripts/popper.min.js"></script>
-<script src="../vendor/scripts/bootstrap.4.5.2.min.js"></script>
-<script src="FeedReader.js"></script><link href="rssfeed.css" rel="stylesheet">
-<!--------<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script><script>var loca = moment.tz.guess();var res = loca.split("/", 1);if ( res == "Asia"){ window.location.href = "https://feed.mwfbiz.com";} else{ window.location.href = "https://mwfbiz.com"; } console.log(moment.tz.guess());</script>------>
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<base target="_blank">
-</head>
-<body>
-
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>News RSS | M W F</title>
+    <meta name="author" content="Es D" />
+    <meta name="title" content="Mind Without Fear | 🌐 mwfbiz.COM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <script src="../vendor/scripts/kit.fontawesome.js"></script>
+    <link rel="stylesheet" href="../vendor/style/bootstrap.4.5.2.min.css" />
+    <link rel="stylesheet" href="../vendor/style/font-awesome.4.7.0.min.css" />
+    <link
+      rel="icon"
+      href="../image/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <script src="../vendor/scripts/jquery.3.4.0.min.js"></script>
+    <script src="../vendor/scripts/popper.min.js"></script>
+    <script src="../vendor/scripts/bootstrap.4.5.2.min.js"></script>
+    <script src="FeedReader.js"></script>
+    <link href="rssfeed.css" rel="stylesheet" />
+    <!--------<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script><script>var loca = moment.tz.guess();var res = loca.split("/", 1);if ( res == "Asia"){ window.location.href = "https://feed.mwfbiz.com";} else{ window.location.href = "https://mwfbiz.com"; } console.log(moment.tz.guess());</script>------>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base target="_blank" />
+  </head>
+  <body>
     <div id="quicknews" align="center">
-        <div align="left">
-        <div style="background-color: white;padding: 10px;margin-bottom:10px;">
-          <a class="btn btn-secondary" href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>
-          <a class="btn btn-secondary" href="https://www.daysoftheyear.com/">Days Of The Year</a>
-          <a class="btn btn-secondary" href="https://www.britannica.com/">Britannica</a>
-          <a class="btn btn-secondary" href="https://www.brainyquote.com/">BrainyQuote</a>
-          <a class="btn btn-secondary" href="https://www.goodreads.com/quotes">Goodreads</a>
+      <div align="left">
+        <div
+          style="background-color: white; padding: 10px; margin-bottom: 10px"
+        >
+          <a
+            class="btn btn-secondary"
+            href="https://en.wikipedia.org/wiki/Main_Page"
+            >Wikipedia</a
+          >
+          <a class="btn btn-secondary" href="https://www.daysoftheyear.com/"
+            >Days Of The Year</a
+          >
+          <a class="btn btn-secondary" href="https://www.britannica.com/"
+            >Britannica</a
+          >
+          <a class="btn btn-secondary" href="https://www.brainyquote.com/"
+            >BrainyQuote</a
+          >
+          <a class="btn btn-secondary" href="https://www.goodreads.com/quotes"
+            >Goodreads</a
+          >
         </div>
-        <a class="btn btn-outline-light" href="https://news.un.org/en/">UN News</a>
-        <a class="btn btn-outline-light" href="https://www.weforum.org/">World Economic Forum</a>
+        <a class="btn btn-outline-light" href="https://news.un.org/en/"
+          >UN News</a
+        >
+        <a class="btn btn-outline-light" href="https://www.weforum.org/"
+          >World Economic Forum</a
+        >
         <a class="btn btn-outline-light" href="https://www.who.int/">WHO</a>
-        <a class="btn btn-outline-light" href="https://www.unicef.org/">UNICEF</a>
+        <a class="btn btn-outline-light" href="https://www.unicef.org/"
+          >UNICEF</a
+        >
         <a class="btn btn-outline-light" href="https://www.imf.org/">IMF</a>
-        <a class="btn btn-outline-light" href="https://www.worldbank.org/">World Bank</a>
+        <a class="btn btn-outline-light" href="https://www.worldbank.org/"
+          >World Bank</a
+        >
         <a class="btn btn-outline-light" href="https://www.un.org/en/">UN</a>
-        <a class="btn btn-outline-light" href="https://www.unwomen.org/">UN Women</a>
-        <a class="btn btn-outline-light" href="https://sdgs.un.org/goals">SDGs</a>
+        <a class="btn btn-outline-light" href="https://www.unwomen.org/"
+          >UN Women</a
+        >
+        <a class="btn btn-outline-light" href="https://sdgs.un.org/goals"
+          >SDGs</a
+        >
         <a class="btn btn-outline-light" href="https://www.undp.org/">UNDP</a>
-        <hr>
-        <a class="btn btn-outline-success" href="https://hbr.org/">Harvard Business Review</a>
-        <a class="btn btn-outline-success" href="https://www.inc.com/">Inc.com</a>
-        <a class="btn btn-outline-success" href="https://www.fastcompany.com/">FAST COMPANY</a>
-        <a class="btn btn-outline-success" href="https://www.forbes.com/">Forbes</a>
-        <a class="btn btn-outline-success" href="https://economictimes.indiatimes.com/">The Economic Times</a>
-        <a class="btn btn-outline-success" href="https://www.economist.com/">The Economist</a>
-        <a class="btn btn-outline-success" href="https://www.financialexpress.com/">Financial Express</a>
-        <a class="btn btn-outline-success" href="https://www.ft.com/">Financial Times</a>
-        <a class="btn btn-outline-success" href="https://www.cnbc.com/world/?region=world">CNBC</a>
-        <a class="btn btn-outline-success" href="https://www.livemint.com/">LiveMint</a>
-        <a class="btn btn-outline-success" href="https://www.businessinsider.com/">Business Insider</a>
-        <a class="btn btn-outline-success" href="https://www.thehindubusinessline.com/">BusinessLine</a>
-        <a class="btn btn-outline-success" href="https://www.gtreview.com/">GTReview</a>
-        <hr>
-        <a class="btn btn-outline-warning" href="https://edition.cnn.com/">CNN</a>
+        <hr />
+        <a class="btn btn-outline-success" href="https://hbr.org/"
+          >Harvard Business Review</a
+        >
+        <a class="btn btn-outline-success" href="https://www.inc.com/"
+          >Inc.com</a
+        >
+        <a class="btn btn-outline-success" href="https://www.fastcompany.com/"
+          >FAST COMPANY</a
+        >
+        <a class="btn btn-outline-success" href="https://www.forbes.com/"
+          >Forbes</a
+        >
+        <a
+          class="btn btn-outline-success"
+          href="https://economictimes.indiatimes.com/"
+          >The Economic Times</a
+        >
+        <a class="btn btn-outline-success" href="https://www.economist.com/"
+          >The Economist</a
+        >
+        <a
+          class="btn btn-outline-success"
+          href="https://www.financialexpress.com/"
+          >Financial Express</a
+        >
+        <a class="btn btn-outline-success" href="https://www.ft.com/"
+          >Financial Times</a
+        >
+        <a
+          class="btn btn-outline-success"
+          href="https://www.cnbc.com/world/?region=world"
+          >CNBC</a
+        >
+        <a class="btn btn-outline-success" href="https://www.livemint.com/"
+          >LiveMint</a
+        >
+        <a
+          class="btn btn-outline-success"
+          href="https://www.businessinsider.com/"
+          >Business Insider</a
+        >
+        <a
+          class="btn btn-outline-success"
+          href="https://www.thehindubusinessline.com/"
+          >BusinessLine</a
+        >
+        <a class="btn btn-outline-success" href="https://www.gtreview.com/"
+          >GTReview</a
+        >
+        <hr />
+        <a class="btn btn-outline-warning" href="https://edition.cnn.com/"
+          >CNN</a
+        >
         <a class="btn btn-outline-warning" href="https://www.bbc.com/">BBC</a>
-        <a class="btn btn-outline-warning" href="https://www.theguardian.com/international">The Guardian</a>
-        <a class="btn btn-outline-warning" href="https://www.bloomberg.com/">Bloomberg</a>
-        <a class="btn btn-outline-warning" href="https://www.theatlantic.com/">The Atlantic</a>
-        <a class="btn btn-outline-warning" href="https://www.wsj.com/">The Wall Street Journal</a>
-        <a class="btn btn-outline-warning" href="https://abcnews.go.com/">ABC News</a>
-        <a class="btn btn-outline-warning" href="https://www.washingtonpost.com/">The Washington Post</a>
-        <a class="btn btn-outline-warning" href="https://www.nytimes.com/">The New York Times</a>
-        <a class="btn btn-outline-warning" href="https://www.aljazeera.com/">Al Jazerra</a>
-        <a class="btn btn-outline-warning" href="https://www.reuters.com/">Reuters</a>
-        <a class="btn btn-outline-warning" href="https://www.nbcnews.com/">NBC News</a>
-        <a class="btn btn-outline-warning" href="https://news.sky.com/">Sky News</a>
-        <a class="btn btn-outline-warning" href="https://www.euronews.com/">Euro News</a>
-        <a class="btn btn-outline-warning" href="https://www.independent.co.uk/">The Independent</a>
-        <a class="btn btn-outline-warning" href="https://theconversation.com/">The Conversation</a>
-        <a class="btn btn-outline-warning" href="https://www.wionews.com/">WION</a>
-        <a class="btn btn-outline-warning" href="https://www.cbsnews.com/">CBS News</a>
-        <a class="btn btn-outline-warning" href="https://www.cbc.ca/news">CBC</a>
-        <hr>
-        <a class="btn btn-outline-info" href="https://indianexpress.com/">The Indian Express</a>
-        <a class="btn btn-outline-info" href="https://www.thehindu.com/">The Hindu</a>
-        <a class="btn btn-outline-info" href="https://www.hindustantimes.com/">Hindustan Times</a>
-        <a class="btn btn-outline-info" href="https://timesofindia.indiatimes.com/">Times of India</a>
-        <a class="btn btn-outline-info" href="https://www.telegraphindia.com/">The Telegraph</a>
-        <a class="btn btn-outline-info" href="https://www.republicworld.com/">Republic World</a>
-        <a class="btn btn-outline-info" href="https://www.indiatoday.in/">India Today</a>
+        <a
+          class="btn btn-outline-warning"
+          href="https://www.theguardian.com/international"
+          >The Guardian</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.bloomberg.com/"
+          >Bloomberg</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.theatlantic.com/"
+          >The Atlantic</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.wsj.com/"
+          >The Wall Street Journal</a
+        >
+        <a class="btn btn-outline-warning" href="https://abcnews.go.com/"
+          >ABC News</a
+        >
+        <a
+          class="btn btn-outline-warning"
+          href="https://www.washingtonpost.com/"
+          >The Washington Post</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.nytimes.com/"
+          >The New York Times</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.aljazeera.com/"
+          >Al Jazerra</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.reuters.com/"
+          >Reuters</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.nbcnews.com/"
+          >NBC News</a
+        >
+        <a class="btn btn-outline-warning" href="https://news.sky.com/"
+          >Sky News</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.euronews.com/"
+          >Euro News</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.independent.co.uk/"
+          >The Independent</a
+        >
+        <a class="btn btn-outline-warning" href="https://theconversation.com/"
+          >The Conversation</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.wionews.com/"
+          >WION</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.cbsnews.com/"
+          >CBS News</a
+        >
+        <a class="btn btn-outline-warning" href="https://www.cbc.ca/news"
+          >CBC</a
+        >
+        <hr />
+        <a class="btn btn-outline-info" href="https://indianexpress.com/"
+          >The Indian Express</a
+        >
+        <a class="btn btn-outline-info" href="https://www.thehindu.com/"
+          >The Hindu</a
+        >
+        <a class="btn btn-outline-info" href="https://www.hindustantimes.com/"
+          >Hindustan Times</a
+        >
+        <a
+          class="btn btn-outline-info"
+          href="https://timesofindia.indiatimes.com/"
+          >Times of India</a
+        >
+        <a class="btn btn-outline-info" href="https://www.telegraphindia.com/"
+          >The Telegraph</a
+        >
+        <a class="btn btn-outline-info" href="https://www.republicworld.com/"
+          >Republic World</a
+        >
+        <a class="btn btn-outline-info" href="https://www.indiatoday.in/"
+          >India Today</a
+        >
         <a class="btn btn-outline-info" href="https://thewire.in/">The Wire</a>
-        <a class="btn btn-outline-info" href="https://theprint.in/">The Print</a>
-        <a class="btn btn-outline-info" href="https://www.firstpost.com/">First Post</a>
+        <a class="btn btn-outline-info" href="https://theprint.in/"
+          >The Print</a
+        >
+        <a class="btn btn-outline-info" href="https://www.firstpost.com/"
+          >First Post</a
+        >
         <a class="btn btn-outline-info" href="https://www.ndtv.com/">NDTV</a>
-        <a class="btn btn-outline-info" href="https://www.aninews.in/">ANI News</a>
-        <a class="btn btn-outline-info" href="https://www.opindia.com/">OpIndia</a>
-        <hr> 
+        <a class="btn btn-outline-info" href="https://www.aninews.in/"
+          >ANI News</a
+        >
+        <a class="btn btn-outline-info" href="https://www.opindia.com/"
+          >OpIndia</a
+        >
+        <hr />
         <a class="btn btn-danger" href="https://www.wired.com/">WIRED</a>
-        <a class="btn btn-danger" href="https://www.sciencedaily.com/">ScienceDaily</a>
-        <a class="btn btn-danger" href="https://scitechdaily.com/">SciTechDaily</a>
+        <a class="btn btn-danger" href="https://www.sciencedaily.com/"
+          >ScienceDaily</a
+        >
+        <a class="btn btn-danger" href="https://scitechdaily.com/"
+          >SciTechDaily</a
+        >
         <a class="btn btn-danger" href="https://mashable.com/">Mashable</a>
         <a class="btn btn-danger" href="https://techxplore.com/">TechXplore</a>
-        <a class="btn btn-danger" href="https://telecomtalk.info/">Telecom Talk</a>
-        <a class="btn btn-danger" href="https://www.techradar.com/">Techradar</a>
+        <a class="btn btn-danger" href="https://telecomtalk.info/"
+          >Telecom Talk</a
+        >
+        <a class="btn btn-danger" href="https://www.techradar.com/"
+          >Techradar</a
+        >
         <a class="btn btn-danger" href="https://www.thedrum.com/">The Drum</a>
         <a class="btn btn-danger" href="https://futurism.com/">FUTURISM</a>
         <a class="btn btn-danger" href="https://www.inverse.com/">INVERSE</a>
         <a class="btn btn-danger" href="https://www.theverge.com/">The Verge</a>
         <a class="btn btn-danger" href="https://www.cnet.com/">CNET</a>
-        <a class="btn btn-danger" href="https://www.analyticsinsight.net/">Analytics Insight</a>
+        <a class="btn btn-danger" href="https://www.analyticsinsight.net/"
+          >Analytics Insight</a
+        >
         <a class="btn btn-danger" href="https://www.space.com/">Space.com</a>
         <a class="btn btn-danger" href="https://news.mit.edu/">MIT News</a>
-        <hr> 
+        <hr />
         <a class="btn btn-outline-danger" href="https://people.com/">People</a>
-        <a class="btn btn-outline-danger" href="https://www.politico.com/">Politico</a>
+        <a class="btn btn-outline-danger" href="https://www.politico.com/"
+          >Politico</a
+        >
         <a class="btn btn-outline-danger" href="https://time.com/">Time</a>
-        <a class="btn btn-outline-danger" href="https://www.thelist.com/">The List</a>
-        <a class="btn btn-outline-danger" href="https://www.boredpanda.com/">Bored Panda</a>
-        <a class="btn btn-outline-danger" href="https://www.globalgoals.org/">Global Goals</a>
+        <a class="btn btn-outline-danger" href="https://www.thelist.com/"
+          >The List</a
+        >
+        <a class="btn btn-outline-danger" href="https://www.boredpanda.com/"
+          >Bored Panda</a
+        >
+        <a class="btn btn-outline-danger" href="https://www.globalgoals.org/"
+          >Global Goals</a
+        >
         <a class="btn btn-outline-danger" href="https://www.wrvo.org/">WRVO</a>
-        <a class="btn btn-outline-danger" href="https://ourworldindata.org/">Our World In Data</a>
-        <a class="btn btn-outline-danger" href="https://www.jstor.org/">JSTOR.org</a>
-        <hr> 
-        <a class="btn btn-outline-light" href="https://www.techexplorist.com/">Tech Explorist</a>
-        <a class="btn btn-outline-light" href="https://bigthink.com/">Big Think</a>
+        <a class="btn btn-outline-danger" href="https://ourworldindata.org/"
+          >Our World In Data</a
+        >
+        <a class="btn btn-outline-danger" href="https://www.jstor.org/"
+          >JSTOR.org</a
+        >
+        <hr />
+        <a class="btn btn-outline-light" href="https://www.techexplorist.com/"
+          >Tech Explorist</a
+        >
+        <a class="btn btn-outline-light" href="https://bigthink.com/"
+          >Big Think</a
+        >
         <a class="btn btn-outline-light" href="https://phys.org/">Phys.org</a>
         <a class="btn btn-outline-light" href="https://www.ted.com/">TED</a>
-        <a class="btn btn-outline-light" href="https://www.nature.com/">NATURE</a>
-        <a class="btn btn-outline-light" href="https://www.discovermagazine.com/">Discover Magazine</a>
-        <a class="btn btn-outline-light" href="https://www.psypost.org/">PsyPost</a>
-        <a class="btn btn-outline-light" href="https://spectrum.ieee.org/">IEEE Spectrum</a>
-        <a class="btn btn-outline-light" href="https://www.quantamagazine.org/">Quanta Magazine</a>
-        <a class="btn btn-outline-light" href="https://www.sciencenews.org/">Science News</a>
-        <a class="btn btn-outline-light" href="https://medcitynews.com/">MedCity News</a>
-        <a class="btn btn-outline-light" href="https://www.healthline.com/">Healthline</a>
-        <a class="btn btn-outline-light" href="https://www.medicalnewstoday.com/">Medical News Today</a>
-        <a class="btn btn-outline-light" href="https://www.news-medical.net/">Medical News</a>
-        <a class="btn btn-outline-light" href="https://www.verywellmind.com/">Very Well Mind</a>
-        <a class="btn btn-outline-light" href="https://www.eatthis.com/">EatThis, Not That!</a>
-        <a class="btn btn-outline-light" href="https://news.yahoo.com/">Yahoo News</a>
-        <a class="btn btn-outline-light" href="https://www.msn.com/en-in/">MSN News</a>
-        <a class="btn btn-outline-light" href="https://news.google.com/">Google News</a>
+        <a class="btn btn-outline-light" href="https://www.nature.com/"
+          >NATURE</a
+        >
+        <a
+          class="btn btn-outline-light"
+          href="https://www.discovermagazine.com/"
+          >Discover Magazine</a
+        >
+        <a class="btn btn-outline-light" href="https://www.psypost.org/"
+          >PsyPost</a
+        >
+        <a class="btn btn-outline-light" href="https://spectrum.ieee.org/"
+          >IEEE Spectrum</a
+        >
+        <a class="btn btn-outline-light" href="https://www.quantamagazine.org/"
+          >Quanta Magazine</a
+        >
+        <a class="btn btn-outline-light" href="https://www.sciencenews.org/"
+          >Science News</a
+        >
+        <a class="btn btn-outline-light" href="https://medcitynews.com/"
+          >MedCity News</a
+        >
+        <a class="btn btn-outline-light" href="https://www.healthline.com/"
+          >Healthline</a
+        >
+        <a
+          class="btn btn-outline-light"
+          href="https://www.medicalnewstoday.com/"
+          >Medical News Today</a
+        >
+        <a class="btn btn-outline-light" href="https://www.news-medical.net/"
+          >Medical News</a
+        >
+        <a class="btn btn-outline-light" href="https://www.verywellmind.com/"
+          >Very Well Mind</a
+        >
+        <a class="btn btn-outline-light" href="https://www.eatthis.com/"
+          >EatThis, Not That!</a
+        >
+        <a class="btn btn-outline-light" href="https://news.yahoo.com/"
+          >Yahoo News</a
+        >
+        <a class="btn btn-outline-light" href="https://www.msn.com/en-in/"
+          >MSN News</a
+        >
+        <a class="btn btn-outline-light" href="https://news.google.com/"
+          >Google News</a
+        >
       </div>
-    </div> 
-<div>
-    <p id="demo"></p>
-<div id="content"  style="text-align: left;">
-</div></div><br>
-</body>
+    </div>
+    <button id="rsstoggle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-rss"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+        />
+        <path
+          d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"
+        />
+      </svg>
+      rss
+    </button>
+    <div>
+      <div id="content"></div>
+    </div>
+    <br />
+    <script>
+      $("#rsstoggle").click(function () {
+        var content = document.getElementById("content");
+        var elmnt = document.getElementById("rsstoggle");
+        if (content.style.display == "none") {
+          content.style.display = "block";
+          elmnt.style.background = "#ce0c0c";
+        } else {
+          content.style.display = "none";
+          elmnt.style.background = "#a6a6a6";
+        }
+      });
+    </script>
+  </body>
 </html>
