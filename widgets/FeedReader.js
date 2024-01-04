@@ -53,10 +53,9 @@ userFeedURLs.forEach((userUrl) => {
     url: API + userUrl,
     dataType: "jsonp",
     success: function (data) {
-      // console.log(data);
       data.items.forEach((item) => {
         var content = document.getElementById("content");
-
+        $("#content").empty();
         var newItem = "";
         newItem +=
           '<div class="rfitem"><a target="_blank" href="' +
