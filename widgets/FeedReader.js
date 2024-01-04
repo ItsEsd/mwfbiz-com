@@ -50,12 +50,12 @@ let userFeedURLs = [
 userFeedURLs.forEach((userUrl) => {
   $.ajax({
     type: "GET",
-    url: API + userUrl,
+    url: API + userUrl + "&api_key=4kxgjjx7bllaou9taph2zardbjvyukmrulz1lzi7",
     dataType: "jsonp",
     success: function (data) {
+      $("#flscon").remove();
       data.items.forEach((item) => {
         var content = document.getElementById("content");
-        $("#content").empty();
         var newItem = "";
         newItem +=
           '<div class="rfitem"><a target="_blank" href="' +
