@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meta Data Parser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="prsrfrm">
+    <form id="meta-parser-form">
+        <label for="url">Enter URL:</label>
+        <input type="url" id="url" required>
+        <button type="submit">Parse</button>
+    </form>
+    </div>
+    <br><hr>
+    <div id="parsed-mdata" class="prsdmtdt">
+        <img id="imagemtprs" class="prsdimg" src="">
+        <p id="titlemtprs" class="prsdtitl"></p>
+        <p id="descriptionmtprs" class="prsddescp"></p>
+    </div>
+    
+    <script>
+        const form = document.getElementById('meta-parser-form');
+        const titleElement = document.getElementById('titlemtprs');
+        const descriptionElement = document.getElementById('descriptionmtprs');
+        const imageElement = document.getElementById('imagemtprs');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const url = document.getElementById('url').value;
+            
+            fetch(url)
+                .then(response => response.text())
+                .then(xmlString => {
+                    const parser = new DOMParser();
+                    // const doc = parser.parseFromString(html, 'text/html');
+                    const doc = parser.parseFromString(xmlString, "application/xml");
+                    const title = doc.querySelector('title').textContent;
+                    const metaDescription = doc.querySelector('meta[name="description"]') || doc.querySelector('meta[property="og:description"]');
+                    const description = metaDescription ? metaDescription.getAttribute('content') : 'Not found';
+                    const metaImage = doc.querySelector('meta[name="image"]') || doc.querySelector('meta[property="og:image"]');
+                    const image = metaImage ? metaImage.getAttribute('content') : 'Not found';
+                    console.log(doc,title,metaDescription,metaImage);
+                    titleElement.textContent = title;
+                    descriptionElement.textContent = description;
+                    imageElement.src = image;
+                })
+                .catch(error => {
+                    titleElement.textContent = 'Error';
+                    descriptionElement.textContent = 'Error';
+                    imageElement.src = '';
+                    console.error('Error fetching and parsing the web page:', error);
+                });
+        });
+    </script>
+</body>
+</html>
