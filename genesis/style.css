@@ -312,7 +312,7 @@ a:focus {
 
 h1 {
   font-size: 40px;
-  background: -webkit-linear-gradient(#ff0000a5, #333333a2, #ffffff9c);
+  background: -webkit-linear-gradient(#ff0000, #333333a2, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
