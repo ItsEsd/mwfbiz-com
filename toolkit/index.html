@@ -1,28 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- Primary Meta Tags -->
-<title>[ Toolkit ] - mwfbiz.COM</title>
-<meta name="title" content="[ Toolkit ] - mwfbiz.COM">
-<meta name="description" content="Text Editor, JSON Formatter">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="[ Toolkit ] - mwfbiz.COM">
-<meta property="og:description" content="Text Editor, JSON Formatter">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@03fac213712b921ff74e7e99598ad75c0f94530d/image/meta/mwfbiz-meta.png">
+    <title>[ Toolkit ] - mwfbiz.COM</title>
+    <meta name="title" content="[ Toolkit ] - mwfbiz.COM" />
+    <meta name="description" content="Text Editor, JSON Formatter" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="[ Toolkit ] - mwfbiz.COM">
-<meta property="twitter:description" content="Text Editor, JSON Formatter">
-<meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@03fac213712b921ff74e7e99598ad75c0f94530d/image/meta/mwfbiz-meta.png">
-    <link rel="icon" href="../image/favicon.png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[ Toolkit ] - mwfbiz.COM" />
+    <meta property="og:description" content="Text Editor, JSON Formatter" />
+    <meta
+      property="og:image"
+      content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@03fac213712b921ff74e7e99598ad75c0f94530d/image/meta/mwfbiz-meta.png"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="[ Toolkit ] - mwfbiz.COM" />
+    <meta
+      property="twitter:description"
+      content="Text Editor, JSON Formatter"
+    />
+    <meta
+      property="twitter:image"
+      content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@03fac213712b921ff74e7e99598ad75c0f94530d/image/meta/mwfbiz-meta.png"
+    />
+    <link
+      rel="icon"
+      href="../image/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -30,12 +44,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-    
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
     <script>
       window.SINGLE_TAB = " ";
-      window.ImgCollapsed = "https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg";
-      window.ImgExpanded = "https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg";
+      window.ImgCollapsed =
+        "https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg";
+      window.ImgExpanded =
+        "https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg";
       window.QuoteKeys = true;
 
       function $id(id) {
@@ -43,20 +61,26 @@
       }
 
       function IsArray(obj) {
-        return obj && typeof obj === 'object' && typeof obj.length === 'number' && !(obj.propertyIsEnumerable('length'));
+        return (
+          obj &&
+          typeof obj === "object" &&
+          typeof obj.length === "number" &&
+          !obj.propertyIsEnumerable("length")
+        );
       }
 
       function Process(extJson) {
         SetTab();
         window.IsCollapsible = $id("CollapsibleView").checked;
         if (!!extJson) extJson = extJson.split("\n").join("\\" + "n");
-        var json = (!!extJson) ? extJson : $id("RawJson").value;
+        var json = !!extJson ? extJson : $id("RawJson").value;
         var html = "";
         try {
-          if (json == "") json = "\"\"";
+          if (json == "") json = '""';
           var obj = eval("[" + json + "]");
           html = ProcessObject(obj[0], 0, false, false, false);
-          $id("Canvas").innerHTML = "<PRE class='CodeContainer'>" + html + "</PRE>";
+          $id("Canvas").innerHTML =
+            "<PRE class='CodeContainer'>" + html + "</PRE>";
         } catch (e) {
           $id("Canvas").innerHTML = "";
         }
@@ -64,69 +88,173 @@
       window._dateObj = new Date();
       window._regexpObj = new RegExp();
 
-      function ProcessObject(obj, indent, addComma, isArray, isPropertyContent) {
+      function ProcessObject(
+        obj,
+        indent,
+        addComma,
+        isArray,
+        isPropertyContent
+      ) {
         var html = "";
-        var comma = (addComma) ? "<span class='Comma'>,</span> " : "";
+        var comma = addComma ? "<span class='Comma'>,</span> " : "";
         var type = typeof obj;
         var clpsHtml = "";
         if (IsArray(obj)) {
           if (obj.length == 0) {
-            html += GetRow(indent, "<span class='ArrayBrace'>[ ]</span>" + comma, isPropertyContent);
+            html += GetRow(
+              indent,
+              "<span class='ArrayBrace'>[ ]</span>" + comma,
+              isPropertyContent
+            );
           } else {
-            clpsHtml = window.IsCollapsible ? "<span><img src=\"" + window.ImgExpanded + "\" onClick=\"ExpImgClicked(this)\" /></span><span class='collapsible'>" : "";
-            html += GetRow(indent, "<span class='ArrayBrace'>[</span>" + clpsHtml, isPropertyContent);
+            clpsHtml = window.IsCollapsible
+              ? '<span><img src="' +
+                window.ImgExpanded +
+                '" onClick="ExpImgClicked(this)" /></span><span class=\'collapsible\'>'
+              : "";
+            html += GetRow(
+              indent,
+              "<span class='ArrayBrace'>[</span>" + clpsHtml,
+              isPropertyContent
+            );
             for (var i = 0; i < obj.length; i++) {
-              html += ProcessObject(obj[i], indent + 1, i < (obj.length - 1), true, false);
+              html += ProcessObject(
+                obj[i],
+                indent + 1,
+                i < obj.length - 1,
+                true,
+                false
+              );
             }
             clpsHtml = window.IsCollapsible ? "</span>" : "";
-            html += GetRow(indent, clpsHtml + "<span class='ArrayBrace'>]</span>" + comma);
+            html += GetRow(
+              indent,
+              clpsHtml + "<span class='ArrayBrace'>]</span>" + comma
+            );
           }
-        } else if (type == 'object') {
+        } else if (type == "object") {
           if (obj == null) {
             html += FormatLiteral("null", "", comma, indent, isArray, "Null");
           } else if (obj.constructor == window._dateObj.constructor) {
-            html += FormatLiteral("new Date(" + obj.getTime() + ") /*" + obj.toLocaleString() + "*/", "", comma, indent, isArray, "Date");
+            html += FormatLiteral(
+              "new Date(" +
+                obj.getTime() +
+                ") /*" +
+                obj.toLocaleString() +
+                "*/",
+              "",
+              comma,
+              indent,
+              isArray,
+              "Date"
+            );
           } else if (obj.constructor == window._regexpObj.constructor) {
-            html += FormatLiteral("new RegExp(" + obj + ")", "", comma, indent, isArray, "RegExp");
+            html += FormatLiteral(
+              "new RegExp(" + obj + ")",
+              "",
+              comma,
+              indent,
+              isArray,
+              "RegExp"
+            );
           } else {
             var numProps = 0;
             for (var prop in obj) numProps++;
             if (numProps == 0) {
-              html += GetRow(indent, "<span class='ObjectBrace'>{ }</span>" + comma, isPropertyContent);
+              html += GetRow(
+                indent,
+                "<span class='ObjectBrace'>{ }</span>" + comma,
+                isPropertyContent
+              );
             } else {
-              clpsHtml = window.IsCollapsible ? "<span><img src=\"" + window.ImgExpanded + "\" onClick=\"ExpImgClicked(this)\" /></span><span class='collapsible'>" : "";
-              html += GetRow(indent, "<span class='ObjectBrace'>{</span>" + clpsHtml, isPropertyContent);
+              clpsHtml = window.IsCollapsible
+                ? '<span><img src="' +
+                  window.ImgExpanded +
+                  '" onClick="ExpImgClicked(this)" /></span><span class=\'collapsible\'>'
+                : "";
+              html += GetRow(
+                indent,
+                "<span class='ObjectBrace'>{</span>" + clpsHtml,
+                isPropertyContent
+              );
               var j = 0;
               for (var prop in obj) {
-                var quote = window.QuoteKeys ? "\"" : "";
-                html += GetRow(indent + 1, "<span class='PropertyName'>" + quote + prop + quote + "</span>: " + ProcessObject(obj[prop], indent + 1, ++j < numProps, false, true));
+                var quote = window.QuoteKeys ? '"' : "";
+                html += GetRow(
+                  indent + 1,
+                  "<span class='PropertyName'>" +
+                    quote +
+                    prop +
+                    quote +
+                    "</span>: " +
+                    ProcessObject(
+                      obj[prop],
+                      indent + 1,
+                      ++j < numProps,
+                      false,
+                      true
+                    )
+                );
               }
               clpsHtml = window.IsCollapsible ? "</span>" : "";
-              html += GetRow(indent, clpsHtml + "<span class='ObjectBrace'>}</span>" + comma);
+              html += GetRow(
+                indent,
+                clpsHtml + "<span class='ObjectBrace'>}</span>" + comma
+              );
             }
           }
-        } else if (type == 'number') {
+        } else if (type == "number") {
           html += FormatLiteral(obj, "", comma, indent, isArray, "Number");
-        } else if (type == 'boolean') {
+        } else if (type == "boolean") {
           html += FormatLiteral(obj, "", comma, indent, isArray, "Boolean");
-        } else if (type == 'function') {
+        } else if (type == "function") {
           if (obj.constructor == window._regexpObj.constructor) {
-            html += FormatLiteral("new RegExp(" + obj + ")", "", comma, indent, isArray, "RegExp");
+            html += FormatLiteral(
+              "new RegExp(" + obj + ")",
+              "",
+              comma,
+              indent,
+              isArray,
+              "RegExp"
+            );
           } else {
             obj = FormatFunction(indent, obj);
             html += FormatLiteral(obj, "", comma, indent, isArray, "Function");
           }
-        } else if (type == 'undefined') {
-          html += FormatLiteral("undefined", "", comma, indent, isArray, "Null");
+        } else if (type == "undefined") {
+          html += FormatLiteral(
+            "undefined",
+            "",
+            comma,
+            indent,
+            isArray,
+            "Null"
+          );
         } else {
-          html += FormatLiteral(obj.toString().split("\\").join("\\\\").split('"').join('\\"'), "\"", comma, indent, isArray, "String");
+          html += FormatLiteral(
+            obj.toString().split("\\").join("\\\\").split('"').join('\\"'),
+            '"',
+            comma,
+            indent,
+            isArray,
+            "String"
+          );
         }
         return html;
       }
 
       function FormatLiteral(literal, quote, comma, indent, isArray, style) {
-        if (typeof literal == 'string') literal = literal.split("<").join("&lt;").split(">").join("&gt;");
-        var str = "<span class='" + style + "'>" + quote + literal + quote + comma + "</span>";
+        if (typeof literal == "string")
+          literal = literal.split("<").join("&lt;").split(">").join("&gt;");
+        var str =
+          "<span class='" +
+          style +
+          "'>" +
+          quote +
+          literal +
+          quote +
+          comma +
+          "</span>";
         if (isArray) str = GetRow(indent, str);
         return str;
       }
@@ -137,20 +265,29 @@
         var funcStrArray = obj.toString().split("\n");
         var str = "";
         for (var i = 0; i < funcStrArray.length; i++) {
-          str += ((i == 0) ? "" : tabs) + funcStrArray[i] + "\n";
+          str += (i == 0 ? "" : tabs) + funcStrArray[i] + "\n";
         }
         return str;
       }
 
       function GetRow(indent, data, isPropertyContent) {
         var tabs = "";
-        for (var i = 0; i < indent && !isPropertyContent; i++) tabs += window.TAB;
-        if (data != null && data.length > 0 && data.charAt(data.length - 1) != "\n") data = data + "\n";
+        for (var i = 0; i < indent && !isPropertyContent; i++)
+          tabs += window.TAB;
+        if (
+          data != null &&
+          data.length > 0 &&
+          data.charAt(data.length - 1) != "\n"
+        )
+          data = data + "\n";
         return tabs + data;
       }
 
       function CollapsibleViewClicked() {
-        $id("CollapsibleViewDetail").style.visibility = $id("CollapsibleView").checked ? "visible" : "hidden";
+        $id("CollapsibleViewDetail").style.visibility = $id("CollapsibleView")
+          .checked
+          ? "visible"
+          : "hidden";
         Process();
       }
 
@@ -161,27 +298,37 @@
 
       function CollapseAllClicked() {
         EnsureIsPopulated();
-        TraverseChildren($id("Canvas"), function(element) {
-          if (element.className == 'collapsible') {
-            MakeContentVisible(element, false);
-          }
-        }, 0);
+        TraverseChildren(
+          $id("Canvas"),
+          function (element) {
+            if (element.className == "collapsible") {
+              MakeContentVisible(element, false);
+            }
+          },
+          0
+        );
       }
 
       function ExpandAllClicked() {
         EnsureIsPopulated();
-        TraverseChildren($id("Canvas"), function(element) {
-          if (element.className == 'collapsible') {
-            MakeContentVisible(element, true);
-          }
-        }, 0);
+        TraverseChildren(
+          $id("Canvas"),
+          function (element) {
+            if (element.className == "collapsible") {
+              MakeContentVisible(element, true);
+            }
+          },
+          0
+        );
       }
 
       function MakeContentVisible(element, visible) {
         var img = element.previousSibling.firstChild;
         if (!!img.tagName && img.tagName.toLowerCase() == "img") {
-          element.style.display = visible ? 'inline' : 'none';
-          element.previousSibling.firstChild.src = visible ? window.ImgExpanded : window.ImgCollapsed;
+          element.style.display = visible ? "inline" : "none";
+          element.previousSibling.firstChild.src = visible
+            ? window.ImgExpanded
+            : window.ImgCollapsed;
         }
       }
 
@@ -207,15 +354,19 @@
 
       function CollapseLevel(level) {
         EnsureIsPopulated();
-        TraverseChildren($id("Canvas"), function(element, depth) {
-          if (element.className == 'collapsible') {
-            if (depth >= level) {
-              MakeContentVisible(element, false);
-            } else {
-              MakeContentVisible(element, true);
+        TraverseChildren(
+          $id("Canvas"),
+          function (element, depth) {
+            if (element.className == "collapsible") {
+              if (depth >= level) {
+                MakeContentVisible(element, false);
+              } else {
+                MakeContentVisible(element, true);
+              }
             }
-          }
-        }, 0);
+          },
+          0
+        );
       }
 
       function TabSizeChanged() {
@@ -224,7 +375,10 @@
 
       function SetTab() {
         var select = $id("TabSize");
-        window.TAB = MultiplyString(parseInt(select.options[select.selectedIndex].value), window.SINGLE_TAB);
+        window.TAB = MultiplyString(
+          parseInt(select.options[select.selectedIndex].value),
+          window.SINGLE_TAB
+        );
       }
 
       function EnsureIsPopulated() {
@@ -248,20 +402,23 @@
             window.getSelection().removeAllRanges();
           }
         }
-        var range = (!!document.body && !!document.body.createTextRange) ? document.body.createTextRange() : document.createRange();
+        var range =
+          !!document.body && !!document.body.createTextRange
+            ? document.body.createTextRange()
+            : document.createRange();
         if (!!range.selectNode) range.selectNode($id("Canvas"));
-        else if (range.moveToElementText) range.moveToElementText($id("Canvas"));
+        else if (range.moveToElementText)
+          range.moveToElementText($id("Canvas"));
         if (!!range.select) range.select($id("Canvas"));
         else window.getSelection().addRange(range);
       }
 
       function LinkToJson() {
         var val = $id("RawJson").value;
-        val = escape(val.split('/n').join(' ').split('/r').join(' '));
+        val = escape(val.split("/n").join(" ").split("/r").join(" "));
         $id("InvisibleLinkUrl").value = val;
         $id("InvisibleLink").submit();
       }
-
     </script>
   </head>
   <style>
@@ -295,7 +452,7 @@
       text-align: left;
       overflow: scroll;
       background-color: white;
-      color:black;
+      color: black;
     }
 
     #textBox:focus {
@@ -332,7 +489,7 @@
 
     .Canvas {
       font: 12pt Verdana;
-      background-color: #ECECEC;
+      background-color: #ececec;
       color: #000000;
       width: 100%;
       border: solid 1px #dd1d16;
@@ -340,17 +497,17 @@
     }
 
     .ObjectBrace {
-      color: #00AA00;
+      color: #00aa00;
       font-weight: bold;
     }
 
     .ArrayBrace {
-      color: #0033FF;
+      color: #0033ff;
       font-weight: bold;
     }
 
     .PropertyName {
-      color: #CC0000;
+      color: #cc0000;
       font-weight: bold;
     }
 
@@ -359,20 +516,20 @@
     }
 
     .Number {
-      color: #AA00AA;
+      color: #aa00aa;
     }
 
     .Boolean {
-      color: #0000FF;
+      color: #0000ff;
     }
 
     .Function {
-      color: #AA6633;
+      color: #aa6633;
       text-decoration: italic;
     }
 
     .Null {
-      color: #0000FF;
+      color: #0000ff;
     }
 
     .Comma {
@@ -412,7 +569,7 @@
 
     #HeaderSubTitle {
       margin-bottom: 2px;
-      margin-top: 0px
+      margin-top: 0px;
     }
 
     #RawJson {
@@ -450,7 +607,6 @@
     label {
       font: 14px Verdana;
       color: #dd1d16;
-      ;
     }
 
     #format {
@@ -468,12 +624,12 @@
     }
 
     footer {
-      font-family: 'Shadows Into Light', sans-sarif;
+      font-family: "Shadows Into Light", sans-sarif;
       bottom: 0;
       position: fixed;
       width: 100%;
     }
-  .sticky {
+    .sticky {
       position: -webkit-sticky;
       position: sticky;
       bottom: 0;
@@ -481,7 +637,8 @@
 
     .sticky img {
       width: 100%;
-      max-width: 300px;background:transparent;
+      max-width: 300px;
+      background: transparent;
     }
 
     .qb a {
@@ -496,19 +653,31 @@
       margin-right: 18px;
       transition: 0.3s;
     }
-    #htmlviewtx{
-    height:400px;
+    #htmlviewtx {
+      height: 400px;
     }
   </style>
 
   <body onload="initDoc();">
-    <div class="container"><br>
-      <h4 style="float:left;color:white;">Text Editor</h4><br>
-      <div align="center"><br>
-        <form name="compForm"> <input type="hidden" name="myDoc"id="htmlviewtx">
-          <div id="textBox" contenteditable="true">
-          </div>
-          <div id="toolBar1"> <select style="font: 14px Arial, sans-serif;border:none;border-radius:4px;height:20px;" onchange="formatDoc('formatblock',this[this.selectedIndex].value);this.selectedIndex=0;">
+    <div class="container">
+      <br />
+      <h4 style="float: left; color: white">Text Editor</h4>
+      <br />
+      <div align="center">
+        <br />
+        <form name="compForm">
+          <input type="hidden" name="myDoc" id="htmlviewtx" />
+          <div id="textBox" contenteditable="true"></div>
+          <div id="toolBar1">
+            <select
+              style="
+                font: 14px Arial, sans-serif;
+                border: none;
+                border-radius: 4px;
+                height: 20px;
+              "
+              onchange="formatDoc('formatblock',this[this.selectedIndex].value);this.selectedIndex=0;"
+            >
               <option selected>- formatting -</option>
               <option value="h1">Title 1 &lt;h1&gt;</option>
               <option value="h2">Title 2 &lt;h2&gt;</option>
@@ -518,13 +687,31 @@
               <option value="h6">Subtitle &lt;h6&gt;</option>
               <option value="p">Paragraph &lt;p&gt;</option>
               <option value="pre">Preformatted &lt;pre&gt;</option>
-            </select> <select style="font: 14px Arial, sans-serif;border:none;border-radius:4px;height:20px;" onchange="formatDoc('fontname',this[this.selectedIndex].value);this.selectedIndex=0;">
+            </select>
+            <select
+              style="
+                font: 14px Arial, sans-serif;
+                border: none;
+                border-radius: 4px;
+                height: 20px;
+              "
+              onchange="formatDoc('fontname',this[this.selectedIndex].value);this.selectedIndex=0;"
+            >
               <option class="heading" selected>- font -</option>
               <option>Arial</option>
               <option>Arial Black</option>
               <option>Courier New</option>
               <option>Times New Roman</option>
-            </select> <select style="font: 14px Arial, sans-serif;border:none;border-radius:4px;height:20px;" onchange="formatDoc('fontsize',this[this.selectedIndex].value);this.selectedIndex=0;">
+            </select>
+            <select
+              style="
+                font: 14px Arial, sans-serif;
+                border: none;
+                border-radius: 4px;
+                height: 20px;
+              "
+              onchange="formatDoc('fontsize',this[this.selectedIndex].value);this.selectedIndex=0;"
+            >
               <option class="heading" selected>- size -</option>
               <option value="1">Very small</option>
               <option value="2">A bit small</option>
@@ -533,30 +720,225 @@
               <option value="5">Big</option>
               <option value="6">Very big</option>
               <option value="7">Maximum</option>
-            </select> <select style="font: 14px Arial, sans-serif;border:none;border-radius:4px;height:20px;" onchange="formatDoc('forecolor',this[this.selectedIndex].value);this.selectedIndex=0;">
+            </select>
+            <select
+              style="
+                font: 14px Arial, sans-serif;
+                border: none;
+                border-radius: 4px;
+                height: 20px;
+              "
+              onchange="formatDoc('forecolor',this[this.selectedIndex].value);this.selectedIndex=0;"
+            >
               <option class="heading" selected>- color -</option>
               <option value="red">Red</option>
               <option value="blue">Blue</option>
               <option value="green">Green</option>
               <option value="black">Black</option>
               <option value="white">White</option>
-            </select> <select style="font: 14px Arial, sans-serif;border:none;border-radius:4px;height:20px;" onchange="formatDoc('backcolor',this[this.selectedIndex].value);this.selectedIndex=0;">
+            </select>
+            <select
+              style="
+                font: 14px Arial, sans-serif;
+                border: none;
+                border-radius: 4px;
+                height: 20px;
+              "
+              onchange="formatDoc('backcolor',this[this.selectedIndex].value);this.selectedIndex=0;"
+            >
               <option class="heading" selected>- background -</option>
               <option value="red">Red</option>
               <option value="green">Green</option>
               <option value="blue">Blue</option>
               <option value="black">Black</option>
               <option value="white">White</option>
-            </select> </div>
-          <div id="toolBar2"> <img class="intLink" title="Clean" onclick="if(validateMode()){oDoc.innerHTML=sDefTxt};" src="data:image/gif;base64,R0lGODlhFgAWAIQbAD04KTRLYzFRjlldZl9vj1dusY14WYODhpWIbbSVFY6O7IOXw5qbms+wUbCztca0ccS4kdDQjdTLtMrL1O3YitHa7OPcsd/f4PfvrvDv8Pv5xv///////////////////yH5BAEKAB8ALAAAAAAWABYAAAV84CeOZGmeaKqubMteyzK547QoBcFWTm/jgsHq4rhMLoxFIehQQSAWR+Z4IAyaJ0kEgtFoLIzLwRE4oCQWrxoTOTAIhMCZ0tVgMBQKZHAYyFEWEV14eQ8IflhnEHmFDQkAiSkQCI2PDC4QBg+OAJc0ewadNCOgo6anqKkoIQA7" /> <img class="intLink" title="Print" onclick="printDoc();" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9oEBxcZFmGboiwAAAAIdEVYdENvbW1lbnQA9syWvwAAAuFJREFUOMvtlUtsjFEUx//n3nn0YdpBh1abRpt4LFqtqkc3jRKkNEIsiIRIBBEhJJpKlIVo4m1RRMKKjQiRMJRUqUdKPT71qpIpiRKPaqdF55tv5vvusZjQTjOlseUkd3Xu/3dPzusC/22wtu2wRn+jG5So/OCDh8ycMJDflehMlkJkVK7KUYN+ufzA/RttH76zaVocDptRxzQtNi3mRWuPc+6cKtlXZ/sddP2uu9uXlmYXZ6Qm8v4Tz8lhF1H+zDQXt7S8oLMXtbF4e8QaFHjj3kbP2MzkktHpiTjp9VH6iHiA+whtAsX5brpwueMGdONdf/2A4M7ukDs1JW662+XkqTkeUoqjKtOjm2h53YFL15pSJ04Zc94wdtibr26fXlC2mzRvBccEbz2kiRFD414tKMlEZbVGT33+qCoHgha81SWYsew0r1uzfNylmtpx80pngQQ91LwVk2JGvGnfvZG6YcYRAT16GFtW5kKKfo1EQLtfh5Q2etT0BIWF+aitq4fDbk+ImYo1OxvGF03waFJQvBCkvDffRyEtxQiFFYgAZTHS0zwAGD7fG5TNnYNTp8/FzvGwJOfmgG7GOx0SAKKgQgDMgKBI0NJGMEImpGDk5+WACEwEd0ywblhGUZ4Hw5OdUekRBLT7DTgdEgxACsIznx8zpmWh7k4rkpJcuHDxCul6MDsmmBXDlWCH2+XozSgBnzsNCEE4euYV4pwCpsWYPW0UHDYBKSWu1NYjENDReqtKjwn2+zvtTc1vMSTB/mvev/WEYSlASsLimcOhOBJxw+N3aP/SjefNL5GePZmpu4kG7OPr1+tOfPyUu3BecWYKcwQcDFmwFKAUo90fhKDInBCAmvqnyMgqUEagQwCoHBDc1rjv9pIlD8IbVkz6qYViIBQGTJPx4k0XpIgEZoRN1Da0cij4VfR0ta3WvBXH/rjdCufv6R2zPgPH/e4pxSBCpeatqPrjNiso203/5s/zA171Mv8+w1LOAAAAAElFTkSuQmCC"> <img class="intLink" title="Undo" onclick="formatDoc('undo');" src="data:image/gif;base64,R0lGODlhFgAWAOMKADljwliE33mOrpGjuYKl8aezxqPD+7/I19DV3NHa7P///////////////////////yH5BAEKAA8ALAAAAAAWABYAAARR8MlJq7046807TkaYeJJBnES4EeUJvIGapWYAC0CsocQ7SDlWJkAkCA6ToMYWIARGQF3mRQVIEjkkSVLIbSfEwhdRIH4fh/DZMICe3/C4nBQBADs=" /> <img class="intLink" title="Redo" onclick="formatDoc('redo');" src="data:image/gif;base64,R0lGODlhFgAWAMIHAB1ChDljwl9vj1iE34Kl8aPD+7/I1////yH5BAEKAAcALAAAAAAWABYAAANKeLrc/jDKSesyphi7SiEgsVXZEATDICqBVJjpqWZt9NaEDNbQK1wCQsxlYnxMAImhyDoFAElJasRRvAZVRqqQXUy7Cgx4TC6bswkAOw==" /> <img class="intLink" title="Remove formatting" onclick="formatDoc('removeFormat')" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB9oECQMCKPI8CIIAAAAIdEVYdENvbW1lbnQA9syWvwAAAuhJREFUOMtjYBgFxAB501ZWBvVaL2nHnlmk6mXCJbF69zU+Hz/9fB5O1lx+bg45qhl8/fYr5it3XrP/YWTUvvvk3VeqGXz70TvbJy8+Wv39+2/Hz19/mGwjZzuTYjALuoBv9jImaXHeyD3H7kU8fPj2ICML8z92dlbtMzdeiG3fco7J08foH1kurkm3E9iw54YvKwuTuom+LPt/BgbWf3//sf37/1/c02cCG1lB8f//f95DZx74MTMzshhoSm6szrQ/a6Ir/Z2RkfEjBxuLYFpDiDi6Af///2ckaHBp7+7wmavP5n76+P2ClrLIYl8H9W36auJCbCxM4szMTJac7Kza////R3H1w2cfWAgafPbqs5g7D95++/P1B4+ECK8tAwMDw/1H7159+/7r7ZcvPz4fOHbzEwMDwx8GBgaGnNatfHZx8zqrJ+4VJBh5CQEGOySEua/v3n7hXmqI8WUGBgYGL3vVG7fuPK3i5GD9/fja7ZsMDAzMG/Ze52mZeSj4yu1XEq/ff7W5dvfVAS1lsXc4Db7z8C3r8p7Qjf///2dnZGxlqJuyr3rPqQd/Hhyu7oSpYWScylDQsd3kzvnH738wMDzj5GBN1VIWW4c3KDon7VOvm7S3paB9u5qsU5/x5KUnlY+eexQbkLNsErK61+++VnAJcfkyMTIwffj0QwZbJDKjcETs1Y8evyd48toz8y/ffzv//vPP4veffxpX77z6l5JewHPu8MqTDAwMDLzyrjb/mZm0JcT5Lj+89+Ybm6zz95oMh7s4XbygN3Sluq4Mj5K8iKMgP4f0////fv77//8nLy+7MCcXmyYDAwODS9jM9tcvPypd35pne3ljdjvj26+H2dhYpuENikgfvQeXNmSl3tqepxXsqhXPyc666s+fv1fMdKR3TK72zpix8nTc7bdfhfkEeVbC9KhbK/9iYWHiErbu6MWbY/7//8/4//9/pgOnH6jGVazvFDRtq2VgiBIZrUTIBgCk+ivHvuEKwAAAAABJRU5ErkJggg=="> <img class="intLink" title="Bold" onclick="formatDoc('bold');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAInhI+pa+H9mJy0LhdgtrxzDG5WGFVk6aXqyk6Y9kXvKKNuLbb6zgMFADs=" /> <img class="intLink" title="Italic" onclick="formatDoc('italic');" src="data:image/gif;base64,R0lGODlhFgAWAKEDAAAAAF9vj5WIbf///yH5BAEAAAMALAAAAAAWABYAAAIjnI+py+0Po5x0gXvruEKHrF2BB1YiCWgbMFIYpsbyTNd2UwAAOw==" /> <img class="intLink" title="Underline" onclick="formatDoc('underline');" src="data:image/gif;base64,R0lGODlhFgAWAKECAAAAAF9vj////////yH5BAEAAAIALAAAAAAWABYAAAIrlI+py+0Po5zUgAsEzvEeL4Ea15EiJJ5PSqJmuwKBEKgxVuXWtun+DwxCCgA7" /> <img class="intLink" title="Left align" onclick="formatDoc('justifyleft');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIghI+py+0Po5y02ouz3jL4D4JMGELkGYxo+qzl4nKyXAAAOw==" /> <img class="intLink" title="Center align" onclick="formatDoc('justifycenter');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIfhI+py+0Po5y02ouz3jL4D4JOGI7kaZ5Bqn4sycVbAQA7" /> <img class="intLink" title="Right align" onclick="formatDoc('justifyright');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIghI+py+0Po5y02ouz3jL4D4JQGDLkGYxouqzl43JyVgAAOw==" /> <img class="intLink" title="Numbered list" onclick="formatDoc('insertorderedlist');" src="data:image/gif;base64,R0lGODlhFgAWAMIGAAAAADljwliE35GjuaezxtHa7P///////yH5BAEAAAcALAAAAAAWABYAAAM2eLrc/jDKSespwjoRFvggCBUBoTFBeq6QIAysQnRHaEOzyaZ07Lu9lUBnC0UGQU1K52s6n5oEADs=" /> <img class="intLink" title="Dotted list" onclick="formatDoc('insertunorderedlist');" src="data:image/gif;base64,R0lGODlhFgAWAMIGAAAAAB1ChF9vj1iE33mOrqezxv///////yH5BAEAAAcALAAAAAAWABYAAAMyeLrc/jDKSesppNhGRlBAKIZRERBbqm6YtnbfMY7lud64UwiuKnigGQliQuWOyKQykgAAOw==" /> <img class="intLink" title="Quote" onclick="formatDoc('formatblock','blockquote');" src="data:image/gif;base64,R0lGODlhFgAWAIQXAC1NqjFRjkBgmT9nqUJnsk9xrFJ7u2R9qmKBt1iGzHmOrm6Sz4OXw3Odz4Cl2ZSnw6KxyqO306K63bG70bTB0rDI3bvI4P///////////////////////////////////yH5BAEKAB8ALAAAAAAWABYAAAVP4CeOZGmeaKqubEs2CekkErvEI1zZuOgYFlakECEZFi0GgTGKEBATFmJAVXweVOoKEQgABB9IQDCmrLpjETrQQlhHjINrTq/b7/i8fp8PAQA7" /> <img class="intLink" title="Delete indentation" onclick="formatDoc('outdent');" src="data:image/gif;base64,R0lGODlhFgAWAMIHAAAAADljwliE35GjuaezxtDV3NHa7P///yH5BAEAAAcALAAAAAAWABYAAAM2eLrc/jDKCQG9F2i7u8agQgyK1z2EIBil+TWqEMxhMczsYVJ3e4ahk+sFnAgtxSQDqWw6n5cEADs=" /> <img class="intLink" title="Add indentation" onclick="formatDoc('indent');" src="data:image/gif;base64,R0lGODlhFgAWAOMIAAAAADljwl9vj1iE35GjuaezxtDV3NHa7P///////////////////////////////yH5BAEAAAgALAAAAAAWABYAAAQ7EMlJq704650B/x8gemMpgugwHJNZXodKsO5oqUOgo5KhBwWESyMQsCRDHu9VOyk5TM9zSpFSr9gsJwIAOw==" /> <img class="intLink" title="Hyperlink" data-toggle="modal" data-target="#crlnk" src="data:image/gif;base64,R0lGODlhFgAWAOMKAB1ChDRLY19vj3mOrpGjuaezxrCztb/I19Ha7Pv8/f///////////////////////yH5BAEKAA8ALAAAAAAWABYAAARY8MlJq7046827/2BYIQVhHg9pEgVGIklyDEUBy/RlE4FQF4dCj2AQXAiJQDCWQCAEBwIioEMQBgSAFhDAGghGi9XgHAhMNoSZgJkJei33UESv2+/4vD4TAQA7" /> </div> <br>
-          <div style="margin-top:10px;"> <button type="button" style="border:none;padding:2px 6px;" title="Add picture" data-toggle="modal" data-target="#crimg" onclick="document.getElementById('btnOkImg').disabled='true';"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+            </select>
+          </div>
+          <div id="toolBar2">
+            <img
+              class="intLink"
+              title="Clean"
+              onclick="if(validateMode()){oDoc.innerHTML=sDefTxt};"
+              src="data:image/gif;base64,R0lGODlhFgAWAIQbAD04KTRLYzFRjlldZl9vj1dusY14WYODhpWIbbSVFY6O7IOXw5qbms+wUbCztca0ccS4kdDQjdTLtMrL1O3YitHa7OPcsd/f4PfvrvDv8Pv5xv///////////////////yH5BAEKAB8ALAAAAAAWABYAAAV84CeOZGmeaKqubMteyzK547QoBcFWTm/jgsHq4rhMLoxFIehQQSAWR+Z4IAyaJ0kEgtFoLIzLwRE4oCQWrxoTOTAIhMCZ0tVgMBQKZHAYyFEWEV14eQ8IflhnEHmFDQkAiSkQCI2PDC4QBg+OAJc0ewadNCOgo6anqKkoIQA7"
+            />
+            <img
+              class="intLink"
+              title="Print"
+              onclick="printDoc();"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9oEBxcZFmGboiwAAAAIdEVYdENvbW1lbnQA9syWvwAAAuFJREFUOMvtlUtsjFEUx//n3nn0YdpBh1abRpt4LFqtqkc3jRKkNEIsiIRIBBEhJJpKlIVo4m1RRMKKjQiRMJRUqUdKPT71qpIpiRKPaqdF55tv5vvusZjQTjOlseUkd3Xu/3dPzusC/22wtu2wRn+jG5So/OCDh8ycMJDflehMlkJkVK7KUYN+ufzA/RttH76zaVocDptRxzQtNi3mRWuPc+6cKtlXZ/sddP2uu9uXlmYXZ6Qm8v4Tz8lhF1H+zDQXt7S8oLMXtbF4e8QaFHjj3kbP2MzkktHpiTjp9VH6iHiA+whtAsX5brpwueMGdONdf/2A4M7ukDs1JW662+XkqTkeUoqjKtOjm2h53YFL15pSJ04Zc94wdtibr26fXlC2mzRvBccEbz2kiRFD414tKMlEZbVGT33+qCoHgha81SWYsew0r1uzfNylmtpx80pngQQ91LwVk2JGvGnfvZG6YcYRAT16GFtW5kKKfo1EQLtfh5Q2etT0BIWF+aitq4fDbk+ImYo1OxvGF03waFJQvBCkvDffRyEtxQiFFYgAZTHS0zwAGD7fG5TNnYNTp8/FzvGwJOfmgG7GOx0SAKKgQgDMgKBI0NJGMEImpGDk5+WACEwEd0ywblhGUZ4Hw5OdUekRBLT7DTgdEgxACsIznx8zpmWh7k4rkpJcuHDxCul6MDsmmBXDlWCH2+XozSgBnzsNCEE4euYV4pwCpsWYPW0UHDYBKSWu1NYjENDReqtKjwn2+zvtTc1vMSTB/mvev/WEYSlASsLimcOhOBJxw+N3aP/SjefNL5GePZmpu4kG7OPr1+tOfPyUu3BecWYKcwQcDFmwFKAUo90fhKDInBCAmvqnyMgqUEagQwCoHBDc1rjv9pIlD8IbVkz6qYViIBQGTJPx4k0XpIgEZoRN1Da0cij4VfR0ta3WvBXH/rjdCufv6R2zPgPH/e4pxSBCpeatqPrjNiso203/5s/zA171Mv8+w1LOAAAAAElFTkSuQmCC"
+            />
+            <img
+              class="intLink"
+              title="Undo"
+              onclick="formatDoc('undo');"
+              src="data:image/gif;base64,R0lGODlhFgAWAOMKADljwliE33mOrpGjuYKl8aezxqPD+7/I19DV3NHa7P///////////////////////yH5BAEKAA8ALAAAAAAWABYAAARR8MlJq7046807TkaYeJJBnES4EeUJvIGapWYAC0CsocQ7SDlWJkAkCA6ToMYWIARGQF3mRQVIEjkkSVLIbSfEwhdRIH4fh/DZMICe3/C4nBQBADs="
+            />
+            <img
+              class="intLink"
+              title="Redo"
+              onclick="formatDoc('redo');"
+              src="data:image/gif;base64,R0lGODlhFgAWAMIHAB1ChDljwl9vj1iE34Kl8aPD+7/I1////yH5BAEKAAcALAAAAAAWABYAAANKeLrc/jDKSesyphi7SiEgsVXZEATDICqBVJjpqWZt9NaEDNbQK1wCQsxlYnxMAImhyDoFAElJasRRvAZVRqqQXUy7Cgx4TC6bswkAOw=="
+            />
+            <img
+              class="intLink"
+              title="Remove formatting"
+              onclick="formatDoc('removeFormat')"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB9oECQMCKPI8CIIAAAAIdEVYdENvbW1lbnQA9syWvwAAAuhJREFUOMtjYBgFxAB501ZWBvVaL2nHnlmk6mXCJbF69zU+Hz/9fB5O1lx+bg45qhl8/fYr5it3XrP/YWTUvvvk3VeqGXz70TvbJy8+Wv39+2/Hz19/mGwjZzuTYjALuoBv9jImaXHeyD3H7kU8fPj2ICML8z92dlbtMzdeiG3fco7J08foH1kurkm3E9iw54YvKwuTuom+LPt/BgbWf3//sf37/1/c02cCG1lB8f//f95DZx74MTMzshhoSm6szrQ/a6Ir/Z2RkfEjBxuLYFpDiDi6Af///2ckaHBp7+7wmavP5n76+P2ClrLIYl8H9W36auJCbCxM4szMTJac7Kza////R3H1w2cfWAgafPbqs5g7D95++/P1B4+ECK8tAwMDw/1H7159+/7r7ZcvPz4fOHbzEwMDwx8GBgaGnNatfHZx8zqrJ+4VJBh5CQEGOySEua/v3n7hXmqI8WUGBgYGL3vVG7fuPK3i5GD9/fja7ZsMDAzMG/Ze52mZeSj4yu1XEq/ff7W5dvfVAS1lsXc4Db7z8C3r8p7Qjf///2dnZGxlqJuyr3rPqQd/Hhyu7oSpYWScylDQsd3kzvnH738wMDzj5GBN1VIWW4c3KDon7VOvm7S3paB9u5qsU5/x5KUnlY+eexQbkLNsErK61+++VnAJcfkyMTIwffj0QwZbJDKjcETs1Y8evyd48toz8y/ffzv//vPP4veffxpX77z6l5JewHPu8MqTDAwMDLzyrjb/mZm0JcT5Lj+89+Ybm6zz95oMh7s4XbygN3Sluq4Mj5K8iKMgP4f0////fv77//8nLy+7MCcXmyYDAwODS9jM9tcvPypd35pne3ljdjvj26+H2dhYpuENikgfvQeXNmSl3tqepxXsqhXPyc666s+fv1fMdKR3TK72zpix8nTc7bdfhfkEeVbC9KhbK/9iYWHiErbu6MWbY/7//8/4//9/pgOnH6jGVazvFDRtq2VgiBIZrUTIBgCk+ivHvuEKwAAAAABJRU5ErkJggg=="
+            />
+            <img
+              class="intLink"
+              title="Bold"
+              onclick="formatDoc('bold');"
+              src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAInhI+pa+H9mJy0LhdgtrxzDG5WGFVk6aXqyk6Y9kXvKKNuLbb6zgMFADs="
+            />
+            <img
+              class="intLink"
+              title="Italic"
+              onclick="formatDoc('italic');"
+              src="data:image/gif;base64,R0lGODlhFgAWAKEDAAAAAF9vj5WIbf///yH5BAEAAAMALAAAAAAWABYAAAIjnI+py+0Po5x0gXvruEKHrF2BB1YiCWgbMFIYpsbyTNd2UwAAOw=="
+            />
+            <img
+              class="intLink"
+              title="Underline"
+              onclick="formatDoc('underline');"
+              src="data:image/gif;base64,R0lGODlhFgAWAKECAAAAAF9vj////////yH5BAEAAAIALAAAAAAWABYAAAIrlI+py+0Po5zUgAsEzvEeL4Ea15EiJJ5PSqJmuwKBEKgxVuXWtun+DwxCCgA7"
+            />
+            <img
+              class="intLink"
+              title="Left align"
+              onclick="formatDoc('justifyleft');"
+              src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIghI+py+0Po5y02ouz3jL4D4JMGELkGYxo+qzl4nKyXAAAOw=="
+            />
+            <img
+              class="intLink"
+              title="Center align"
+              onclick="formatDoc('justifycenter');"
+              src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIfhI+py+0Po5y02ouz3jL4D4JOGI7kaZ5Bqn4sycVbAQA7"
+            />
+            <img
+              class="intLink"
+              title="Right align"
+              onclick="formatDoc('justifyright');"
+              src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIghI+py+0Po5y02ouz3jL4D4JQGDLkGYxouqzl43JyVgAAOw=="
+            />
+            <img
+              class="intLink"
+              title="Numbered list"
+              onclick="formatDoc('insertorderedlist');"
+              src="data:image/gif;base64,R0lGODlhFgAWAMIGAAAAADljwliE35GjuaezxtHa7P///////yH5BAEAAAcALAAAAAAWABYAAAM2eLrc/jDKSespwjoRFvggCBUBoTFBeq6QIAysQnRHaEOzyaZ07Lu9lUBnC0UGQU1K52s6n5oEADs="
+            />
+            <img
+              class="intLink"
+              title="Dotted list"
+              onclick="formatDoc('insertunorderedlist');"
+              src="data:image/gif;base64,R0lGODlhFgAWAMIGAAAAAB1ChF9vj1iE33mOrqezxv///////yH5BAEAAAcALAAAAAAWABYAAAMyeLrc/jDKSesppNhGRlBAKIZRERBbqm6YtnbfMY7lud64UwiuKnigGQliQuWOyKQykgAAOw=="
+            />
+            <img
+              class="intLink"
+              title="Quote"
+              onclick="formatDoc('formatblock','blockquote');"
+              src="data:image/gif;base64,R0lGODlhFgAWAIQXAC1NqjFRjkBgmT9nqUJnsk9xrFJ7u2R9qmKBt1iGzHmOrm6Sz4OXw3Odz4Cl2ZSnw6KxyqO306K63bG70bTB0rDI3bvI4P///////////////////////////////////yH5BAEKAB8ALAAAAAAWABYAAAVP4CeOZGmeaKqubEs2CekkErvEI1zZuOgYFlakECEZFi0GgTGKEBATFmJAVXweVOoKEQgABB9IQDCmrLpjETrQQlhHjINrTq/b7/i8fp8PAQA7"
+            />
+            <img
+              class="intLink"
+              title="Delete indentation"
+              onclick="formatDoc('outdent');"
+              src="data:image/gif;base64,R0lGODlhFgAWAMIHAAAAADljwliE35GjuaezxtDV3NHa7P///yH5BAEAAAcALAAAAAAWABYAAAM2eLrc/jDKCQG9F2i7u8agQgyK1z2EIBil+TWqEMxhMczsYVJ3e4ahk+sFnAgtxSQDqWw6n5cEADs="
+            />
+            <img
+              class="intLink"
+              title="Add indentation"
+              onclick="formatDoc('indent');"
+              src="data:image/gif;base64,R0lGODlhFgAWAOMIAAAAADljwl9vj1iE35GjuaezxtDV3NHa7P///////////////////////////////yH5BAEAAAgALAAAAAAWABYAAAQ7EMlJq704650B/x8gemMpgugwHJNZXodKsO5oqUOgo5KhBwWESyMQsCRDHu9VOyk5TM9zSpFSr9gsJwIAOw=="
+            />
+            <img
+              class="intLink"
+              title="Hyperlink"
+              data-toggle="modal"
+              data-target="#crlnk"
+              src="data:image/gif;base64,R0lGODlhFgAWAOMKAB1ChDRLY19vj3mOrpGjuaezxrCztb/I19Ha7Pv8/f///////////////////////yH5BAEKAA8ALAAAAAAWABYAAARY8MlJq7046827/2BYIQVhHg9pEgVGIklyDEUBy/RlE4FQF4dCj2AQXAiJQDCWQCAEBwIioEMQBgSAFhDAGghGi9XgHAhMNoSZgJkJei33UESv2+/4vD4TAQA7"
+            />
+          </div>
+          <br />
+          <div style="margin-top: 10px">
+            <button
+              type="button"
+              style="border: none; padding: 2px 6px"
+              title="Add picture"
+              data-toggle="modal"
+              data-target="#crimg"
+              onclick="document.getElementById('btnOkImg').disabled='true';"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-images"
+                viewBox="0 0 16 16"
+              >
                 <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z" /> </svg> Add Picture</button> <button type="button" style="border:none;padding:2px 6px;" title="Add video" data-toggle="modal" data-target="#crvid"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
-                <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" /> </svg> Add Video</button> </div>
+                <path
+                  d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"
+                />
+              </svg>
+              Add Picture
+            </button>
+            <button
+              type="button"
+              style="border: none; padding: 2px 6px"
+              title="Add video"
+              data-toggle="modal"
+              data-target="#crvid"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-film"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"
+                />
+              </svg>
+              Add Video
+            </button>
+          </div>
           <div class="modal" id="crlnk" role="dialog">
             <div class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-body"><input type="url" id="crlink" style="height:40px; width:60%; outline:none;border:1px solid #dd1d16;border-radius:0px;" placeholder="https://" /><button class="btn btn-dark" id="btnOkLink" data-dismiss="modal" onmouseup="CreateLink()" style="border:none;height:38px;width:80px;background-color:black;border-radius:0px;margin-bottom:1px;margin-left:4px;">Apply</button></div>
+                <div class="modal-body">
+                  <input
+                    type="url"
+                    id="crlink"
+                    style="
+                      height: 40px;
+                      width: 60%;
+                      outline: none;
+                      border: 1px solid #dd1d16;
+                      border-radius: 0px;
+                    "
+                    placeholder="https://"
+                  /><button
+                    class="btn btn-dark"
+                    id="btnOkLink"
+                    data-dismiss="modal"
+                    onmouseup="CreateLink()"
+                    style="
+                      border: none;
+                      height: 38px;
+                      width: 80px;
+                      background-color: black;
+                      border-radius: 0px;
+                      margin-bottom: 1px;
+                      margin-left: 4px;
+                    "
+                  >
+                    Apply
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -564,53 +946,200 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-body">
-                  <h5>Image URL</h5><input id="crImage" type="url" style="height:40px; width:60%; outline:none;border:1px solid #dd1d16;border-radius:0px;" placeholder="https://" /><button type="button" class="btn btn-dark" id="btnOkImg" data-dismiss="modal" style="border:none;height:38px;width:80px;background-color:black;border-radius:0px;margin-bottom:1px;margin-left:4px;" disabled="disabled">Done</button>
-                  <div id="radioS" style="padding-top:10px;display:none;"> <input name="size" id="rd1" type="radio"> Small <input id="rd2" name="size" type="radio"> Medium <input id="rd3" name="size" type="radio"> Large</div>
-                  <div id="previewImg" style="padding-top:10px;display:none;"></div>
+                  <h5>Image URL</h5>
+                  <input
+                    id="crImage"
+                    type="url"
+                    style="
+                      height: 40px;
+                      width: 60%;
+                      outline: none;
+                      border: 1px solid #dd1d16;
+                      border-radius: 0px;
+                    "
+                    placeholder="https://"
+                  /><button
+                    type="button"
+                    class="btn btn-dark"
+                    id="btnOkImg"
+                    data-dismiss="modal"
+                    style="
+                      border: none;
+                      height: 38px;
+                      width: 80px;
+                      background-color: black;
+                      border-radius: 0px;
+                      margin-bottom: 1px;
+                      margin-left: 4px;
+                    "
+                    disabled="disabled"
+                  >
+                    Done
+                  </button>
+                  <div id="radioS" style="padding-top: 10px; display: none">
+                    <input name="size" id="rd1" type="radio" /> Small
+                    <input id="rd2" name="size" type="radio" /> Medium
+                    <input id="rd3" name="size" type="radio" /> Large
+                  </div>
+                  <div
+                    id="previewImg"
+                    style="padding-top: 10px; display: none"
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
-          <!--------------------------------->
           <div class="modal" id="crvid" role="dialog">
             <div class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-body"><input id="crVideo" type="url" style="height:40px; width:60%; outline:none;border:1px solid #dd1d16;border-radius:0px;" placeholder="YouTube Video Link" /><button class="btn btn-dark" id="btnOkVid" data-dismiss="modal" onclick="embed_vid()" style="border:none;height:38px;width:80px;background-color:black;border-radius:0px;margin-bottom:1px;margin-left:4px;">Insert</button>
-                  <div id="previewvid" style="padding-top:10px;display:none;"></div>
+                <div class="modal-body">
+                  <input
+                    id="crVideo"
+                    type="url"
+                    style="
+                      height: 40px;
+                      width: 60%;
+                      outline: none;
+                      border: 1px solid #dd1d16;
+                      border-radius: 0px;
+                    "
+                    placeholder="YouTube Video Link"
+                  /><button
+                    class="btn btn-dark"
+                    id="btnOkVid"
+                    data-dismiss="modal"
+                    onclick="embed_vid()"
+                    style="
+                      border: none;
+                      height: 38px;
+                      width: 80px;
+                      background-color: black;
+                      border-radius: 0px;
+                      margin-bottom: 1px;
+                      margin-left: 4px;
+                    "
+                  >
+                    Insert
+                  </button>
+                  <div
+                    id="previewvid"
+                    style="padding-top: 10px; display: none"
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
-          <p id="editMode"> <input type="checkbox" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" /> <label for="switchBox" style="color:white;">Show HTML</label> </p>
-          <p style="display:none;"> <input type="submit" value="Send" /> </p>
+          <p id="editMode">
+            <input
+              type="checkbox"
+              name="switchMode"
+              id="switchBox"
+              onchange="setDocMode(this.checked);"
+            />
+            <label for="switchBox" style="color: white">Show HTML</label>
+          </p>
+          <p style="display: none"><input type="submit" value="Send" /></p>
         </form>
-      </div><hr style="border-width:2px;border-color:white;"><hr style="border-width:2px;border-color:white;">
+      </div>
+      <hr style="border-width: 2px; border-color: white" />
+      <hr style="border-width: 2px; border-color: white" />
 
-      <div id="jsonF"><br>
-        <h4 style="float:left;color:white;">JSON Formatter</h4><br><br><textarea id="RawJson">{"some":"data"}</textarea>
-        <div id="ControlsRow"> <input id="format" type="Button" value="Format" onClick="Process()" /> <span id="TabSizeHolder"> Tab size: <select id="TabSize" onChange="TabSizeChanged()">
+      <div id="jsonF">
+        <br />
+        <h4 style="float: left; color: white">JSON Formatter</h4>
+        <br /><br /><textarea id="RawJson">{"some":"data"}</textarea>
+        <div id="ControlsRow">
+          <input id="format" type="Button" value="Format" onClick="Process()" />
+          <span id="TabSizeHolder">
+            Tab size:
+            <select id="TabSize" onChange="TabSizeChanged()">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3" selected="true">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
               <option value="6">6</option>
-            </select> </span> <label for="QuoteKeys"> <input type="checkbox" id="QuoteKeys" onClick="QuoteKeysClicked()" checked="true" /> Keys in Quotes </label>&nbsp; <span><a href="javascript:void(0);" onClick="SelectAllClicked()">Select all</a></span> &nbsp; <span id="CollapsibleViewHolder"> <label for="CollapsibleView"> <input type="checkbox" id="CollapsibleView" onClick="CollapsibleViewClicked()" checked="true" /> Collapsible View </label> </span> <span id="CollapsibleViewDetail"> <a href="javascript:void(0);" onClick="ExpandAllClicked()">Expand all</a> <a href="javascript:void(0);" onClick="CollapseAllClicked()">Collapse all</a> </span></div><br><br>
-        <div id="Canvas" class="Canvas"></div><br>
-        <form id="InvisibleLink" action="http://www.bodurov.com/JsonFormatter/view.aspx" target="_blank"> <input type="hidden" id="InvisibleLinkUrl" name="json" value="" /></form>
-      </div><br><hr style="border-width:2px;border-color:white;"><hr style="border-width:2px;border-color:white;">
+            </select>
+          </span>
+          <label for="QuoteKeys">
+            <input
+              type="checkbox"
+              id="QuoteKeys"
+              onClick="QuoteKeysClicked()"
+              checked="true"
+            />
+            Keys in Quotes </label
+          >&nbsp;
+          <span
+            ><a href="javascript:void(0);" onClick="SelectAllClicked()"
+              >Select all</a
+            ></span
+          >
+          &nbsp;
+          <span id="CollapsibleViewHolder">
+            <label for="CollapsibleView">
+              <input
+                type="checkbox"
+                id="CollapsibleView"
+                onClick="CollapsibleViewClicked()"
+                checked="true"
+              />
+              Collapsible View
+            </label>
+          </span>
+          <span id="CollapsibleViewDetail">
+            <a href="javascript:void(0);" onClick="ExpandAllClicked()"
+              >Expand all</a
+            >
+            <a href="javascript:void(0);" onClick="CollapseAllClicked()"
+              >Collapse all</a
+            >
+          </span>
+        </div>
+        <br /><br />
+        <div id="Canvas" class="Canvas"></div>
+        <br />
+        <form
+          id="InvisibleLink"
+          action="http://www.bodurov.com/JsonFormatter/view.aspx"
+          target="_blank"
+        >
+          <input type="hidden" id="InvisibleLinkUrl" name="json" value="" />
+        </form>
+      </div>
+      <br />
+      <hr style="border-width: 2px; border-color: white" />
+      <hr style="border-width: 2px; border-color: white" />
     </div>
- <!-------->
-    <div class="sticky" style="background-image: linear-gradient(-25deg,  blue,red);padding-bottom:4px;">
-    <div align="center" style="padding-bottom:0px;padding-top:4px;margin-left:8px;"><a target="_blank" href="../home"><img src="../image/mwfLogo.gif" frameBorder="0" class="titleImg" style="pointer-events: none;float:center;" alt="M W F"></a></div>
-      
+    <!-------->
+    <div
+      class="sticky"
+      style="
+        background-image: linear-gradient(-25deg, blue, red);
+        padding-bottom: 4px;
+      "
+    >
+      <div
+        align="center"
+        style="padding-bottom: 0px; padding-top: 4px; margin-left: 8px"
+      >
+        <a target="_blank" href="../home"
+          ><img
+            src="../image/mwfLogo.gif"
+            frameBorder="0"
+            class="titleImg"
+            style="pointer-events: none; float: center"
+            alt="M W F"
+        /></a>
+      </div>
     </div>
-    <!----------------->
     <script>
-      Process("{\"some\":\"data\"}");
-
+      Process('{"some":"data"}');
     </script>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script
+      src="http://www.google-analytics.com/urchin.js"
+      type="text/javascript"
+    ></script>
 
     <script>
       var oDoc, sDefTxt;
@@ -667,9 +1196,17 @@
         if (!validateMode()) {
           return;
         }
-        var oPrntWin = window.open("", "_blank", "width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+        var oPrntWin = window.open(
+          "",
+          "_blank",
+          "width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes"
+        );
         oPrntWin.document.open();
-        oPrntWin.document.write("<!doctype html><html><head><title>Mind Without Fear | M W F<\/title><\/head><body onload=\"print();\">" + oDoc.innerHTML + "<\/body><\/html>");
+        oPrntWin.document.write(
+          '<!doctype html><html><head><title>Mind Without Fear | M W F<\/title><\/head><body onload="print();">' +
+            oDoc.innerHTML +
+            "<\/body><\/html>"
+        );
         oPrntWin.document.close();
       }
       document.getElementById("crImage").addEventListener("input", selectImg);
@@ -681,43 +1218,60 @@
         var imgS = document.getElementById("crImage").value;
         document.getElementById("previewImg").style.display = "block";
         document.getElementById("radioS").style.display = "block";
-        document.getElementById("previewImg").innerHTML = '<img src="' + imgS + '" width="100%" height="240px">';
-        if (imgS != '' && imgS != 'http://') {
-          if (document.getElementById('rd1').checked) {
+        document.getElementById("previewImg").innerHTML =
+          '<img src="' + imgS + '" width="100%" height="240px">';
+        if (imgS != "" && imgS != "http://") {
+          if (document.getElementById("rd1").checked) {
             document.getElementById("btnOkImg").disabled = false;
-            formatDoc('insertHTML', '<img src="' + imgS + '" width="30%" style="float:left; padding:6px;margin:4px;">');
+            formatDoc(
+              "insertHTML",
+              '<img src="' +
+                imgS +
+                '" width="30%" style="float:left; padding:6px;margin:4px;">'
+            );
           }
-          if (document.getElementById('rd2').checked) {
+          if (document.getElementById("rd2").checked) {
             document.getElementById("btnOkImg").disabled = false;
-            formatDoc('insertHTML', '<img src="' + imgS + '" width="50%" style="float:right;padding:6px;margin:4px;">');
+            formatDoc(
+              "insertHTML",
+              '<img src="' +
+                imgS +
+                '" width="50%" style="float:right;padding:6px;margin:4px;">'
+            );
           }
-          if (document.getElementById('rd3').checked) {
+          if (document.getElementById("rd3").checked) {
             document.getElementById("btnOkImg").disabled = false;
-            formatDoc('insertHTML', '<img src="' + imgS + '" width="98%" style="float:center;padding:6px;margin:4px;">');
+            formatDoc(
+              "insertHTML",
+              '<img src="' +
+                imgS +
+                '" width="98%" style="float:center;padding:6px;margin:4px;">'
+            );
           } else {
             return false;
           }
         } else {
-          return false
+          return false;
         }
       }
 
       function CreateLink() {
-        var sLnk = document.getElementById('crlink').value;
-        if (sLnk != '' && sLnk != 'http://') {
-          formatDoc('createlink', sLnk)
+        var sLnk = document.getElementById("crlink").value;
+        if (sLnk != "" && sLnk != "http://") {
+          formatDoc("createlink", sLnk);
         } else {
-          return false
+          return false;
         }
       }
 
       function getId(url) {
-        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var regExp =
+          /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
         var match = url.match(regExp);
         if (match && match[2].length == 11) {
           return match[2];
         } else {
-          return 'error';
+          return "error";
         }
       }
       document.getElementById("crVideo").addEventListener("input", embed_vid);
@@ -726,16 +1280,21 @@
         document.getElementById("previewvid").style.display = "block";
         var link = document.getElementById("crVideo").value;
         var myId = getId(link);
-        if (link != '' && link != 'http://') {
-          document.getElementById("previewvid").innerHTML = '<iframe width="100%" src="//www.youtube.com/embed/' + myId + '" frameborder="0" allowfullscreen></iframe>';
-          formatDoc('insertHTML', '<div class="youvid" align="center"><div class="embed-responsive embed-responsive-16by9 " style="max-width:600px; padding-top:10px;"><iframe class="embed-responsive-item" src="//www.youtube.com/embed/' + myId + '" frameborder="0" allowfullscreen></iframe></div></div><br>');
+        if (link != "" && link != "http://") {
+          document.getElementById("previewvid").innerHTML =
+            '<iframe width="100%" src="//www.youtube.com/embed/' +
+            myId +
+            '" frameborder="0" allowfullscreen></iframe>';
+          formatDoc(
+            "insertHTML",
+            '<div class="youvid" align="center"><div class="embed-responsive embed-responsive-16by9 " style="max-width:600px; padding-top:10px;"><iframe class="embed-responsive-item" src="//www.youtube.com/embed/' +
+              myId +
+              '" frameborder="0" allowfullscreen></iframe></div></div><br>'
+          );
         } else {
           return false;
         }
       }
-
     </script>
-
   </body>
-
 </html>
