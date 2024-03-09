@@ -427,7 +427,7 @@ form input[type="email"]:focus {
   }
   #accrecov {
     margin-top: 8px;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 400px) {
